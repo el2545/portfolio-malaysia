@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="El Ghali Sany — AUS MSEP admissions portfolio connecting urban economics, transport policy evaluation, QGIS/SUMO traffic modelling, financial appraisal, MCDA, PDPL-aware data governance, and a data-gated research proposal on Dubai smart-traffic investments." name="description"/>
+<title>El Ghali Sany | AUS MSEP Academic Evidence Portfolio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&amp;family=Inter:wght@400;500;600;700;800;900&amp;family=Noto+Kufi+Arabic:wght@400;600;700;900&amp;family=Noto+Naskh+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+ color-scheme:light;
+ --gulf-turquoise:#0C7B77;--gulf-turquoise-light:#22AAA3;--deep:#0E1B29;--desert-gold:#CFA24C;--pearl-mist:#F7F0E0;--paper:#FCFCFA;
+ --gulf-turquoise-deep:#118C86;--aqua-glow:#52C6C0;--bronze-gold:#8E6C2F;--space-violet:#5F668C;--ink:#13202B;--muted:#586573;
+ --white:#fff;--line:rgba(207,162,76,.17);--glass:rgba(255,255,255,.74);
+ --shadow:0 26px 72px rgba(14,27,41,.12);--shadow-soft:0 16px 38px rgba(14,27,41,.08);--radius:28px;
+ --font-en:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+ --font-ar:'Noto Naskh Arabic','Cairo','Noto Kufi Arabic',Tahoma,sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:var(--font-en);color:var(--ink);min-height:100vh;overflow-x:hidden;background:radial-gradient(circle at 10% 10%,rgba(82,198,192,.12),transparent 22%),radial-gradient(circle at 88% 8%,rgba(207,162,76,.10),transparent 24%),radial-gradient(circle at 72% 78%,rgba(95,102,140,.09),transparent 26%),linear-gradient(135deg,#ffffff 0%,#f9f7f1 46%,#f4fbfb 100%);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.02;background-image:linear-gradient(90deg,transparent 44%,var(--bronze-gold) 45%,var(--bronze-gold) 55%,transparent 56%),linear-gradient(0deg,transparent 44%,var(--bronze-gold) 45%,var(--bronze-gold) 55%,transparent 56%);background-size:84px 84px,84px 84px;background-position:18px 18px,18px 18px}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.02;background:radial-gradient(circle at 18% 80%,transparent 0 72px,var(--gulf-turquoise-deep) 73px 74px,transparent 75px),radial-gradient(circle at 22% 80%,transparent 0 112px,var(--gulf-turquoise-deep) 113px 114px,transparent 115px),radial-gradient(circle at 82% 22%,transparent 0 88px,var(--space-violet) 89px 90px,transparent 91px);mix-blend-mode:multiply}
+body.rtl{font-family:var(--font-ar);direction:rtl;font-size:110%}body.policy{--paper:#F9FFFD;--pearl-mist:#EAF8F6;--gulf-turquoise:#0B8F88;--gulf-turquoise-light:#34C7BE;--gulf-turquoise-deep:#08716D;--aqua-glow:#6EDBD4}
+body.policy .metric[data-policy-focus="true"]{border-color:rgba(13,90,48,.20);box-shadow:0 0 0 4px rgba(52,190,149,.09),var(--shadow-soft)}
+.metric-note{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:6px 10px;border-radius:999px;background:rgba(13,90,48,.08);border:1px solid rgba(13,90,48,.14);color:var(--gulf-turquoise);font-size:.76rem;font-weight:900;line-height:1.25}
+.metric-note[hidden]{display:none!important}
+.policy-lens-badge{background:linear-gradient(135deg,rgba(13,90,48,.13),rgba(52,190,149,.10));color:var(--gulf-turquoise)!important;border-color:rgba(13,90,48,.18)!important}
+.policy-lens-badge[hidden]{display:none!important}
+.policy-why{margin:18px 0 0;padding:22px;border-radius:26px;background:linear-gradient(135deg,rgba(13,90,48,.11),rgba(52,190,149,.09));border:1px solid rgba(13,90,48,.14);box-shadow:var(--shadow-soft)}
+.policy-why[hidden]{display:none!important}
+.policy-why h3{color:var(--bronze-gold);font-size:1.14rem;margin-bottom:10px}
+.policy-why p{color:var(--muted);line-height:1.72;font-weight:650}
+.policy-points{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.policy-point{padding:14px;border-radius:18px;background:rgba(255,255,255,.82);border:1px solid var(--line)}
+.policy-point b{display:block;color:var(--gulf-turquoise);margin-bottom:6px;font-size:.9rem}
+.policy-point span{display:block;color:var(--muted);line-height:1.55;font-size:.88rem;font-weight:650}
+.policy-inline-note{margin-top:14px;padding:13px 14px;border-radius:16px;background:rgba(255,255,255,.74);border:1px dashed rgba(13,90,48,.24);color:var(--muted);font-weight:700;line-height:1.58}
+.rank-main{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}.rank-main strong{font-weight:800;color:var(--ink)}
+.project-tag{display:inline-flex;align-items:center;padding:4px 8px;border-radius:999px;background:rgba(13,90,48,.10);border:1px solid rgba(13,90,48,.16);color:var(--gulf-turquoise);font-size:.71rem;font-weight:900;line-height:1}
+.rank-row.sustainable-project{border-color:rgba(13,90,48,.18);background:linear-gradient(135deg,rgba(246,255,243,.92),rgba(255,255,255,.86));box-shadow:0 10px 20px rgba(13,90,48,.09)}
+.rank-row.sustainable-project b{color:var(--gulf-turquoise-light)}
+body.policy #stressLab{border-color:rgba(13,90,48,.18)}
+@media(max-width:760px){.policy-points{grid-template-columns:1fr 1fr}}
+a{color:inherit;text-decoration:none}a:hover{text-decoration:underline;text-underline-offset:.22em}button{font:inherit;cursor:pointer}:focus-visible{outline:4px solid #111827;outline-offset:3px;border-radius:12px}
+.skip{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}.skip:focus{left:18px;top:18px;width:auto;height:auto;background:var(--gulf-turquoise);color:#fff;padding:12px 16px;border-radius:12px;z-index:1000;font-weight:900}body.rtl .skip:focus{right:18px;left:auto}.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}.icon-universal{transform:none!important}
+.nav{position:sticky;top:0;z-index:80;background:rgba(255,249,239,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);box-shadow:0 12px 32px rgba(16,36,29,.08)}
+.nav-inner{max-width:1480px;margin:auto;padding:12px clamp(14px,2vw,28px);display:flex;align-items:center;gap:16px;justify-content:space-between}.logo{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.04em;min-width:230px;line-height:1.05}.rtl .logo{letter-spacing:0}.logo-mark{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--gulf-turquoise),var(--gulf-turquoise-deep),var(--space-violet));display:grid;place-items:center;color:#fff;box-shadow:0 14px 28px rgba(0,108,53,.24);flex:0 0 auto}.logo-mark svg{width:28px;height:28px}
+.nav-links{display:flex;gap:8px;align-items:center;justify-content:flex-end;flex-wrap:wrap}.nav a,.nav button{min-height:44px;border-radius:999px;border:1px solid rgba(122,78,54,.24);background:rgba(255,255,255,.74);padding:8px 13px;font-weight:850;font-size:.84rem;color:var(--ink);white-space:nowrap}.nav a:hover,.nav button:hover{border-color:var(--gulf-turquoise-deep);box-shadow:0 8px 24px rgba(0,124,137,.14);text-decoration:none}.nav button.active{background:var(--gulf-turquoise);color:#fff;border-color:var(--gulf-turquoise)}
+.nav-link-bi{position:relative;overflow:hidden;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15;min-width:max-content}.nav-link-bi .ar-hover{font-family:'Noto Kufi Arabic','Cairo',sans-serif;font-size:.72rem;color:var(--gulf-turquoise);opacity:0;max-height:0;transform:translateY(6px);transition:all .25s ease}.nav-link-bi:hover .en-label{transform:translateY(-1px)}.nav-link-bi:hover .ar-hover{opacity:1;max-height:20px;transform:translateY(0)}
+.container{max-width:1360px;margin:auto;padding:22px}.glass,.hero-card,.panel,.module,.doc-card{background:var(--glass);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+.hero{display:grid;grid-template-columns:1.12fr .88fr;gap:22px;align-items:stretch;min-height:680px;padding-top:12px}.hero-card{position:relative;overflow:hidden;padding:42px;background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(255,249,239,.76))}.hero-card::after{content:"";position:absolute;inset:auto -10% -20% 38%;height:260px;background:radial-gradient(circle,rgba(0,163,173,.18),transparent 64%);pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(0,108,53,.12);color:var(--gulf-turquoise);font-weight:900;font-size:.84rem;margin-bottom:24px}
+h1{font-size:clamp(2.45rem,5vw,5.55rem);line-height:.96;letter-spacing:-.075em;margin-bottom:24px;max-width:1080px}.rtl h1{letter-spacing:-.02em;line-height:1.16}.gradient{background:linear-gradient(110deg,var(--space-violet),var(--gulf-turquoise-deep),var(--gulf-turquoise));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:clamp(1rem,1.6vw,1.26rem);line-height:1.78;color:var(--muted);font-weight:650;max-width:920px;margin-bottom:24px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:16px;font-weight:900;min-height:48px;border:1px solid var(--line);background:#fff}.cta.primary{background:linear-gradient(135deg,var(--gulf-turquoise),var(--gulf-turquoise-deep));color:#fff;border:0;box-shadow:0 15px 28px rgba(0,108,53,.2)}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:7px 10px;font-size:.78rem;font-weight:900;background:rgba(0,124,137,.10);color:#005b64;border:1px solid rgba(0,124,137,.14)}.badge.supported{background:rgba(0,108,53,.11);color:var(--gulf-turquoise)}.badge.assumption{background:rgba(161,59,57,.10);color:var(--space-violet)}.badge.limit{background:rgba(122,78,54,.12);color:var(--bronze-gold)}
+.hero-side{display:grid;gap:16px}.metric{padding:24px;border-radius:24px;background:rgba(255,255,255,.82);border:1px solid var(--line);box-shadow:var(--shadow-soft);position:relative;overflow:hidden}.metric::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,var(--gulf-turquoise),var(--aqua-glow),var(--space-violet));opacity:.78}.metric b{display:block;font-size:clamp(2rem,3vw,3.1rem);line-height:1;color:var(--bronze-gold);margin:6px 0 8px}.metric span{display:block;line-height:1.65;color:var(--muted);font-weight:650}
+.page-section{padding:34px 0}.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:18px}.kicker{font-size:.82rem;font-weight:900;text-transform:uppercase;letter-spacing:.16em;color:var(--gulf-turquoise);margin-bottom:8px}.rtl .kicker{letter-spacing:.05em}h2{font-size:clamp(1.7rem,3.2vw,3rem);line-height:1.08;letter-spacing:-.045em;max-width:980px}.rtl h2{letter-spacing:0;line-height:1.22}.section-note{max-width:760px;color:var(--muted);line-height:1.75;font-weight:650}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.panel,.module{padding:24px;box-shadow:var(--shadow-soft)}.panel h3,.module h3,.doc-card h3{color:var(--bronze-gold);font-size:1.08rem;margin-bottom:10px}.panel p,.module p,.doc-card p{color:var(--muted);line-height:1.72;font-weight:650}.arch-board{display:grid;grid-template-columns:.82fr 1.18fr;gap:16px;align-items:start}
+.timeline{position:relative;display:grid;gap:12px}.timeline::before{content:"";position:absolute;left:20px;top:10px;bottom:10px;width:4px;background:linear-gradient(var(--gulf-turquoise),var(--gulf-turquoise-deep),var(--space-violet));border-radius:99px}.rtl .timeline::before{right:20px;left:auto}.tl-item{position:relative;padding:18px 18px 18px 54px;border-radius:20px;background:rgba(255,255,255,.82);border:1px solid var(--line);box-shadow:var(--shadow-soft);transition:.2s}.rtl .tl-item{padding:18px 54px 18px 18px}.tl-item::before{content:"";position:absolute;left:10px;top:20px;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--gulf-turquoise),var(--gulf-turquoise-deep));border:4px solid #fff;box-shadow:0 0 0 1px var(--line)}.rtl .tl-item::before{right:10px;left:auto}.tl-item b{display:block;color:var(--bronze-gold);margin-bottom:4px}.tl-item span{display:block;color:var(--muted);line-height:1.6;font-weight:650}.tl-item.active-map{border-color:var(--aqua-glow);box-shadow:0 0 0 4px rgba(0,163,173,.13),var(--shadow-soft);transform:translateY(-2px)}
+.dashboard{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}.skill{padding:17px;border-radius:18px;background:rgba(255,255,255,.86);border:1px solid var(--line);min-height:168px;transition:.2s}.skill:hover{border-color:var(--aqua-glow);transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,124,137,.13)}.skill b{display:block;color:var(--gulf-turquoise);font-size:.95rem;margin-bottom:8px}.skill p{font-size:.9rem;line-height:1.6;color:var(--muted);font-weight:650}
+.map-shell{display:grid;grid-template-columns:1fr .9fr;gap:16px;align-items:start}.smart-map{min-height:460px;border-radius:28px;border:1px solid var(--line);box-shadow:var(--shadow-soft);position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(255,255,255,.16) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.16) 1px,transparent 1px),radial-gradient(circle at 20% 44%,rgba(0,108,53,.32),transparent 19%),radial-gradient(circle at 72% 26%,rgba(0,163,173,.32),transparent 22%),radial-gradient(circle at 65% 70%,rgba(215,183,119,.45),transparent 22%),linear-gradient(135deg,#fdf4dd,#e8f6ef);background-size:48px 48px,48px 48px,auto,auto,auto,auto}.map-road{position:absolute;background:rgba(122,78,54,.33);border-radius:999px;transform-origin:center}.r1{width:82%;height:9px;left:8%;top:46%;transform:rotate(-9deg)}.r2{width:76%;height:7px;left:12%;top:62%;transform:rotate(22deg)}.r3{width:54%;height:6px;left:20%;top:31%;transform:rotate(48deg)}.r4{width:62%;height:7px;left:26%;top:74%;transform:rotate(-29deg)}.node{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--bronze-gold);box-shadow:0 0 0 9px rgba(122,78,54,.14),0 0 26px rgba(122,78,54,.28)}.mode-dooh .node{background:var(--aqua-glow);box-shadow:0 0 0 11px rgba(0,163,173,.18),0 0 34px rgba(0,163,173,.55)}.mode-hybrid .node:nth-child(even){background:var(--aqua-glow);box-shadow:0 0 0 11px rgba(0,163,173,.18),0 0 34px rgba(0,163,173,.55)}.n1{left:23%;top:43%}.n2{left:42%;top:58%}.n3{left:64%;top:38%}.n4{left:72%;top:71%}.n5{left:34%;top:26%}.n6{left:52%;top:78%}.map-label{position:absolute;left:18px;bottom:18px;right:18px;padding:14px;border-radius:18px;background:rgba(255,255,255,.84);backdrop-filter:blur(14px);border:1px solid var(--line);font-weight:850;color:var(--ink)}
+.switch-row{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px 0}.switch-row button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 13px;font-weight:900;min-height:42px}.switch-row button.active{background:var(--gulf-turquoise);color:#fff;border-color:var(--gulf-turquoise)}
+.pipeline{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}.pipe{position:relative;padding:18px;border-radius:18px;background:rgba(255,255,255,.86);border:1px solid var(--line);min-height:176px;overflow:hidden}.pipe::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--gulf-turquoise),var(--aqua-glow),var(--space-violet));opacity:.86}.pipe small{display:inline-flex;padding:5px 8px;border-radius:999px;background:rgba(0,108,53,.10);color:var(--gulf-turquoise);font-weight:900;margin-bottom:8px}.pipe b{display:block;color:var(--bronze-gold);margin-bottom:8px}.pipe span{display:block;color:var(--muted);line-height:1.55;font-weight:650;font-size:.92rem}
+.evidence{position:relative}.evidence:hover::after{content:attr(data-tip);position:absolute;left:18px;right:18px;bottom:18px;background:#10241D;color:#fff;border-radius:14px;padding:12px;line-height:1.5;font-size:.86rem;font-weight:700;z-index:3}.rtl .evidence:hover::after{direction:rtl}
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}.layer{padding:20px;border-radius:20px;background:rgba(255,255,255,.86);border:1px solid var(--line);box-shadow:var(--shadow-soft)}.layer b{display:block;color:var(--gulf-turquoise);margin-bottom:8px}.layer p{font-size:.92rem;color:var(--muted);line-height:1.62;font-weight:650}
+.lab{margin-top:16px;padding:22px;border-radius:24px;background:linear-gradient(135deg,rgba(0,108,53,.10),rgba(0,124,137,.10));border:1px solid var(--line)}.lab.netzero{background:linear-gradient(135deg,rgba(13,90,48,.22),rgba(52,190,149,.14));box-shadow:0 0 0 4px rgba(52,190,149,.08)}.control-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.control{padding:16px;border-radius:18px;background:rgba(255,255,255,.75);border:1px solid var(--line)}.control label{display:flex;justify-content:space-between;gap:10px;font-weight:900;color:var(--bronze-gold);margin-bottom:8px}.control output{color:var(--gulf-turquoise)}input[type="range"]{width:100%;accent-color:var(--gulf-turquoise)}.rank-list{display:grid;gap:8px;margin-top:14px}.rank-row{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.78);border:1px solid var(--line);transition:.2s}.rank-row b{color:var(--gulf-turquoise)}.rank-row span{font-weight:800;color:var(--ink)}.rank-row em{font-style:normal;color:var(--muted);font-weight:800;font-size:.88rem}.insight{margin-top:12px;padding:13px;border-radius:16px;background:rgba(16,36,29,.88);color:#fff;line-height:1.55;font-weight:750}.insight.flash{animation:pulseFlash .9s ease}@keyframes pulseFlash{0%{transform:scale(.99);opacity:.72}50%{transform:scale(1.01);opacity:1}100%{transform:scale(1);opacity:1}}
+.checklist{display:grid;gap:10px}.check{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:14px;border-radius:16px;background:rgba(255,255,255,.86);border:1px solid var(--line)}.check input{width:20px;height:20px;accent-color:var(--gulf-turquoise)}.check b{display:block;color:var(--bronze-gold);margin-bottom:3px}.check span{display:block;color:var(--muted);font-weight:650;line-height:1.45}.state{font-size:.76rem;border-radius:999px;padding:6px 9px;font-weight:900;background:rgba(0,108,53,.11);color:var(--gulf-turquoise)}.state.partial{background:rgba(215,183,119,.2);color:var(--bronze-gold)}
+.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.summary-card{padding:22px;border-radius:22px;background:rgba(255,255,255,.86);border:1px solid var(--line);box-shadow:var(--shadow-soft)}.summary-letter{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--gulf-turquoise),var(--gulf-turquoise-deep));color:#fff;font-weight:900;margin-bottom:14px}.summary-card h3{color:var(--bronze-gold);margin-bottom:10px}.summary-card p{color:var(--muted);line-height:1.68;font-weight:650}
+.gantt{display:grid;gap:10px;margin-top:18px}.g-row{display:grid;grid-template-columns:260px 1fr;gap:12px;align-items:center}.g-label{font-weight:900;color:var(--bronze-gold)}.g-label span{display:block;font-size:.84rem;color:var(--muted);font-weight:700;line-height:1.45}.g-track{height:40px;border-radius:999px;background:rgba(255,255,255,.78);border:1px solid var(--line);position:relative;overflow:hidden}.g-bar{position:absolute;top:5px;bottom:5px;border-radius:999px;background:linear-gradient(90deg,var(--gulf-turquoise),var(--aqua-glow));box-shadow:0 8px 20px rgba(0,108,53,.18)}
+.docs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.doc-card{padding:20px;box-shadow:var(--shadow-soft);display:flex;flex-direction:column;justify-content:space-between;min-height:285px}.doc-card .meta{display:block;margin:10px 0 14px;color:var(--muted);line-height:1.55;font-weight:650;font-size:.9rem}.doc-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.doc-actions a,.doc-actions button{border:1px solid var(--line);background:#fff;border-radius:14px;padding:10px 12px;font-weight:900;color:var(--ink);font-size:.86rem}.doc-actions a.primary,.doc-actions button.primary{background:var(--gulf-turquoise);color:#fff;border-color:var(--gulf-turquoise)}
+.source-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.source{padding:16px;border-radius:18px;background:rgba(255,255,255,.78);border:1px solid var(--line)}.source b{display:block;color:var(--bronze-gold);margin-bottom:8px}.source a{color:#005b64;font-weight:850;word-break:break-word}.source p{color:var(--muted);font-weight:650;line-height:1.5;font-size:.9rem;margin-top:6px}.system-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.pillar{padding:22px;border-radius:24px;background:rgba(255,255,255,.82);border:1px solid var(--line);box-shadow:var(--shadow-soft)}.pillar h3{color:var(--bronze-gold);margin-bottom:14px}.pillar ul{padding-inline-start:18px;display:grid;gap:10px}.pillar li{color:var(--muted);line-height:1.55;font-weight:650}
+.modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;background:rgba(16,36,29,.42);backdrop-filter:blur(10px);padding:18px}.modal.open{display:grid}.modal-card{max-width:920px;width:min(920px,100%);border-radius:30px;background:rgba(255,255,255,.92);border:1px solid var(--line);box-shadow:0 34px 90px rgba(16,36,29,.32);padding:26px}.modal-head{display:flex;justify-content:space-between;gap:16px;align-items:start;margin-bottom:16px}.close{background:var(--deep)!important;color:#fff!important;border:0!important;border-radius:999px!important;padding:10px 13px!important;font-weight:900!important}.toast{position:fixed;right:18px;bottom:18px;z-index:110;max-width:440px;padding:16px 18px;border-radius:20px;background:#10241D;color:#fff;box-shadow:0 20px 60px rgba(16,36,29,.3);display:none;line-height:1.55;font-weight:750}.toast.show{display:block;animation:pulseFlash .5s ease}.rtl .toast{right:auto;left:18px}
+.footer{margin-top:28px;padding:28px;border-radius:30px 30px 0 0;background:linear-gradient(135deg,#10241D,#234137);color:#fff}.footer p{color:rgba(255,255,255,.78);line-height:1.7;max-width:980px}.footer b{color:#fff}.small-note{margin-top:14px;padding:15px;border-radius:18px;background:rgba(255,255,255,.74);border:1px solid var(--line);color:var(--muted);line-height:1.65;font-weight:650}.dark-note{background:rgba(16,36,29,.88);color:#fff;border-color:rgba(255,255,255,.16)}
+@media(max-width:1180px){.hero,.grid-2,.arch-board,.map-shell{grid-template-columns:1fr}.grid-3,.method-grid,.summary-grid,.docs-grid,.source-grid{grid-template-columns:repeat(2,1fr)}.grid-4,.dashboard,.pipeline,.system-pillars{grid-template-columns:repeat(2,1fr)}.nav-inner{align-items:flex-start;flex-direction:column}.nav-links{justify-content:flex-start}.control-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.container{padding:14px}.hero-card,.panel,.module,.doc-card{border-radius:22px;padding:20px}.grid-3,.grid-4,.dashboard,.pipeline,.method-grid,.summary-grid,.docs-grid,.source-grid,.system-pillars{grid-template-columns:1fr}.section-head{display:block}.g-row{grid-template-columns:1fr}.nav-links a,.nav-links button{width:100%;text-align:center}.nav-links{width:100%}h1{font-size:2.45rem}.hero{min-height:auto}.rank-row{grid-template-columns:1fr}.smart-map{min-height:330px}.source-grid{grid-template-columns:1fr}.hero-side{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+:root{--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;}
+
+.egs-sumo-shell {
+ background: #050505;
+ color: #E8FCEE;
+ border: 1px solid #004400;
+ font-family: var(--font-mono);
+}
+.egs-sumo-toolbar {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 6px;
+ padding: 7px;
+ border-bottom: 1px solid #004400;
+ background: #071107;
+}
+.egs-mode-btn,
+.egs-zone-btn,
+.egs-control-btn {
+ border: 1px solid #004400;
+ background: #101b10;
+ color: #75a875;
+ border-radius: 3px;
+ padding: 5px 9px;
+ font-family: var(--font-mono);
+ font-size: 10px;
+ cursor: pointer;
+ line-height: 1.15;
+}
+.egs-mode-btn:hover,
+.egs-zone-btn:hover,
+.egs-control-btn:hover { color: #00FF88; border-color: #00AA55; }
+.egs-mode-btn.active,
+.egs-zone-btn.active {
+ background: rgba(0,255,136,.12);
+ color: var(--tc, #00FF88);
+ border-color: var(--tc, #00FF88);
+ box-shadow: inset 0 -2px 0 var(--tc, #00FF88);
+}
+.egs-sumo-grid {
+ display: grid;
+ grid-template-columns: minmax(0, 1fr) 220px;
+ min-height: 430px;
+}
+.egs-map-wrap { position: relative; min-height: 430px; background: #0A0A0A; }
+#egsSumoMap { position:absolute; inset:0; z-index:1; min-height:430px; }
+#egsTrafficCanvas { position:absolute; inset:0; z-index:500; width:100%; height:100%; pointer-events:none; }
+.egs-map-badge {
+ position: absolute;
+ z-index: 700;
+ top: 10px; left: 10px;
+ max-width: calc(100% - 20px);
+ background: rgba(0, 10, 0, .82);
+ border: 1px solid #004400;
+ border-radius: 3px;
+ padding: 7px 9px;
+ color: #00FF88;
+ pointer-events: none;
+}
+.egs-map-badge strong { display:block; font-size: 11px; margin-bottom:2px; }
+.egs-map-badge span { display:block; font-size: 9px; color:#77aa77; line-height:1.35; }
+.egs-legend {
+ position: absolute;
+ z-index: 700;
+ left: 10px; bottom: 10px;
+ display:flex; gap:8px; flex-wrap:wrap;
+ background: rgba(0, 10, 0, .82);
+ border: 1px solid #004400;
+ border-radius: 3px;
+ padding: 6px 8px;
+ font-size: 9px;
+ color:#77aa77;
+ pointer-events:none;
+}
+.egs-dot { display:inline-block; width:10px; height:10px; border-radius:99px; margin-right:4px; vertical-align:-1px; }
+.egs-dot.green { background:#00FF88; }
+.egs-dot.yellow { background:#FFD700; }
+.egs-dot.red { background:#FF3355; }
+.egs-side {
+ background: #050505;
+ border-left: 1px solid #004400;
+ display:flex;
+ flex-direction:column;
+}
+.egs-kpis { display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #004400; }
+.egs-kpi { padding:8px 7px; border-right:1px solid #004400; border-bottom:1px solid #004400; text-align:center; }
+.egs-kpi:nth-child(2n) { border-right:none; }
+.egs-kpi-label { color:#446644; font-size:8px; margin-bottom:3px; }
+.egs-kpi-val { color:#00FF88; font-size:18px; font-weight:700; line-height:1; }
+.egs-controls { padding:8px; border-bottom:1px solid #004400; }
+.egs-control-row { margin-bottom:8px; }
+.egs-control-row label { display:block; color:#668866; font-size:8px; margin-bottom:3px; }
+.egs-control-row input[type="range"] { width:100%; accent-color:#00FF88; }
+.egs-control-buttons { display:grid; grid-template-columns:1fr 1fr; gap:5px; margin-bottom:8px; }
+.egs-note { padding:8px; color:#668866; font-size:9px; line-height:1.5; overflow-y:auto; }
+.egs-hidden { display:none !important; }
+.egs-link-row { display:flex; gap:5px; flex-wrap:wrap; padding:7px; border-top:1px solid #004400; }
+.egs-small-tag { border:1px solid #004400; color:#668866; padding:2px 6px; border-radius:2px; font-size:8px; }
+@media (max-width: 760px) {
+ .egs-sumo-grid { grid-template-columns: 1fr; }
+ .egs-side { border-left:none; border-top:1px solid #004400; }
+ .egs-map-wrap, #egsSumoMap { min-height: 360px; }
+}
+
+#sumo-dashboard{
+ margin-top:18px;
+ overflow:hidden;
+}
+#sumo-dashboard .ph{
+ padding:10px 14px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:12px;
+ border-radius:20px 20px 0 0;
+ min-height:48px;
+}
+#sumo-dashboard .ph-en{
+ font-size:.72rem;
+ font-weight:700;
+ white-space:normal;
+}
+#sumo-dashboard .pb{
+ border-radius:0 0 20px 20px;
+ overflow:hidden;
+}
+body.rtl #sumo-dashboard{direction:ltr;font-family:var(--font-en);}
+
+.fixed-line{position:fixed;inset-inline-start:50%;bottom:18px;width:170px;height:3px;transform:translateX(-50%) scaleX(var(--scroll-scale,.12));transform-origin:center;background:linear-gradient(90deg,transparent,var(--aqua-glow),#fff,var(--aqua-glow),transparent);box-shadow:0 0 22px rgba(0,163,173,.75);border-radius:99px;pointer-events:none;z-index:30;opacity:.72}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.tag{padding:7px 10px;border-radius:999px;background:rgba(0,124,137,.10);border:1px solid rgba(0,124,137,.14);color:#005c66;font-weight:850;font-size:.82rem}.assumption{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border-radius:999px;background:rgba(161,59,57,.10);color:var(--space-violet);font-size:.78rem;font-weight:900;margin-top:12px}.bridge-banner{padding:20px 22px;border-radius:24px;background:linear-gradient(135deg,rgba(161,59,57,.08),rgba(0,108,53,.08));border:1px solid var(--line);margin-top:16px;box-shadow:var(--shadow-soft)}.bridge-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(161,59,57,.11);color:var(--space-violet);font-weight:900;margin-bottom:14px}.bridge-banner p{color:var(--muted);line-height:1.72;font-weight:650}.merge-decision{margin-top:16px;padding:18px;border-radius:20px;background:rgba(16,36,29,.88);color:#fff;box-shadow:var(--shadow-soft)}.merge-decision b{display:block;margin-bottom:8px}.merge-decision span{display:block;line-height:1.62;color:rgba(255,255,255,.88);font-weight:650}.method-cycle-shell{padding:24px;border-radius:30px;background:rgba(255,255,255,.82);border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}.method-cycle-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:20px}.method-cycle-note{max-width:760px;line-height:1.75;color:var(--muted);font-weight:650}.method-cycle-cycle-wrap{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto auto;gap:14px;align-items:center;justify-items:center}.method-cycle-hub-cell{grid-column:2;grid-row:2;width:100%;display:flex;align-items:center;justify-content:center}.method-cycle-hub{position:relative;width:220px;height:220px;flex:0 0 220px}.method-cycle-hub-svg{width:100%;height:100%}.method-cycle-hub-inner{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:126px;height:126px;border-radius:50%;display:grid;place-items:center;text-align:center;padding:10px;background:linear-gradient(135deg,var(--space-violet),var(--gulf-turquoise));color:#fff;box-shadow:0 14px 28px rgba(20,40,30,.22);z-index:2}.method-cycle-hub-inner b{display:block;font-size:.73rem;font-weight:900;margin-bottom:3px;line-height:1.2}.method-cycle-hub-inner span{font-size:.62rem;font-weight:750;line-height:1.35;opacity:.92}.method-cycle-stop{padding:14px;border-radius:17px;background:rgba(255,255,255,.94);border:1.5px solid var(--line);box-shadow:var(--shadow-soft);width:100%;cursor:pointer;transition:box-shadow .22s,border-color .22s,transform .16s}.method-cycle-stop:hover,.method-cycle-stop.active{border-color:var(--aqua-glow);box-shadow:0 12px 28px rgba(0,124,137,.18);transform:translateY(-2px)}.method-cycle-stop h3{font-size:.9rem;color:var(--bronze-gold);margin-bottom:4px;line-height:1.3;font-weight:900}.method-cycle-stop p{font-size:.78rem;line-height:1.5;color:var(--muted);font-weight:650}.method-cycle-stop .meta{display:block;margin-top:6px;font-size:.7rem;font-weight:900;color:var(--gulf-turquoise)}.method-cycle-stop .mini-tag{display:inline-block;margin-bottom:6px;padding:3px 7px;border-radius:999px;background:rgba(0,124,137,.1);font-size:.68rem;font-weight:900;color:#005c66}.ds-1{grid-column:2;grid-row:1}.ds-2{grid-column:3;grid-row:1}.ds-3{grid-column:3;grid-row:2}.ds-4{grid-column:3;grid-row:3}.ds-5{grid-column:2;grid-row:3}.ds-6{grid-column:1;grid-row:3}.ds-7{grid-column:1;grid-row:2}.method-merge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.method-card{padding:16px;border-radius:18px;background:rgba(255,255,255,.88);border:1px solid var(--line);box-shadow:var(--shadow-soft)}.method-card b{display:block;color:var(--bronze-gold);margin-bottom:6px}.method-card span{display:block;color:var(--muted);line-height:1.55;font-weight:650;font-size:.9rem}.clarity-panel{margin-top:18px;padding:24px;border-radius:26px;background:linear-gradient(135deg,rgba(0,108,53,.10),rgba(161,59,57,.08));border:1px solid var(--line);box-shadow:var(--shadow-soft)}.clarity-panel h3{color:var(--bronze-gold);font-size:1.25rem;margin-bottom:10px}.clarity-panel p{color:var(--muted);line-height:1.72;font-weight:650}.clarity-commitments{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}.clarity-item{padding:15px;border-radius:16px;background:rgba(255,255,255,.88);border:1px solid rgba(122,78,54,.14)}.clarity-item b{display:block;color:var(--gulf-turquoise);margin-bottom:6px}.accessibility-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.access-card{padding:22px;border-radius:24px;background:rgba(255,255,255,.84);border:1px solid var(--line);box-shadow:var(--shadow-soft);min-height:180px}.access-card h3{margin-bottom:10px;color:var(--bronze-gold);font-size:1.08rem}.access-card p{line-height:1.72;color:var(--muted);font-weight:650}.review-footer-note{margin-top:12px;color:rgba(255,255,255,.80);line-height:1.7}
+@media(max-width:1060px){.method-cycle-top{display:block}.method-merge-grid,.clarity-commitments,.accessibility-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.fixed-line{bottom:12px;opacity:.48}.method-cycle-cycle-wrap{grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto auto}.method-cycle-hub-cell{grid-column:1/3;grid-row:1}.ds-1{grid-column:1;grid-row:2}.ds-2{grid-column:2;grid-row:2}.ds-3{grid-column:1;grid-row:3}.ds-4{grid-column:2;grid-row:3}.ds-5{grid-column:1;grid-row:4}.ds-6{grid-column:2;grid-row:4}.ds-7{grid-column:1/3;grid-row:5;max-width:340px;justify-self:center}.method-merge-grid,.clarity-commitments,.accessibility-grid{grid-template-columns:1fr}.method-cycle-shell{padding:18px;border-radius:22px}}
+@media (prefers-reduced-motion:reduce){.fixed-line{display:none}.method-cycle-stop{transition:none!important}}
+
+body.rtl .nav-link-bi .ar-hover{display:none!important}
+body.rtl .nav-link-bi .en-label{font-family:var(--font-ar);font-size:.9rem}
+body.rtl .lead, body.rtl .section-note, body.rtl p, body.rtl li, body.rtl span{line-height:1.9}
+body.rtl .modal-card{text-align:right}
+
+.file-ref{
+ text-decoration:none!important;
+ cursor:pointer;
+ word-break:break-word;
+}
+.doc-actions .file-ref{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ gap:8px;
+ border:1px solid var(--line);
+ background:#fff;
+ border-radius:14px;
+ padding:10px 12px;
+ font-weight:900;
+ color:var(--ink);
+ font-size:.86rem;
+ max-width:100%;
+}
+.doc-actions a.primary.file-ref,
+.doc-actions button.primary.file-ref{
+ background:var(--gulf-turquoise);
+ color:#fff;
+ border-color:var(--gulf-turquoise);
+}
+.cta.file-ref{min-height:48px;border-radius:16px}
+.source .file-ref{
+ display:inline;
+ padding:0;
+ border:0;
+ background:transparent;
+ border-radius:0;
+ color:#005b64;
+ font-weight:850;
+ font-size:inherit;
+ line-height:inherit;
+}
+.file-ref::before{content:none!important;display:none!important;}
+body.rtl .file-ref::before{content:none!important;display:none!important;}
+
+.site-nav{
+ position:sticky;
+ top:0;
+ z-index:120;
+ isolation:isolate;
+ background:
+ linear-gradient(180deg,rgba(255,252,246,.97),rgba(255,249,239,.91)),
+ radial-gradient(circle at 96% 50%,rgba(0,124,137,.09),transparent 32%);
+ border-bottom:1px solid rgba(122,78,54,.13);
+ box-shadow:0 14px 38px rgba(16,36,29,.08);
+ backdrop-filter:blur(18px);
+}
+.site-nav::before{
+ content:"";
+ position:absolute;
+ inset:0 0 auto 0;
+ height:2px;
+ background:linear-gradient(90deg,transparent,rgba(215,183,119,.86),transparent);
+ pointer-events:none;
+}
+.site-nav::after{
+ content:"";
+ position:absolute;
+ inset:0 0 0 auto;
+ width:min(420px,30vw);
+ opacity:.08;
+ background-image:
+ linear-gradient(45deg,transparent 46%,var(--bronze-gold) 47%,var(--bronze-gold) 49%,transparent 50%),
+ linear-gradient(-45deg,transparent 46%,var(--gulf-turquoise-deep) 47%,var(--gulf-turquoise-deep) 49%,transparent 50%);
+ background-size:44px 44px;
+ pointer-events:none;
+ z-index:-1;
+}
+body.rtl .site-nav::after{inset:0 auto 0 0;}
+.site-nav-inner{
+ max-width:1480px;
+ margin:auto;
+ padding:18px clamp(16px,2.6vw,42px);
+ display:grid;
+ grid-template-columns:minmax(286px,.55fr) minmax(0,1.45fr);
+ align-items:center;
+ gap:28px;
+}
+body.rtl .site-nav-inner{grid-template-columns:minmax(0,1.45fr) minmax(286px,.55fr);}
+.brand-card{
+ min-width:0;
+ width:100%;
+ display:flex;
+ align-items:center;
+ gap:14px;
+ padding:14px 18px;
+ border-radius:999px;
+ background:linear-gradient(135deg,rgba(255,255,255,.86),rgba(255,249,239,.72));
+ border:1px solid rgba(122,78,54,.18);
+ box-shadow:0 14px 36px rgba(16,36,29,.08), inset 0 1px 0 rgba(255,255,255,.75);
+ text-decoration:none!important;
+ position:relative;
+ overflow:hidden;
+}
+body.rtl .brand-card{grid-column:2;flex-direction:row;}
+body.rtl .nav-workspace{grid-column:1;grid-row:1;}
+.brand-card::after{
+ content:"";
+ position:absolute;
+ inset:12px auto 12px -1px;
+ width:1px;
+ background:linear-gradient(180deg,transparent,rgba(215,183,119,.85),transparent);
+}
+body.rtl .brand-card::after{inset:12px -1px 12px auto;}
+.brand-mark{
+ width:62px;
+ height:62px;
+ border-radius:22px;
+ background:linear-gradient(145deg,rgba(255,255,255,.97),rgba(255,249,239,.82));
+ border:1px solid rgba(0,108,53,.20);
+ box-shadow:0 16px 34px rgba(0,108,53,.15), inset 0 1px 0 rgba(255,255,255,.92);
+ color:var(--gulf-turquoise);
+}
+.brand-mark svg{width:42px;height:42px;filter:none;}
+.brand-mark .zaouia-node{display:block;}
+.brand-mark .zaouia-node .soft-layer{opacity:.34;}
+.brand-mark .zaouia-node .node-core{opacity:.92;}
+.brand-mark .zaouia-node .node-link{opacity:.82;}
+.brand-copy{display:grid;gap:4px;min-width:0;line-height:1.18;}
+.brand-copy strong{
+ font-size:1.13rem;
+ color:var(--deep);
+ font-weight:900;
+ letter-spacing:-.025em;
+ white-space:nowrap;
+}
+body.rtl .brand-copy strong{font-size:1.22rem;letter-spacing:0;}
+.brand-copy span{
+ font-size:.86rem;
+ color:var(--muted);
+ font-weight:750;
+ white-space:normal;
+}
+.brand-copy span .ltr, .brand-copy .ltr{font-weight:900;color:var(--gulf-turquoise);}
+.nav-workspace{display:grid;gap:14px;min-width:0;}
+.site-links{
+ display:flex;
+ align-items:center;
+ justify-content:flex-end;
+ gap:10px;
+ flex-wrap:wrap;
+ padding:0 0 14px;
+ border-bottom:1px solid rgba(122,78,54,.13);
+ overflow:visible;
+}
+body.rtl .site-links{justify-content:flex-start;}
+.site-links .nav-link-bi{
+ min-height:44px;
+ display:inline-flex;
+ flex-direction:row;
+ align-items:center;
+ justify-content:center;
+ gap:10px;
+ padding:10px 16px;
+ border-radius:999px;
+ background:linear-gradient(180deg,rgba(255,255,255,.83),rgba(255,249,239,.68));
+ border:1px solid rgba(122,78,54,.16);
+ box-shadow:0 8px 20px rgba(16,36,29,.055), inset 0 1px 0 rgba(255,255,255,.8);
+ color:var(--ink);
+ font-weight:850;
+ font-size:.86rem;
+ line-height:1;
+ white-space:nowrap;
+ transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease;
+}
+body.rtl .site-links .nav-link-bi{flex-direction:row-reverse;font-family:var(--font-ar);font-size:.95rem;}
+.site-links .nav-link-bi:hover{
+ transform:translateY(-1px);
+ border-color:rgba(0,124,137,.28);
+ box-shadow:0 13px 28px rgba(0,124,137,.10), inset 0 1px 0 rgba(255,255,255,.86);
+ text-decoration:none;
+}
+.site-links .nav-link-bi[href="#context"]{
+ box-shadow:0 8px 20px rgba(16,36,29,.055), inset 0 0 0 1.5px rgba(0,108,53,.18), inset 0 1px 0 rgba(255,255,255,.84);
+}
+.site-links .nav-num{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ min-width:24px;
+ color:var(--bronze-gold);
+ font-weight:950;
+ opacity:.78;
+ font-variant-numeric:tabular-nums;
+ direction:ltr;
+ unicode-bidi:isolate;
+}
+.site-links .nav-title{display:inline-block;}
+.site-links .ar-hover{display:none!important;}
+.nav-controls{
+ display:flex;
+ align-items:center;
+ justify-content:flex-end;
+ gap:12px;
+ flex-wrap:wrap;
+}
+body.rtl .nav-controls{justify-content:flex-start;}
+.nav-action{
+ min-height:48px;
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ gap:10px;
+ border-radius:999px;
+ border:1px solid rgba(122,78,54,.16);
+ background:linear-gradient(180deg,rgba(255,255,255,.87),rgba(255,249,239,.70));
+ color:var(--ink);
+ padding:10px 16px;
+ font-weight:900;
+ box-shadow:0 10px 24px rgba(16,36,29,.07), inset 0 1px 0 rgba(255,255,255,.84);
+ transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease;
+}
+.nav-action:hover{transform:translateY(-1px);text-decoration:none;box-shadow:0 15px 30px rgba(16,36,29,.11), inset 0 1px 0 rgba(255,255,255,.84);}
+.summary-action{
+ background:linear-gradient(135deg,var(--gulf-turquoise),#07543a);
+ color:#fff;
+ border-color:transparent;
+ box-shadow:0 14px 30px rgba(0,108,53,.23), inset 0 1px 0 rgba(255,255,255,.18);
+ padding-inline:18px;
+}
+.summary-action .action-icon{width:24px;height:24px;display:grid;place-items:center;}
+.summary-action svg{width:24px;height:24px;}
+.lang-action{
+ width:54px;
+ padding-inline:0;
+ color:var(--gulf-turquoise);
+ font-family:var(--font-en);
+ font-weight:950;
+ letter-spacing:.02em;
+}
+.lang-action.active{background:var(--deep);color:#fff;border-color:var(--deep);}
+.policy-action{padding-inline:14px 12px;}
+body.rtl .policy-action{padding-inline:12px 14px;}
+.policy-icon{width:24px;height:24px;display:grid;place-items:center;color:var(--gulf-turquoise);}
+.policy-icon svg{width:25px;height:25px;}
+.policy-switch{
+ width:46px;
+ height:26px;
+ border-radius:999px;
+ padding:3px;
+ background:rgba(122,78,54,.14);
+ border:1px solid rgba(122,78,54,.10);
+ display:inline-flex;
+ justify-content:flex-start;
+ transition:background .2s ease;
+}
+.policy-switch span{
+ width:18px;
+ height:18px;
+ border-radius:50%;
+ background:#fff;
+ box-shadow:0 3px 8px rgba(16,36,29,.22);
+ transition:transform .2s ease;
+}
+.policy-action.active .policy-switch{background:linear-gradient(135deg,var(--gulf-turquoise),var(--gulf-turquoise-light));}
+.policy-action.active .policy-switch span{transform:translateX(20px);}
+body.rtl .policy-action.active .policy-switch span{transform:translateX(-20px);}
+.policy-action.active{border-color:rgba(0,108,53,.24);box-shadow:0 12px 28px rgba(0,108,53,.13), inset 0 1px 0 rgba(255,255,255,.86);}
+body.rtl .nav-action{font-family:var(--font-ar);font-size:.96rem;}
+@media(max-width:1180px){
+ .site-nav-inner{grid-template-columns:1fr;gap:16px;}
+ body.rtl .site-nav-inner{grid-template-columns:1fr;}
+ body.rtl .brand-card,body.rtl .nav-workspace{grid-column:1;grid-row:auto;}
+ .brand-card{max-width:620px;justify-self:stretch;}
+ .site-links,.nav-controls,body.rtl .site-links,body.rtl .nav-controls{justify-content:flex-start;}
+}
+@media(max-width:760px){
+ .site-nav-inner{padding:14px;gap:12px;}
+ .brand-card{border-radius:24px;padding:12px 14px;}
+ .brand-mark{width:50px;height:50px;border-radius:18px;}
+ .brand-copy strong{font-size:1rem;}
+ .brand-copy span{font-size:.78rem;}
+ .site-links{
+ flex-wrap:nowrap;
+ overflow-x:auto;
+ scrollbar-width:none;
+ padding-bottom:10px;
+ }
+ .site-links::-webkit-scrollbar{display:none;}
+ .site-links .nav-link-bi{min-width:max-content;padding:10px 14px;}
+ .nav-controls{display:grid;grid-template-columns:1fr auto;align-items:center;}
+ .summary-action{grid-column:1/-1;width:100%;}
+ .policy-action{min-width:0;}
+}
+
+html{scroll-padding-top:96px!important;}
+body.has-fixed-header{padding-top:0!important;}
+.nav.site-nav,.site-nav,.nav{position:relative!important;top:auto!important;left:auto!important;right:auto!important;width:auto!important;}
+
+.nav .policy-action{
+ min-height:48px;
+ gap:12px;
+ padding:9px 14px;
+ background:linear-gradient(180deg,rgba(255,255,255,.90),rgba(255,249,239,.74)) !important;
+ color:var(--deep) !important;
+ border:1px solid rgba(122,78,54,.16) !important;
+ box-shadow:0 10px 24px rgba(16,36,29,.065), inset 0 1px 0 rgba(255,255,255,.86) !important;
+}
+.nav .policy-action:hover{
+ background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(246,255,243,.78)) !important;
+ border-color:rgba(0,108,53,.26) !important;
+ box-shadow:0 14px 30px rgba(0,108,53,.10), inset 0 1px 0 rgba(255,255,255,.90) !important;
+}
+.nav .policy-action.active{
+ background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(246,255,243,.82)) !important;
+ color:var(--deep) !important;
+ border-color:rgba(0,108,53,.30) !important;
+ box-shadow:0 14px 32px rgba(0,108,53,.11), inset 0 0 0 1px rgba(0,108,53,.10), inset 0 1px 0 rgba(255,255,255,.92) !important;
+}
+.nav .policy-action .policy-icon{
+ width:40px;
+ height:40px;
+ flex:0 0 40px;
+ border-radius:999px;
+ background:rgba(0,108,53,.085);
+ color:var(--gulf-turquoise);
+ box-shadow:inset 0 0 0 1px rgba(0,108,53,.10);
+}
+.nav .policy-action .policy-icon svg{
+ width:34px;
+ height:34px;
+ display:block;
+}
+
+.nav .policy-action .policy-icon img.uae-emblem-img{
+ width:34px;
+ height:34px;
+ display:block;
+ object-fit:contain;
+ border-radius:0;
+ background:#fff;
+}
+.nav .policy-action.active .policy-icon{
+ background:linear-gradient(135deg,rgba(0,108,53,.14),rgba(52,190,149,.12));
+ color:var(--gulf-turquoise);
+}
+.nav .policy-action .control-label{
+ color:var(--deep) !important;
+ font-weight:900;
+ line-height:1;
+ white-space:nowrap;
+}
+.nav .policy-action.active .control-label{
+ color:var(--gulf-turquoise) !important;
+}
+.nav .policy-action .policy-switch{
+ width:48px;
+ height:28px;
+ flex:0 0 48px;
+ padding:3px;
+ border-radius:999px;
+ background:rgba(122,78,54,.13) !important;
+ border:1px solid rgba(122,78,54,.12) !important;
+ box-shadow:inset 0 1px 3px rgba(16,36,29,.12);
+}
+.nav .policy-action .policy-switch span{
+ width:20px;
+ height:20px;
+ background:#fff;
+ box-shadow:0 3px 9px rgba(16,36,29,.24);
+}
+.nav .policy-action.active .policy-switch{
+ background:linear-gradient(135deg,var(--gulf-turquoise),var(--gulf-turquoise-light)) !important;
+ border-color:rgba(0,108,53,.18) !important;
+}
+.nav .policy-action.active .policy-switch span{transform:translateX(20px);}
+body.rtl .nav .policy-action.active .policy-switch span{transform:translateX(-20px);}
+body.rtl .nav .policy-action{direction:rtl;}
+body.rtl .nav .policy-action .control-label{font-family:var(--font-ar);font-size:.98rem;}
+@media(max-width:760px){
+ .nav .policy-action{justify-content:space-between;min-width:min(100%,320px);}
+}
+
+.footer .footer-inner{
+ max-width:980px;
+ margin-inline:auto;
+ text-align:center;
+}
+.footer .footer-review-note,
+.footer .review-footer-note{
+ max-width:920px;
+ margin-left:auto;
+ margin-right:auto;
+ text-align:center;
+ direction:ltr;
+ unicode-bidi:isolate;
+}
+.footer .review-footer-note{
+ margin-top:12px;
+}
+body.rtl .footer .footer-review-note,
+body.rtl .footer .review-footer-note{
+ direction:rtl;
+ text-align:center;
+}
+body.rtl .footer .review-footer-note span{
+ display:inline-block;
+ direction:rtl;
+ unicode-bidi:isolate;
+}
+body.rtl .source-grid,
+body.rtl .docs-grid{
+ direction:rtl;
+}
+body.rtl .source,
+body.rtl .doc-card{
+ text-align:right;
+}
+body.rtl .source a,
+body.rtl .doc-actions{
+ justify-content:center;
+}
+
+body.rtl .section-head{
+ display:block;
+ text-align:center;
+ margin-inline:auto;
+}
+body.rtl .section-head > div,
+body.rtl .section-head .kicker,
+body.rtl .section-head h2,
+body.rtl .section-note{
+ margin-inline:auto;
+ text-align:center;
+}
+body.rtl .section-head h2{
+ max-width:920px;
+ text-wrap:balance;
+}
+body.rtl .section-note{
+ max-width:820px;
+ margin-top:12px;
+ direction:rtl;
+}
+body.rtl .doc-card{
+ direction:rtl;
+ text-align:right;
+ align-items:stretch;
+}
+body.rtl .doc-card h3,
+body.rtl .doc-card .meta{
+ text-align:right;
+ direction:rtl;
+}
+body.rtl .doc-card .badge{
+ align-self:flex-start;
+}
+body.rtl .doc-actions{
+ justify-content:center;
+ direction:rtl;
+}
+body.rtl .doc-actions a,
+body.rtl .doc-actions button{
+ direction:rtl;
+ unicode-bidi:plaintext;
+ text-align:center;
+ white-space:normal;
+}
+body.rtl .control label{
+ direction:rtl;
+ align-items:flex-start;
+}
+body.rtl .control output,
+body.rtl .metric b,
+body.rtl .metric .ltr,
+body.rtl .rank-row b{
+ direction:ltr;
+ unicode-bidi:isolate;
+}
+body.rtl .control small{
+ display:block;
+ direction:rtl;
+ text-align:right;
+ line-height:1.65;
+}
+body.rtl .rank-list{
+ direction:rtl;
+}
+body.rtl .rank-row{
+ grid-template-columns:auto 1fr auto;
+ direction:rtl;
+ text-align:right;
+}
+body.rtl .rank-row b{grid-column:1;grid-row:1;text-align:right;}
+body.rtl .rank-row .rank-main,
+body.rtl .rank-row > span{grid-column:2;grid-row:1;justify-content:flex-start;text-align:right;}
+body.rtl .rank-row em{grid-column:3;grid-row:1;text-align:left;white-space:nowrap;}
+body.rtl .rank-main strong{direction:rtl;text-align:right;}
+body.rtl .project-tag{direction:rtl;white-space:nowrap;}
+body.rtl .badge{
+ direction:rtl;
+ unicode-bidi:plaintext;
+ text-align:center;
+}
+.footer .footer-inner,
+.footer .footer-review-note,
+.footer .review-footer-note,
+body.rtl .footer .footer-inner,
+body.rtl .footer .footer-review-note,
+body.rtl .footer .review-footer-note{
+ text-align:center!important;
+ margin-inline:auto!important;
+ justify-content:center!important;
+}
+body.rtl .footer .review-footer-note span{display:inline;}
+body.rtl .source,
+body.rtl .source p,
+body.rtl .source a{
+ text-align:right;
+ direction:rtl;
+}
+body.rtl .source b{display:block;text-align:right;}
+body.rtl .file-ref::after{
+ content:"";
+}
+@media(max-width:760px){
+ body.rtl .rank-row{grid-template-columns:1fr;}
+ body.rtl .rank-row b,
+ body.rtl .rank-row .rank-main,
+ body.rtl .rank-row > span,
+ body.rtl .rank-row em{grid-column:1;text-align:right;}
+}
+
+:root{
+ --gulf-turquoise:#00A6B4;
+ --gulf-turquoise-light:#32D3C8;
+ --deep:#102A43;
+ --desert-gold:#C9A227;
+ --pearl-mist:#FFF3D2;
+ --paper:#FFFDF7;
+ --gulf-turquoise-deep:#007C92;
+ --aqua-glow:#3ED9D0;
+ --bronze-gold:#B8860B;
+ --space-violet:#7C3AED;
+ --ink:#12212F;
+ --muted:#526476;
+ --line:rgba(184,134,11,.18);
+ --glass:rgba(255,255,255,.78);
+}
+body{background:radial-gradient(circle at 8% 8%,rgba(0,166,180,.20),transparent 28%),radial-gradient(circle at 92% 6%,rgba(124,58,237,.16),transparent 30%),radial-gradient(circle at 55% 90%,rgba(201,162,39,.20),transparent 36%),linear-gradient(135deg,#fffdf7 0%,#fff3d2 42%,#eafcff 100%)}
+body::before{opacity:.05;background-image:linear-gradient(45deg,transparent 45%,var(--desert-gold) 46%,var(--desert-gold) 48%,transparent 49%),linear-gradient(-45deg,transparent 45%,var(--gulf-turquoise) 46%,var(--gulf-turquoise) 48%,transparent 49%)}
+.gradient{background:linear-gradient(110deg,var(--desert-gold),var(--gulf-turquoise),var(--space-violet));-webkit-background-clip:text;background-clip:text;color:transparent}.hero-card::after{background:radial-gradient(circle,rgba(124,58,237,.16),transparent 64%)}.metric::before,.pipe::before{background:linear-gradient(90deg,var(--desert-gold),var(--gulf-turquoise),var(--space-violet))}.cta.primary{background:linear-gradient(135deg,var(--gulf-turquoise),var(--deep));}.badge.supported{background:rgba(0,166,180,.10);color:#006E78;border-color:rgba(0,166,180,.20)}.brand-mark{color:var(--gulf-turquoise)}.summary-action{background:linear-gradient(135deg,var(--gulf-turquoise),var(--deep))}.fixed-line{background:linear-gradient(90deg,transparent,var(--gulf-turquoise),#fff,var(--space-violet),transparent)}
+body.rtl #sumo-dashboard{direction:ltr;font-family:var(--font-en);}
+
+.uae-exec-layer{
+ margin-top:18px;
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:10px;
+ position:relative;
+ z-index:1;
+}
+.uae-trust-item{
+ padding:13px 14px;
+ border-radius:18px;
+ background:rgba(255,255,255,.86);
+ border:1px solid rgba(0,124,137,.14);
+ box-shadow:0 10px 24px rgba(16,36,29,.055);
+}
+.uae-trust-item b{
+ display:block;
+ color:var(--gulf-turquoise-deep);
+ font-size:.78rem;
+ font-weight:900;
+ margin-bottom:4px;
+}
+.uae-trust-item span{
+ display:block;
+ color:var(--muted);
+ font-size:.82rem;
+ line-height:1.45;
+ font-weight:650;
+}
+.evidence-split{
+ margin-top:20px;
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:14px;
+ position:relative;
+ z-index:1;
+}
+.evidence-column{
+ padding:18px;
+ border-radius:22px;
+ background:rgba(255,255,255,.88);
+ border:1px solid rgba(122,78,54,.14);
+ box-shadow:var(--shadow-soft);
+}
+.evidence-column h3{
+ color:var(--deep);
+ font-size:.98rem;
+ line-height:1.28;
+ margin-bottom:10px;
+}
+.evidence-column ul{
+ display:grid;
+ gap:8px;
+ padding-inline-start:18px;
+ color:var(--muted);
+ font-weight:650;
+ line-height:1.45;
+ font-size:.9rem;
+}
+.evidence-column.proposed{
+ border-color:rgba(0,124,137,.22);
+ background:linear-gradient(135deg,rgba(255,255,255,.90),rgba(234,252,255,.66));
+}
+.pdf-evidence-grid{
+ margin-top:14px;
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:10px;
+ position:relative;
+ z-index:1;
+}
+.pdf-evidence-card{
+ padding:14px;
+ border-radius:18px;
+ background:rgba(255,255,255,.86);
+ border:1px solid rgba(0,124,137,.14);
+ box-shadow:0 10px 22px rgba(16,36,29,.055);
+ min-height:150px;
+}
+.pdf-evidence-card b{
+ display:block;
+ color:var(--bronze-gold);
+ font-size:.84rem;
+ margin-bottom:7px;
+}
+.pdf-evidence-card span{
+ display:block;
+ color:var(--muted);
+ font-size:.82rem;
+ line-height:1.48;
+ font-weight:650;
+}
+.cta.primary{
+ letter-spacing:0;
+}
+.cta[href="#vault"]{
+ border-color:rgba(0,124,137,.24);
+ color:var(--gulf-turquoise-deep);
+}
+.nav .summary-action .control-label{
+ white-space:normal;
+}
+.lang-action{
+ width:auto;
+ min-width:72px;
+ padding-inline:12px;
+}
+.premium-focus-note{
+ border-color:rgba(0,124,137,.18);
+ background:linear-gradient(135deg,rgba(255,255,255,.86),rgba(234,252,255,.54));
+}
+body.rtl .uae-exec-layer,
+body.rtl .evidence-split,
+body.rtl .evidence-column,
+body.rtl .pdf-evidence-grid,
+body.rtl .pdf-evidence-card{
+ direction:rtl;
+ text-align:right;
+}
+body.rtl .evidence-column ul{padding-inline-start:0;padding-inline-end:18px;}
+@media(max-width:960px){
+ .uae-exec-layer{grid-template-columns:repeat(2,1fr);}
+ .evidence-split{grid-template-columns:1fr;}
+ .pdf-evidence-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:760px){
+ .hero{gap:14px;}
+ .hero-card{padding:20px!important;}
+ .lead{font-size:1rem;line-height:1.62;margin-bottom:14px;}
+ .eyebrow{margin-bottom:14px;}
+ .badge-row .badge:nth-child(n+4){display:none;}
+ .uae-exec-layer{grid-template-columns:1fr;gap:8px;}
+ .uae-trust-item{padding:12px 13px;border-radius:16px;}
+ .evidence-split{margin-top:14px;gap:10px;}
+ .evidence-column{padding:15px;border-radius:18px;}
+ .pdf-evidence-grid{grid-template-columns:1fr;gap:9px;}
+ .pdf-evidence-card{min-height:auto;}
+ .cta-row{display:grid;grid-template-columns:1fr;gap:10px;}
+ .cta{width:100%;min-height:52px;text-align:center;}
+ .site-links .nav-link-bi:nth-child(n+4){display:none;}
+ .nav-controls{grid-template-columns:1fr auto!important;}
+ .lang-action{min-width:64px;}
+}
+
+.aus-proposal-card{
+ border-color:rgba(0,166,180,.26);
+ background:linear-gradient(135deg,rgba(255,255,255,.90),rgba(244,251,251,.88));
+}
+.aus-proposal-card h3{color:var(--gulf-turquoise-deep);}
+.aus-proposal-card .doc-actions a.primary{background:linear-gradient(135deg,var(--gulf-turquoise),var(--space-violet));}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div aria-hidden="true" class="fixed-line"></div>
+<header aria-label="Primary navigation" class="nav site-nav">
+<div class="nav-inner site-nav-inner">
+<a aria-label="El Ghali Sany UAE portfolio home" class="logo brand-card" href="#top">
+<span aria-hidden="true" class="logo-mark brand-mark">
+<svg aria-hidden="true" class="zaouia-node" focusable="false" viewbox="0 0 64 64">
+<g class="soft-layer" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
+<path d="M32 7 43.5 11.5 52.5 20.5 57 32 52.5 43.5 43.5 52.5 32 57 20.5 52.5 11.5 43.5 7 32 11.5 20.5 20.5 11.5Z"></path>
+<path d="M32 12 44 20 52 32 44 44 32 52 20 44 12 32 20 20Z"></path>
+<path d="M16 16 48 16 48 48 16 48Z"></path>
+<path d="M32 8 56 32 32 56 8 32Z"></path>
+</g>
+<g class="node-link" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2">
+<path d="M32 16v32M16 32h32"></path>
+<path d="M21 21 43 43"></path>
+<path d="M43 21 21 43"></path>
+<path d="M32 32 32 8"></path>
+<path d="M32 32 56 32"></path>
+<path d="M32 32 32 56"></path>
+<path d="M32 32 8 32"></path>
+<path d="M32 32 49 15"></path>
+<path d="M32 32 49 49"></path>
+<path d="M32 32 15 49"></path>
+<path d="M32 32 15 15"></path>
+</g>
+<g class="node-core" fill="currentColor">
+<circle cx="32" cy="32" r="3.8"></circle>
+<circle cx="32" cy="8" r="2.5"></circle>
+<circle cx="56" cy="32" r="2.5"></circle>
+<circle cx="32" cy="56" r="2.5"></circle>
+<circle cx="8" cy="32" r="2.5"></circle>
+<circle cx="15" cy="15" r="2.2"></circle>
+<circle cx="49" cy="15" r="2.2"></circle>
+<circle cx="49" cy="49" r="2.2"></circle>
+<circle cx="15" cy="49" r="2.2"></circle>
+</g>
+</svg>
+</span>
+<span class="brand-copy">
+<strong><span data-ar="الغالي ساني" data-en="El Ghali Sany" id="brandName">El Ghali Sany</span></strong>
+<span data-ar="محفظة أدلة أكاديمية لبرنامج AUS MSEP" data-en="AUS MSEP Academic Evidence Portfolio" id="brandSubtitle">AUS MSEP Academic Evidence Portfolio</span>
+</span>
+</a>
+<div class="nav-workspace">
+<nav aria-label="Portfolio sections" class="nav-links site-links">
+<a class="nav-link-bi" href="#context"><span class="nav-num">01</span><span class="nav-title" data-ar="السياق الإماراتي" data-en="UAE Context">UAE Context</span><span class="ar-hover">السياق الإماراتي</span></a>
+<a class="nav-link-bi" href="#human"><span class="nav-num">02</span><span class="nav-title" data-ar="بناء القدرات" data-en="Capability">Capability</span><span class="ar-hover">بناء القدرات</span></a>
+<a class="nav-link-bi" href="#pfe"><span class="nav-num">03</span><span class="nav-title" data-ar="البحث التطبيقي" data-en="Applied Research">Applied Research</span><span class="ar-hover">البحث التطبيقي</span></a>
+<a class="nav-link-bi" href="#methods"><span class="nav-num">04</span><span class="nav-title" data-ar="المناهج" data-en="Methods">Methods</span><span class="ar-hover">المناهج</span></a>
+<a class="nav-link-bi" href="#vault"><span class="nav-num">05</span><span class="nav-title" data-ar="مستودع الأدلة" data-en="Academic Evidence Repository">Academic Evidence Repository</span><span class="ar-hover">مستودع الأدلة الأكاديمية</span></a>
+<a class="nav-link-bi" href="#reality"><span class="nav-num">06</span><span class="nav-title" data-ar="النطاق والأدلة" data-en="Scope &amp; Evidence">Scope &amp; Evidence</span><span class="ar-hover">النطاق والأدلة</span></a>
+</nav>
+<div aria-label="Interface controls" class="nav-controls">
+<button class="nav-action summary-action active" id="summaryBtn" type="button">
+<span aria-hidden="true" class="action-icon"><svg viewbox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8A2.5 2.5 0 0 1 17.5 16H13v2.25h3.25a.9.9 0 0 1 0 1.8h-8.5a.9.9 0 0 1 0-1.8H11V16H6.5A2.5 2.5 0 0 1 4 13.5v-8Zm2.5-.7a.7.7 0 0 0-.7.7v8c0 .39.31.7.7.7h11a.7.7 0 0 0 .7-.7v-8a.7.7 0 0 0-.7-.7h-11Zm2.1 2.45h6.8a.9.9 0 0 1 0 1.8H8.6a.9.9 0 1 1 0-1.8Zm0 3.2h4.2a.9.9 0 1 1 0 1.8H8.6a.9.9 0 1 1 0-1.8Z" fill="currentColor"></path></svg></span>
+<span class="control-label" data-ar="الملخص الأكاديمي" data-en="Academic Summary">Academic Summary</span>
+</button>
+<button aria-label="التبديل إلى العربية" aria-pressed="false" class="nav-action lang-action" id="langBtn" type="button">العربية</button>
+</div>
+</div>
+</div>
+</header>
+<main class="container" id="main">
+<section aria-labelledby="heroTitle" class="hero" id="top">
+<div class="hero-card">
+<div class="eyebrow" data-ar="ملف قبول AUS MSEP · اقتصاد تطبيقي · تقييم سياسات قائم على البيانات" data-en="AUS MSEP admissions supplement · applied economics · data-based policy evaluation">AUS MSEP admissions supplement · applied economics · data-based policy evaluation</div>
+<h1 id="heroTitle"><span data-ar="هل تحقق استثمارات المرور الذكي في دبي منافع رفاه قابلة للقياس؟" data-en="Do Dubai smart-traffic investments produce measurable welfare gains?">Do Dubai smart-traffic investments produce measurable welfare gains?</span> <span class="gradient" data-ar="محفظة اقتصاد وسياسات لبرنامج AUS MSEP." data-en="Economics and policy portfolio for AUS MSEP.">Economics and policy portfolio for AUS MSEP.</span></h1>
+<p class="lead" data-ar="يعرض هذا الملف ملاءمتي لبرنامج AUS MSEP عبر سؤال بحث واضح: قياس أثر استثمارات المرور الذكي في دبي على التأخير، موثوقية الرحلات، السلامة، الانبعاثات، والعائد الصافي على الرفاه باستخدام DiD/Event Study عند توافر البيانات، ثم CBA وقواعد خفض الادعاء عند ضعف التعريف السببي." data-en="This portfolio presents my AUS MSEP fit through one research question: whether Dubai smart-traffic investments reduce delay, improve travel-time reliability, affect safety and emissions, and generate net welfare returns using DiD/Event Study where data allow, followed by CBA and downgrade rules when causal identification is weak.">This portfolio presents my AUS MSEP fit through one research question: whether Dubai smart-traffic investments reduce delay, improve travel-time reliability, affect safety and emissions, and generate net welfare returns using DiD/Event Study where data allow, followed by CBA and downgrade rules when causal identification is weak.</p>
+<div class="badge-row">
+<span class="badge supported" data-ar="قبول AUS MSEP" data-en="AUS MSEP admissions">AUS MSEP admissions</span>
+<span class="badge supported" data-ar="سياق دبي المروري" data-en="Dubai traffic context">Dubai traffic context</span>
+<span class="badge supported" data-ar="حوكمة بيانات PDPL" data-en="PDPL-aware data governance">PDPL-aware data governance</span>
+<span class="badge supported" data-ar="DiD / Event Study / CBA" data-en="DiD / Event Study / CBA">DiD / Event Study / CBA</span>
+</div>
+<div class="cta-row">
+<button class="cta primary" data-ar="راجع ملخص الدقيقتين" data-en="Review 2-Minute Summary" id="summaryBtn2" type="button">Review 2-Minute Summary</button>
+<a class="cta" data-ar="افتح حزمة الأدلة" data-en="Open Evidence Pack" href="#vault">Open Evidence Pack</a>
+<a class="cta" data-ar="راجع سياق الإمارات" data-en="Review UAE Context" href="#context">Review UAE Context</a>
+</div>
+<div aria-label="AUS MSEP academic fit signals" class="uae-exec-layer">
+<div class="uae-trust-item"><b data-ar="سؤال البحث" data-en="Research Question">Research Question</b><span data-ar="الأثر المقابل لعدم التدخل والعائد الصافي على الرفاه، وليس وصف تقنية المرور." data-en="Counterfactual impact and net welfare return, not a description of traffic technology.">Counterfactual impact and net welfare return, not a description of traffic technology.</span></div>
+<div class="uae-trust-item"><b data-ar="البيانات" data-en="Data">Data</b><span data-ar="توقيت التدخل، الجغرافيا، النتائج، الضوابط، وبدائل DLD عند تعذر بيانات المرور." data-en="Treatment timing, geography, outcomes, controls, and DLD fallback when traffic data are unavailable.">Treatment timing, geography, outcomes, controls, and DLD fallback when traffic data are unavailable.</span></div>
+<div class="uae-trust-item"><b data-ar="التعريف السببي" data-en="Identification">Identification</b><span data-ar="DiD/Event Study أولاً، ثم Hedonic أو سيناريوهات مع خفض واضح لمستوى الادعاء." data-en="DiD/Event Study first, then hedonic or scenario appraisal with explicit claim downgrading.">DiD/Event Study first, then hedonic or scenario appraisal with explicit claim downgrading.</span></div>
+<div class="uae-trust-item"><b data-ar="جاهزية المساعدة البحثية" data-en="GA Readiness">GA Readiness</b><span data-ar="تنظيف بيانات، توثيق مصادر، لوحات قياس، تحليل حساسية، ومراجعة افتراضات." data-en="Data cleaning, source documentation, dashboards, sensitivity analysis, and assumption review.">Data cleaning, source documentation, dashboards, sensitivity analysis, and assumption review.</span></div>
+</div>
+<div class="evidence-split" aria-label="Completed and proposed evidence">
+<article class="evidence-column"><h3 data-ar="أدلة منجزة" data-en="Completed Evidence">Completed Evidence</h3><ul><li data-ar="مشروع الدار البيضاء: QGIS/SUMO، وتحليل حساسات المرور، ومقارنة مواقع Maârif وHay Hassani وBen M'Sick وBoulevard Mohammed V وSidi Maârouf." data-en="Casablanca PFE: QGIS/SUMO, traffic-sensor analysis, and location comparison across Maârif, Hay Hassani, Ben M'Sick, Boulevard Mohammed V, and Sidi Maârouf.">Casablanca PFE: QGIS/SUMO, traffic-sensor analysis, and location comparison across Maârif, Hay Hassani, Ben M'Sick, Boulevard Mohammed V, and Sidi Maârouf.</li><li data-ar="نموذج مالي لخمس سنوات يقارن OOH/DOOH عبر CAPEX/OPEX وTCO ونقطة التعادل وROI وIRP." data-en="Five-year OOH/DOOH financial model covering CAPEX/OPEX, TCO, break-even, ROI, and IRP.">Five-year OOH/DOOH financial model covering CAPEX/OPEX, TCO, break-even, ROI, and IRP.</li><li data-ar="ورقة AI-MCDM: XGBoost، وDNPV معدّل بالكربون، وReal Options، وFuzzy-AHP/MEREC، وترتيب AROMAN." data-en="AI-MCDM paper: XGBoost, carbon-adjusted DNPV, Real Options, Fuzzy-AHP/MEREC, and AROMAN ranking.">AI-MCDM paper: XGBoost, carbon-adjusted DNPV, Real Options, Fuzzy-AHP/MEREC, and AROMAN ranking.</li></ul></article>
+<article class="evidence-column proposed"><h3 data-ar="مقترح AUS MSEP" data-en="Proposed AUS MSEP Research">Proposed AUS MSEP Research</h3><ul><li data-ar="يبدأ من مركز دبي لأنظمة المرور الذكية بقيمة 590 مليون درهم وتوسيع تغطية ITS من 11% إلى 60%." data-en="Starts from Dubai's AED 590m Intelligent Traffic Systems Centre and ITS coverage expansion from 11% to 60%.">Starts from Dubai's AED 590m Intelligent Traffic Systems Centre and ITS coverage expansion from 11% to 60%.</li><li data-ar="يختبر مكاسب UTC-UX المعلنة بنسبة 16%–37% عبر سجل تدخلات وDiD/Event Study إذا سمحت البيانات." data-en="Tests reported UTC-UX 16%–37% flow gains through a treatment registry and DiD/Event Study if data allow.">Tests reported UTC-UX 16%–37% flow gains through a treatment registry and DiD/Event Study if data allow.</li><li data-ar="إذا فشلت بوابة البيانات، ينتقل التصميم إلى Hedonic عبر بيانات DLD ثم إلى تقييم سيناريوهات بدون ادعاء سببي مبالغ." data-en="If the data gate fails, the design downgrades to a DLD hedonic fallback and then scenario appraisal without overstated causal claims.">If the data gate fails, the design downgrades to a DLD hedonic fallback and then scenario appraisal without overstated causal claims.</li></ul></article>
+</div>
+<div class="pdf-evidence-grid" aria-label="Extracted PDF evidence">
+<article class="pdf-evidence-card"><b data-ar="المقترح البحثي" data-en="Research Proposal">Research Proposal</b><span data-ar="DITSC بقيمة 590 مليون درهم، تغطية ITS من 11% إلى 60%، ومكاسب UTC-UX المعلنة 16%–37% كدافع بحثي لا كدليل سببي." data-en="AED 590m DITSC, ITS coverage from 11% to 60%, and reported UTC-UX 16%–37% gains framed as research motivation, not causal proof.">AED 590m DITSC, ITS coverage from 11% to 60%, and reported UTC-UX 16%–37% gains framed as research motivation, not causal proof.</span></article>
+<article class="pdf-evidence-card"><b data-ar="ورقة AI-MCDM" data-en="AI-MCDM Paper">AI-MCDM Paper</b><span data-ar="خفض XGBoost خطأ MAE بنسبة 45.8% مقابل Ridge؛ وأعاد سعر كربون €85 ترتيب 5/25 مشاريع و€150 ترتيب 12/25." data-en="XGBoost reduced MAE by 45.8% versus Ridge; €85 carbon stress re-ranked 5/25 projects and €150 re-ranked 12/25.">XGBoost reduced MAE by 45.8% versus Ridge; €85 carbon stress re-ranked 5/25 projects and €150 re-ranked 12/25.</span></article>
+<article class="pdf-evidence-card"><b data-ar="مشروع PFE" data-en="PFE Project">PFE Project</b><span data-ar="منهج DOOH في الدار البيضاء جمع المرور المكاني مع CAPEX/OPEX وTCO ونقطة التعادل وROI لتقييم المواقع." data-en="Casablanca DOOH work combined spatial traffic exposure with CAPEX/OPEX, TCO, break-even, and ROI for location appraisal.">Casablanca DOOH work combined spatial traffic exposure with CAPEX/OPEX, TCO, break-even, and ROI for location appraisal.</span></article>
+<article class="pdf-evidence-card"><b data-ar="السيرة الذاتية" data-en="CV Evidence">CV Evidence</b><span data-ar="High Honors، خبرة VBA/Power Query خفضت دورة التقارير 40%، ومهارات DiD/CBA/QGIS/SUMO/Power BI." data-en="High Honors, VBA/Power Query work that reduced reporting cycle time by 40%, and DiD/CBA/QGIS/SUMO/Power BI skill evidence.">High Honors, VBA/Power Query work that reduced reporting cycle time by 40%, and DiD/CBA/QGIS/SUMO/Power BI skill evidence.</span></article>
+</div>
+</div>
+<aside aria-label="Key portfolio evidence metrics" class="hero-side">
+<article class="metric" id="metric1"><b class="ltr" id="metric1Value">AED 590m</b><span data-ar="حجم استثمار DITSC في دبي، مع توسيع تغطية ITS من 11% إلى 60%؛ يُستخدم كدافع بحثي لا كادعاء إنجاز شخصي." data-en="Scale of Dubai's DITSC investment, with ITS coverage expansion from 11% to 60%; used as research motivation, not a personal delivery claim." id="metric1Text">Scale of Dubai's DITSC investment, with ITS coverage expansion from 11% to 60%; used as research motivation, not a personal delivery claim.</span><small class="metric-note" hidden="" id="metric1Note"></small></article>
+<article class="metric" id="metric2"><b class="ltr" id="metric2Value">45.8%</b><span data-ar="انخفاض MAE لـ XGBoost مقارنةً بـ Ridge في الورقة المستقلة؛ يُعامل كدليل تنبؤي وليس كبرهان سببي." data-en="MAE reduction of XGBoost versus Ridge in the independent working paper; treated as forecasting evidence, not causal proof." id="metric2Text">MAE reduction of XGBoost versus Ridge in the independent working paper; treated as forecasting evidence, not causal proof.</span><small class="metric-note" hidden="" id="metric2Note"></small></article>
+<article class="metric" id="metric3"><b class="ltr" id="metric3Value">25/25</b><span data-ar="حالات استثمار في البنية التحتية اختلف ترتيبها عن NPV فقط عند استخدام MCDA/AROMAN عبر العائد والكربون والمخاطر والجاهزية المؤسسية." data-en="Infrastructure investment cases whose MCDA/AROMAN ranking differed from NPV-only logic across return, carbon exposure, risk, and institutional readiness." id="metric3Text">Infrastructure investment cases whose MCDA/AROMAN ranking differed from NPV-only logic across return, carbon exposure, risk, and institutional readiness.</span><small class="metric-note" hidden="" id="metric3Note"></small></article>
+<article class="metric" id="metric4"><b class="ltr" data-ar="17 مايو 2026" data-en="17 May 2026" id="metric4Value">17 May 2026</b><span data-ar="تاريخ تقديم المقترح: تقييم شبه تجريبي مشروط بالبيانات لاستثمارات المرور الذكي في دبي مع CBA وقواعد خفض الادعاء." data-en="Proposal submission date: a data-gated quasi-experimental evaluation of Dubai smart-traffic investment with CBA and downgrade rules." id="metric4Text">Proposal submission date: a data-gated quasi-experimental evaluation of Dubai smart-traffic investment with CBA and downgrade rules.</span><small class="metric-note" hidden="" id="metric4Note"></small></article>
+</aside>
+</section>
+<section aria-labelledby="contextTitle" class="page-section" id="context">
+<div class="section-head"><div><div class="kicker" data-ar="01 — مشكلة سياسة قابلة للقياس" data-en="01 — Measurable Policy Problem">01 — Measurable Policy Problem</div><h2 data-ar="السياق الإماراتي: إنتاجية التنقل، السلامة، الانبعاثات، وقيمة الوقت." data-en="UAE Context: Mobility Productivity, Safety, Emissions, and Value of Time." id="contextTitle">UAE Context: Mobility Productivity, Safety, Emissions, and Value of Time.</h2></div><p class="section-note" data-ar="يركز الملف على متغيرات تصلح لتقييم اقتصادي: التأخير، السرعة، موثوقية الرحلات، الحوادث، الانبعاثات، CAPEX/OPEX، وقيمة الوقت. لا يستخدم السياق الإماراتي كزخرفة ثقافية، بل كبيئة سياسة عامة وبيانات." data-en="The portfolio focuses on variables that can support economic evaluation: delay, speed, travel-time reliability, crashes, emissions, CAPEX/OPEX, and value of time. UAE context is used as a policy and data environment, not as cultural decoration.">The portfolio focuses on variables that can support economic evaluation: delay, speed, travel-time reliability, crashes, emissions, CAPEX/OPEX, and value of time. UAE context is used as a policy and data environment, not as cultural decoration.</p></div>
+<div class="grid-3">
+<article class="panel"><h3 data-ar="المخرجات المرورية" data-en="Transport Outcomes">Transport Outcomes</h3><p data-ar="يقيس التصميم التأخير، فقدان السرعة، موثوقية زمن الرحلة، الحوادث، والانبعاثات قبل تحويلها إلى قيمة اقتصادية." data-en="The design measures delay, speed loss, travel-time reliability, crashes, and emissions before translating them into economic value.">The design measures delay, speed loss, travel-time reliability, crashes, and emissions before translating them into economic value.</p></article>
+<article class="panel"><h3 data-ar="تكلفة ومنفعة عامة" data-en="Public Cost and Benefit">Public Cost and Benefit</h3><p data-ar="تُقيّم الاستثمارات عبر CAPEX/OPEX، قيمة الوقت، السلامة، الانبعاثات، NPV، BCR، وتحليل الحساسية." data-en="Investment is evaluated through CAPEX/OPEX, value of time, safety, emissions, NPV, BCR, and sensitivity analysis.">Investment is evaluated through CAPEX/OPEX, value of time, safety, emissions, NPV, BCR, and sensitivity analysis.</p></article>
+<article class="panel"><h3 data-ar="قيود البيانات" data-en="Data Constraints">Data Constraints</h3><p data-ar="يعترف التصميم بأن بيانات التوقيت والجغرافيا والضوابط قد لا تكون كاملة؛ لذلك يحدد بدائل منهجية قبل الادعاء السببي." data-en="The design recognizes that timing, geography, and control data may be incomplete, so it defines fallback methods before making causal claims.">The design recognizes that timing, geography, and control data may be incomplete, so it defines fallback methods before making causal claims.</p></article>
+</div>
+</section>
+<section aria-labelledby="humanTitle" class="page-section" id="human">
+<div class="section-head"><div><div class="kicker" data-ar="02 — القدرة الأكاديمية" data-en="02 — Academic Capability">02 — Academic Capability</div><h2 data-ar="مسار قدرات نحو بحث تقييم السياسات في AUS." data-en="A capability pipeline toward AUS policy-evaluation research." id="humanTitle">A capability pipeline toward AUS policy-evaluation research.</h2></div><p class="section-note" data-ar="يعرض هذا القسم الانتقال من المالية والمحاسبة وسلاسل الإمداد إلى الاقتصاد التطبيقي: تحليل التعرّض المروري، والتقييم المكاني، والتنبؤ، وتحليل المنافع والتكاليف، وتقييم السياسات المبني على الأدلة." data-en="This section shows the transition from finance, accounting, and supply-chain coursework into applied economics: traffic-exposure analysis, spatial appraisal, forecasting, CBA, and evidence-aware policy evaluation.">This section shows the transition from finance, accounting, and supply-chain coursework into applied economics: traffic-exposure analysis, spatial appraisal, forecasting, CBA, and evidence-aware policy evaluation.</p></div>
+<div class="arch-board">
+<div class="timeline">
+<article class="tl-item" data-step="1"><b data-ar="2022–2025 · قاعدة مالية ومحاسبية" data-en="2022–2025 · Finance &amp; Accounting Base">2022–2025 · Finance &amp; Accounting Base</b><span data-ar="إدارة، وتمويل، ومحاسبة، وتحليل مخاطر، وربط الأداء بالتكلفة والعائد." data-en="Management, finance, accounting, risk analysis, and cost-return reasoning.">Management, finance, accounting, risk analysis, and cost-return reasoning.</span></article>
+<article class="tl-item" data-step="2"><b data-ar="2024–2026 · الواقع المهني" data-en="2024–2026 · Market Reality">2024–2026 · Market Reality</b><span data-ar="خبرات في التحصيل، وإعداد التقارير، وتقسيم المحافظ، وتقييم الاستثمارات الإعلانية." data-en="Debt recovery, reporting, portfolio segmentation, and advertising-investment appraisal.">Debt recovery, reporting, portfolio segmentation, and advertising-investment appraisal.</span></article>
+<article class="tl-item" data-step="3"><b data-ar="2025 · مشروع تقييم التعرض المروري" data-en="2025 · Traffic-Appraisal Project">2025 · Traffic-Appraisal Project</b><span data-ar="مشروع الدار البيضاء: SUMO/GIS، والتعرّض المروري، وCAPEX/OPEX، وROI، وتقييم المواقع." data-en="Casablanca project: SUMO/GIS, traffic exposure, CAPEX/OPEX, ROI, and location scoring.">Casablanca project: SUMO/GIS, traffic exposure, CAPEX/OPEX, ROI, and location scoring.</span></article>
+<article class="tl-item" data-step="4"><b data-ar="2025–2027 · جاهزية كمية ومساعدة بحثية" data-en="2025–2027 · Quantitative &amp; GA Readiness">2025–2027 · Quantitative &amp; GA Readiness</b><span data-ar="تنظيف بيانات، Excel/VBA، Power Query، Power BI، SQL أساسي، QGIS/SUMO، تحليل حساسية، وتوثيق افتراضات لمساندة بحث أعضاء هيئة التدريس." data-en="Data cleaning, Excel/VBA, Power Query, Power BI, basic SQL, QGIS/SUMO, sensitivity analysis, and assumption documentation to support faculty research.">Data cleaning, Excel/VBA, Power Query, Power BI, basic SQL, QGIS/SUMO, sensitivity analysis, and assumption documentation to support faculty research.</span></article>
+</div>
+<div class="dashboard">
+<article class="skill" data-highlight="1"><b data-ar="التمويل" data-en="Finance">Finance</b><p data-ar="تحويل المؤشرات الحضرية إلى NPV، TCO، ROI، CAPEX، وOPEX." data-en="Converting urban signals into NPV, TCO, ROI, CAPEX, and OPEX.">Converting urban signals into NPV, TCO, ROI, CAPEX, and OPEX.</p></article>
+<article class="skill" data-highlight="2"><b data-ar="العمليات" data-en="Operations">Operations</b><p data-ar="قراءة التدفقات، نقاط الاختناق، وسلاسل القرار في البنية التحتية." data-en="Reading flows, bottlenecks, and decision chains in infrastructure.">Reading flows, bottlenecks, and decision chains in infrastructure.</p></article>
+<article class="skill" data-highlight="3"><b data-ar="الذكاء الاصطناعي / MCDA" data-en="Forecasting & MCDA">Forecasting & MCDA</b><p data-ar="XGBoost، AROMAN، TOPSIS، COPRAS، وتحليل الحساسية." data-en="XGBoost, AROMAN, TOPSIS, COPRAS, and sensitivity analysis.">XGBoost, AROMAN, TOPSIS, COPRAS, and sensitivity analysis.</p></article>
+<article class="skill" data-highlight="4"><b data-ar="الحوكمة والأخلاقيات" data-en="Governance &amp; Ethics">Governance &amp; Ethics</b><p data-ar="قانون حماية البيانات الشخصية PDPL، وأخلاقيات الذكاء الاصطناعي، ومسارات تدقيق جاهزة للمراجعة." data-en="PDPL, data minimization, model documentation, transparency, and reviewer-ready audit trails.">PDPL, data minimization, model documentation, transparency, and reviewer-ready audit trails.</p></article>
+</div>
+</div>
+</section>
+<section aria-labelledby="pfeTitle" class="page-section" id="pfe">
+<div class="section-head"><div><div class="kicker" data-ar="03 — البحث التطبيقي السابق" data-en="03 — Prior Applied Research">03 — Prior Applied Research</div><h2 data-ar="من تقييم التعرض المروري في الدار البيضاء إلى تقييم السياسات في دبي." data-en="From Casablanca traffic-exposure appraisal to Dubai policy evaluation." id="pfeTitle">From Casablanca traffic-exposure appraisal to Dubai policy evaluation.</h2></div><p class="section-note" data-ar="يُستخدم مشروع الدار البيضاء كدليل منهجي سابق: التعرض المروري، القيمة المالية، القيود التنظيمية، التحليل المكاني، وتقييم الاستثمار. ولا يُقدَّم كدليل تنفيذ داخل الإمارات." data-en="The Casablanca project is used as prior methodological evidence: traffic exposure, financial value, regulatory constraints, spatial analysis, and investment appraisal. It is not presented as evidence of an implemented UAE system.">The Casablanca project is used as prior methodological evidence: traffic exposure, financial value, regulatory constraints, spatial analysis, and investment appraisal. It is not presented as evidence of an implemented UAE system.</p></div>
+<div class="map-shell">
+<div aria-label="Smart city asset comparison map" class="smart-map mode-ooh" data-ar="وضع الأصول التقليدية · CAPEX أقل، تعرّض ثابت، ونقطة تعادل أسرع." data-en="Traditional Asset Mode · Lower CAPEX, static exposure, accelerated break-even." id="smartMap">
+<div class="map-road r1"></div><div class="map-road r2"></div><div class="map-road r3"></div><div class="map-road r4"></div>
+<div class="node n1"></div><div class="node n2"></div><div class="node n3"></div><div class="node n4"></div><div class="node n5"></div><div class="node n6"></div>
+<div class="map-label" data-ar="وضع الأصول التقليدية · CAPEX أقل، تعرّض ثابت، ونقطة تعادل أسرع." data-en="Traditional Asset Mode · Lower CAPEX, static exposure, accelerated break-even." id="mapLabel">Traditional Asset Mode · Lower CAPEX, static exposure, accelerated break-even.</div>
+</div>
+<div class="panel">
+<div class="switch-row"><button class="active" data-ar="تقليدي" data-en="Traditional" data-mode="ooh" type="button">Traditional</button><button data-ar="جاهز للمستقبل" data-en="Future-Ready" data-mode="dooh" type="button">Future-Ready</button><button data-ar="هجين" data-en="Hybrid" data-mode="hybrid" type="button">Hybrid</button></div>
+<h3 data-ar="لوحة تقييم الأصول الحضرية" data-en="Urban Asset Appraisal Dashboard">Urban Asset Appraisal Dashboard</h3>
+<p data-ar="قيّم المشروع الأصلي أصول OOH/DOOH عبر التعرض المروري والمؤشرات الاجتماعية والاقتصادية وCAPEX/OPEX وROI والقيود التنظيمية. أما قيمته بالنسبة إلى AUS فهي نقل المنهج: التقييم المكاني وحدود الادعاء المنضبطة." data-en="The original project evaluated OOH/DOOH advertising assets through traffic exposure, socioeconomic proxies, CAPEX/OPEX, ROI, and regulatory constraints. For AUS, the value is the method transfer: spatial appraisal and disciplined claim boundaries." id="modeText">The original project evaluated OOH/DOOH advertising assets through traffic exposure, socioeconomic proxies, CAPEX/OPEX, ROI, and regulatory constraints. For AUS, the value is the method transfer: spatial appraisal and disciplined claim boundaries.</p>
+<div class="small-note" data-ar="الهدف ليس نقل تجربة الدار البيضاء حرفياً إلى الإمارات، بل تحويل المنهج إلى أداة معايرة: ما الذي يتغير عندما تكون البيانات أعمق، ومعايير الحوكمة أعلى، والطموح الكربوني أوضح؟" data-en="The objective is not to copy Casablanca into the UAE; it is to transfer the method into a calibration tool: what changes when data depth, governance standards, and carbon ambition are higher?">The objective is not to copy Casablanca into the UAE; it is to transfer the method into a calibration tool: what changes when data depth, governance standards, and carbon ambition are higher?</div>
+</div>
+</div>
+<div aria-label="Leaflet SUMO traffic simulation dashboard" class="egs-sumo-shell panel" id="sumo-dashboard">
+<div class="ph"><b data-ar="مختبر نقل منهج Leaflet/SUMO" data-en="Leaflet/SUMO Transfer Lab">Leaflet/SUMO Transfer Lab</b><span class="ph-en" data-ar="تم الاحتفاظ بنموذج محاكاة حركة المرور في الدار البيضاء بوصفه طبقة منهجية تطبيقية." data-en="The Casablanca traffic simulation model is preserved as the empirical method layer.">The Casablanca traffic simulation model is preserved as the empirical method layer.</span></div>
+<div class="pb">
+<div class="egs-sumo-toolbar"><button class="egs-mode-btn active" data-ar="خريطة حرارية" data-egs-mode="heatmap" data-en="Heatmap">Heatmap</button><button class="egs-mode-btn" data-ar="محاكاة" data-egs-mode="simulation" data-en="Simulation">Simulation</button><button class="egs-zone-btn active" data-egs-zone="maarif">Maârif</button><button class="egs-zone-btn" data-egs-zone="hay_hassani">Hay Hassani</button><button class="egs-zone-btn" data-egs-zone="ben_msick">Ben M'Sick</button><button class="egs-zone-btn" data-egs-zone="sidi_maarouf">Sidi Maârouf</button><button class="egs-zone-btn" data-egs-zone="bd_mohammed_v">Bd. Mohammed V</button></div>
+<div class="egs-sumo-grid"><div class="egs-map-wrap"><div id="egsSumoMap"></div><canvas id="egsTrafficCanvas"></canvas><div class="egs-map-badge"><strong data-ar="طبقة أدلة SUMO/GIS" data-en="SUMO/GIS Evidence Layer" id="egsStatusTitle">SUMO/GIS Evidence Layer</strong><span data-ar="اختر منطقة لفحص الخريطة الحرارية أو محاكاة المركبات." data-en="Load a zone to inspect heatmap or vehicle simulation." id="egsStatusText">Load a zone to inspect heatmap or vehicle simulation.</span></div><div class="egs-legend"><span data-ar="بطيء" data-en="Slow"><i class="egs-dot red"></i>Slow</span><span data-ar="متوسط" data-en="Medium"><i class="egs-dot yellow"></i>Medium</span><span data-ar="سريع" data-en="Fast"><i class="egs-dot green"></i>Fast</span></div></div><aside class="egs-side"><div class="egs-kpis"><div class="egs-kpi"><div class="egs-kpi-label" data-ar="النقاط" data-en="POINTS">POINTS</div><div class="egs-kpi-val" id="egsKpiMain">—</div></div><div class="egs-kpi"><div class="egs-kpi-label" data-ar="المركبات" data-en="VEHICLES">VEHICLES</div><div class="egs-kpi-val" id="egsKpiVehicles">—</div></div><div class="egs-kpi"><div class="egs-kpi-label" data-ar="متوسط السرعة" data-en="AVG SPEED">AVG SPEED</div><div class="egs-kpi-val" id="egsKpiSpeed">—</div></div><div class="egs-kpi"><div class="egs-kpi-label" data-ar="الوضع" data-en="MODE">MODE</div><div class="egs-kpi-val" id="egsKpiMode">—</div></div></div><div class="egs-controls"><div class="egs-control-row" data-ar="نصف قطر الحرارة" data-en="Heat radius"><label data-ar="نصف قطر الحرارة" data-en="Heat radius">Heat radius</label><input id="egsRadiusRange" max="35" min="5" type="range" value="18"/></div><div class="egs-control-row" data-ar="تمويه الحرارة" data-en="Heat blur"><label data-ar="تمويه الحرارة" data-en="Heat blur">Heat blur</label><input id="egsBlurRange" max="35" min="5" type="range" value="20"/></div><div class="egs-control-row" data-ar="الكثافة" data-en="Intensity"><label data-ar="الكثافة" data-en="Intensity">Intensity</label><input id="egsIntensityRange" max="10" min="1" type="range" value="5"/></div><div class="egs-control-row" data-ar="سرعة المركبات" data-en="Vehicle speed"><label data-ar="سرعة المركبات" data-en="Vehicle speed">Vehicle speed</label><input id="egsSpeedRange" max="10" min="1" type="range" value="6"/></div><div class="egs-control-row" data-ar="حجم المركبات" data-en="Vehicle size"><label data-ar="حجم المركبات" data-en="Vehicle size">Vehicle size</label><input id="egsVehicleSizeRange" max="12" min="2" type="range" value="6"/></div><div class="egs-control-buttons"><button class="egs-control-btn" data-ar="إعادة الحرارة" data-en="Reset Heat" id="egsResetHeatmapBtn">Reset Heat</button><button class="egs-control-btn" data-ar="ضبط المحاكاة" data-en="Fit Sim" id="egsResetSimulationBtn">Fit Sim</button><button class="egs-control-btn" data-ar="تشغيل" data-en="Play" id="egsPlayBtn">Play</button><button class="egs-control-btn" data-ar="إيقاف مؤقت" data-en="Pause" id="egsPauseBtn">Pause</button><button class="egs-control-btn" data-ar="إعادة التشغيل" data-en="Restart" id="egsRestartBtn">Restart</button></div></div><p class="egs-note" data-ar="تحافظ هذه اللوحة على طبقة منهج SUMO/GIS من المحفظة الأصلية." data-en="This dashboard preserves the SUMO/GIS method layer from the original portfolio." id="egsAnalysisText">This dashboard preserves the SUMO/GIS method layer from the original portfolio.</p></aside></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="methodsTitle" class="page-section" id="methods">
+<div class="section-head"><div><div class="kicker" data-ar="04 — التعريف السببي والتقييم وتقييم السياسات" data-en="04 — Identification &amp; Appraisal &amp; Policy Evaluation">04 — Identification &amp; Appraisal &amp; Policy Evaluation</div><h2 data-ar="المناهج: التعريف أولاً، ثم التقييم الاقتصادي، ثم التنبؤ." data-en="Methods: identification first, appraisal second, forecasting third." id="methodsTitle">Methods: identification first, appraisal second, forecasting third.</h2></div><p class="section-note" data-ar="يبدأ التصميم البحثي بالتعريف السببي لا بالذكاء الاصطناعي. تُستخدم DiD/Event Study فقط إذا كان توقيت التدخل والجغرافيا والنتائج والضوابط قابلة للدفاع؛ وإلا ينخفض الادعاء إلى مسار Hedonic أو تقييم سيناريوهات." data-en="The research design starts with causal identification, not AI. DiD/event study is attempted only if treatment timing, geography, outcomes, and controls are defensible. If not, the design downgrades to DLD hedonic fallback or scenario appraisal.">The research design starts with causal identification, not AI. DiD/event study is attempted only if treatment timing, geography, outcomes, and controls are defensible. If not, the design downgrades to DLD hedonic fallback or scenario appraisal.</p></div>
+<div class="method-grid">
+<article class="layer"><b data-ar="سجل التدخلات" data-en="Treatment Registry">Treatment Registry</b><p data-ar="توقيت التدخل، وجغرافيا الممرات أو التقاطعات، ومناطق التعرض، ونوافذ النتائج قبل وبعد التنفيذ." data-en="Intervention timing, corridor/intersection geography, exposure buffers, and pre/post outcome windows.">Intervention timing, corridor/intersection geography, exposure buffers, and pre/post outcome windows.</p></article>
+<article class="layer"><b data-ar="التعريف السببي" data-en="Causal Identification">Causal Identification</b><p data-ar="DiD/Event Study فقط عندما تكون متطلبات الاتجاهات المتوازية والضوابط قابلة للدفاع؛ وإلا لا يوجد ادعاء سببي." data-en="DiD/event study where parallel-trend and control requirements are credible; otherwise no causal claim.">DiD/event study where parallel-trend and control requirements are credible; otherwise no causal claim.</p></article>
+<article class="layer"><b data-ar="التقييم الاقتصادي للرفاه" data-en="Welfare Appraisal">Welfare Appraisal</b><p data-ar="CBA باستخدام CAPEX/OPEX، وقيمة الوقت، والسلامة، والانبعاثات، وNPV/BCR، وتحليل الحساسية." data-en="CBA using CAPEX/OPEX, value of time, safety, emissions, NPV/BCR, and sensitivity analysis.">CBA using CAPEX/OPEX, value of time, safety, emissions, NPV/BCR, and sensitivity analysis.</p></article>
+<article class="layer"><b data-ar="التنبؤ وMCDA كأدلة مساندة" data-en="Forecasting &amp; MCDA Evidence">Forecasting &amp; MCDA Evidence</b><p data-ar="يبقى XGBoost وAROMAN دليلاً مسانداً من أعمال سابقة، وليس بديلاً عن التعريف وتقييم السياسات." data-en="XGBoost and AROMAN remain supporting evidence from prior work, not substitutes for policy identification.">XGBoost and AROMAN remain supporting evidence from prior work, not substitutes for policy identification.</p></article>
+</div><div class="small-note" data-ar="بروتوكول حوكمة البيانات: يطبق التصميم تقليل البيانات، وتحديد الغرض، وتوثيق المصادر، وإخفاء الهوية أو التجميع حيثما أمكن، وحدود الاحتفاظ، وضبط الوصول، وتوثيق مخاطر المعالجة العابرة للحدود. وستُرفق المكونات المدعومة بالذكاء الاصطناعي بتوثيق على نمط بطاقة النموذج، وسجلات افتراضات، وتحليل حساسية، ومراجعة بشرية. وستُقيّد الادعاءات الأخلاقية بما تسمح به البيانات المتاحة والموافقات المؤسسية والإطار القانوني الإماراتي." data-en="Data-governance protocol: the research design applies data minimization, purpose limitation, source logging, anonymization or aggregation where feasible, retention limits, access control, and documented treatment of cross-border processing risks. AI-assisted components will be accompanied by model-card style documentation, assumption logs, sensitivity analysis, and human review. Ethical claims will be restricted to what the available data, institutional approvals, and UAE legal framework can support." id="governanceProtocol">Data-governance protocol: the research design applies data minimization, purpose limitation, source logging, anonymization or aggregation where feasible, retention limits, access control, and documented treatment of cross-border processing risks. AI-assisted components will be accompanied by model-card style documentation, assumption logs, sensitivity analysis, and human review. Ethical claims will be restricted to what the available data, institutional approvals, and UAE legal framework can support.</div>
+<div class="lab" id="stressLab"><h3 data-ar="مختبر المتانة وإعداد التقارير" data-en="Robustness &amp; Reporting Lab">Robustness &amp; Reporting Lab</h3><p data-ar="توضح هذه اللوحة المصغرة منطق الشفافية: يتغير الترتيب عندما يتغير وزن السياسة أو سيناريو تكلفة الكربون. إنها مثال على انضباط تحليل الحساسية، وليست ادعاءً بوجود تطبيق تشغيلي داخل الإمارات." data-en="This mini-dashboard demonstrates transparency: rankings shift when the policy weight or carbon-cost scenario changes. It is an illustration of sensitivity discipline, not an implementation claim in the UAE." id="stressLabDesc">This mini-dashboard demonstrates transparency: rankings shift when the policy weight or carbon-cost scenario changes. It is an illustration of sensitivity discipline, not an implementation claim in the UAE.</p><div class="control-grid"><div class="control"><label><span data-ar="المعامل المعياري λ" data-en="Normative λ">Normative λ</span><output id="lambdaOut">0.5 · Balanced</output></label><input id="lambdaRange" max="0.7" min="0.3" step="0.1" type="range" value="0.5"/><small data-ar="0.3 = تقليل التكلفة · 0.7 = تعظيم المنفعة" data-en="0.3 = Cost-minimization · 0.7 = Benefit-maximization">0.3 = Cost-minimization · 0.7 = Benefit-maximization</small></div><div class="control"><label><span data-ar="سعر الكربون" data-en="Carbon price">Carbon price</span><output id="carbonOut">€30 · Moderate</output></label><input id="carbonRange" max="3" min="0" step="1" type="range" value="1"/><small data-ar="€0 خط أساس · €30 متوسط · €85 أقل من درجتين مئويتين · €150 حياد كربوني" data-en="€0 Baseline · €30 Moderate · €85 Below 2°C · €150 Net Zero">€0 Baseline · €30 Moderate · €85 Below 2°C · €150 Net Zero</small></div></div><div class="rank-list" id="rankList"></div><div class="insight" id="labInsight">Transparency alert: rankings are normative and require stakeholder calibration.</div></div>
+<div class="grid-3" style="margin-top:16px"><article class="check"><input checked="" disabled="" type="checkbox"/><div><b data-ar="العدالة" data-en="Fairness">Fairness</b><span data-ar="اختبار عدم استبعاد المستخدمين المتنوعين أو المناطق ذات البيانات المحدودة." data-en="Avoid excluding diverse users or lower-data districts.">Avoid excluding diverse users or lower-data districts.</span></div><span class="state" data-ar="مفعّل" data-en="Active">Active</span></article><article class="check"><input checked="" disabled="" type="checkbox"/><div><b data-ar="المساءلة" data-en="Accountability">Accountability</b><span data-ar="كل ترتيب يحتاج إلى مالك قرار، وفرضية معلنة، وسجل تغييرات." data-en="Every ranking requires owner, assumption, and change log.">Every ranking requires owner, assumption, and change log.</span></div><span class="state" data-ar="مفعّل" data-en="Active">Active</span></article><article class="check"><input checked="" disabled="" type="checkbox"/><div><b data-ar="الشفافية" data-en="Transparency">Transparency</b><span data-ar="عرض المدخلات، والأوزان، والحساسية، والقيود قبل صياغة أي توصية." data-en="Expose inputs, weights, sensitivity, and limits before recommendation.">Expose inputs, weights, sensitivity, and limits before recommendation.</span></div><span class="state" data-ar="مفعّل" data-en="Active">Active</span></article></div>
+</section>
+<section aria-labelledby="vaultTitle" class="page-section" id="vault">
+<div class="section-head"><div><div class="kicker" data-ar="05 — مستودع الأدلة" data-en="05 — Academic Evidence Repository">05 — Academic Evidence Repository</div><h2 data-ar="مستودع أدلة قابل للمراجعة لملف قبول AUS." data-en="A reviewable evidence repository for AUS admissions." id="vaultTitle">A reviewable evidence repository for AUS admissions.</h2></div><p class="section-note" data-ar="يفصل المستودع بين وثائق التقديم، والأدلة الأكاديمية المكتملة، والملخصات المنهجية، وتصميم البحث المقترح لبرنامج AUS MSEP." data-en="The repository separates submitted application documents, completed academic evidence, methodological summaries, and the proposed AUS MSEP research design.">The repository separates submitted application documents, completed academic evidence, methodological summaries, and the proposed AUS MSEP research design.</p></div>
+<div class="docs-grid"><article class="doc-card"><div><h3 data-ar="السيرة الذاتية ومصفوفة القدرات" data-en="CV &amp; Capability Matrix">CV &amp; Capability Matrix</h3><span class="badge" data-ar="الملف الشخصي" data-en="Profile">Profile</span><span class="meta" data-ar="سيرة AUS تعرض High Honors، وخفض دورة التقارير 40%، ومهارات DiD/CBA/QGIS/SUMO/Power BI." data-en="AUS-facing CV showing High Honors, 40% reporting-cycle reduction, and DiD/CBA/QGIS/SUMO/Power BI skills.">AUS-facing CV showing High Honors, 40% reporting-cycle reduction, and DiD/CBA/QGIS/SUMO/Power BI skills.</span></div><div class="doc-actions" data-ar="↓ تحميل السيرة الذاتية" data-en="↓ Download CV"><a data-ar="↓ تحميل السيرة الذاتية" data-en="↓ Download CV" download="" href="CV_El_Ghali_Sany_AUS_MSEP.pdf">↓ Download CV</a></div></article><article class="doc-card"><div><h3 data-ar="مقترح بحث AUS MSEP" data-en="AUS MSEP Research Proposal">AUS MSEP Research Proposal</h3><span class="badge supported" data-ar="الاقتصاد والسياسات العامة" data-en="Economics &amp; Policy">Economics &amp; Policy</span><span class="meta" data-ar="مقترح مؤرخ 17 مايو 2026: DITSC بقيمة 590 مليون درهم، تغطية ITS من 11% إلى 60%، وDiD/Hedonic/CBA مشروط بالبيانات." data-en="17 May 2026 proposal: AED 590m DITSC, ITS coverage from 11% to 60%, and data-gated DiD/Hedonic/CBA.">17 May 2026 proposal: AED 590m DITSC, ITS coverage from 11% to 60%, and data-gated DiD/Hedonic/CBA.</span></div><div class="doc-actions" data-ar="↓ تحميل المقترح" data-en="↓ Download Proposal"><a class="primary" data-ar="↓ تحميل المقترح" data-en="↓ Download Proposal" download="" href="AUS_MSEP_Research_Proposal.pdf">↓ Download Proposal</a></div></article><article class="doc-card"><div><h3 data-ar="مشروع تقييم التعرّض المروري في الدار البيضاء" data-en="Casablanca Traffic-Appraisal Project">Casablanca Traffic-Appraisal Project</h3><span class="badge" data-ar="دليل سابق" data-en="Prior Evidence">Prior Evidence</span><span class="meta" data-ar="مشروع التخرج الكامل: QGIS/SUMO، ومناطق الدار البيضاء الخمس، وربحية OOH/DOOH، وCAPEX/OPEX، وTCO، وROI، وIRP." data-en="Full undergraduate PFE: QGIS/SUMO, five Casablanca zones, OOH/DOOH profitability, CAPEX/OPEX, TCO, ROI, and IRP.">Full undergraduate PFE: QGIS/SUMO, five Casablanca zones, OOH/DOOH profitability, CAPEX/OPEX, TCO, ROI, and IRP.</span></div><div class="doc-actions" data-ar="عرض الملخص · تحميل ملف PFE" data-en="View Summary · Download PFE"><a data-ar="عرض الملخص" data-en="View Summary" href="#pfe">View Summary</a><a class="primary" data-ar="↓ تحميل ملف PFE" data-en="↓ Download PFE" download="" href="el_ghali_sany_pfe_casablanca_dooh_profitability.pdf">↓ Download PFE</a></div></article><article class="doc-card"><div><h3 data-ar="مذكرة منهجية: MCDA والتنبؤ" data-en="MCDA / Forecasting Method Note">MCDA / Forecasting Method Note</h3><span class="badge" data-ar="ملخص منهجي" data-en="Method Summary">Method Summary</span><span class="meta" data-ar="ورقة العمل: XGBoost خفض MAE بنسبة 45.8%، وAROMAN أعاد ترتيب 25/25 مقارنةً بمنطق NPV فقط." data-en="Working paper: XGBoost reduced MAE by 45.8%, and AROMAN re-ranked 25/25 projects versus NPV-only logic.">Working paper: XGBoost reduced MAE by 45.8%, and AROMAN re-ranked 25/25 projects versus NPV-only logic.</span></div><div class="doc-actions" data-ar="عرض المناهج · تحميل ورقة العمل" data-en="View Methods · Download Paper"><a data-ar="عرض المناهج" data-en="View Methods" href="#methods">View Methods</a><a class="primary" data-ar="↓ تحميل ورقة العمل" data-en="↓ Download Paper" download="" href="AI-MCDM%20Investment%20Scoring%20for%20Smart%20Cities.pdf">↓ Download Paper</a></div></article><article class="doc-card"><div><h3 data-ar="سجل المصادر" data-en="Source Register">Source Register</h3><span class="badge" data-ar="الحوكمة" data-en="Governance">Governance</span><span class="meta" data-ar="روابط رسمية لتثبيت ملاءمة برنامج AUS، وسياق النقل في دبي، وبديل بيانات DLD، وPDPL، وإطار حوكمة النماذج." data-en="Official links used to anchor the AUS program fit, Dubai transport context, DLD fallback, PDPL, and model-governance framing.">Official links used to anchor the AUS program fit, Dubai transport context, DLD fallback, PDPL, and model-governance framing.</span></div><div class="doc-actions" data-ar="فتح المصادر" data-en="Open Sources"><a data-ar="فتح المصادر" data-en="Open Sources" href="#sources">Open Sources</a></div></article></div>
+</section>
+<section aria-labelledby="realityTitle" class="page-section" id="reality">
+<div class="section-head"><div><div class="kicker" data-ar="06 — النطاق والأدلة" data-en="06 — Scope &amp; Evidence">06 — Scope &amp; Evidence</div><h2 data-ar="تقييم المرور الذكي في دبي هو تصميم بحث مقترح، وليس ادعاءً تشغيلياً." data-en="Dubai smart-traffic evaluation is a proposed research design, not an operational claim." id="realityTitle">Dubai smart-traffic evaluation is a proposed research design, not an operational claim.</h2></div><p class="section-note" data-ar="يمنع هذا القسم المبالغة: يتم فصل العمل المكتمل وسياق السياسة الإماراتية وافتراضات مقترح AUS قبل صياغة أي ادعاء بحثي." data-en="This section prevents overclaiming: completed work, UAE policy context, and AUS proposal assumptions are separated before any research claim is made.">This section prevents overclaiming: completed work, UAE policy context, and AUS proposal assumptions are separated before any research claim is made.</p></div>
+<div class="grid-4"><article class="panel"><h3 data-ar="الأدلة المكتملة" data-en="Completed Evidence">Completed Evidence</h3><p data-ar="مشروع التخرج، وSUMO/GIS، والنمذجة المالية، ومنهجية XGBoost/MCDA، وواجهة محفظة القبول هذه." data-en="PFE, SUMO/GIS, financial modelling, XGBoost/MCDA methodology, and this admissions portfolio interface.">PFE, SUMO/GIS, financial modelling, XGBoost/MCDA methodology, and this admissions portfolio interface.</p></article><article class="panel"><h3 data-ar="السياق الرسمي في الإمارات" data-en="Official UAE Context">Official UAE Context</h3><p data-ar="التنقل الذكي في دبي، وحوكمة البيانات في الإمارات، وتقييم النقل، وتقييم البنية التحتية العامة." data-en="Dubai smart mobility, UAE data governance, transport appraisal, and public-infrastructure evaluation.">Dubai smart mobility, UAE data governance, transport appraisal, and public-infrastructure evaluation.</p></article><article class="panel"><h3 data-ar="البحث المقترح في AUS" data-en="Proposed AUS Research">Proposed AUS Research</h3><p data-ar="سجل تدخلات، واختبار شبه تجريبي إذا سمحت البيانات، وبديل Hedonic، ومصنف تحليل المنافع والتكاليف." data-en="Treatment registry, quasi-experimental testing if data allow, hedonic fallback, and CBA workbook.">Treatment registry, quasi-experimental testing if data allow, hedonic fallback, and CBA workbook.</p></article><article class="panel"><h3 data-ar="متطلبات ما قبل الادعاءات البحثية" data-en="Required Before Research Claims">Required Before Research Claims</h3><p data-ar="الوصول إلى بيانات على مستوى الممرات، وتوقيت التدخل، وضوابط مقارنة موثوقة، وإشراف أكاديمي، وموافقة أخلاقية، وقواعد شفافة لخفض مستوى الادعاء." data-en="Corridor-level data access, treatment timing, credible controls, faculty supervision, ethics approval, and transparent downgrade rules.">Corridor-level data access, treatment timing, credible controls, faculty supervision, ethics approval, and transparent downgrade rules.</p></article></div>
+</section>
+<section aria-labelledby="sourcesTitle" class="page-section" id="sources">
+<div class="section-head"><div><div class="kicker" data-ar="المصادر والأدلة" data-en="Sources &amp; Evidence">Sources &amp; Evidence</div><h2 data-ar="سجل مصادر رسمي لسياق AUS والسياسات العامة في الإمارات." data-en="Official source register for AUS and UAE policy context." id="sourcesTitle">Official source register for AUS and UAE policy context.</h2></div><p class="section-note" data-ar="روابط رسمية تُستخدم لتثبيت ملاءمة البرنامج، وسياق تدخلات النقل في دبي، وبيانات العقار البديلة، وPDPL، وإطار حوكمة النماذج." data-en="Official links used to anchor the program fit, Dubai transport intervention context, real-estate fallback data, PDPL, and model-governance framing.">Official links used to anchor the program fit, Dubai transport intervention context, real-estate fallback data, PDPL, and model-governance framing.</p></div>
+<div class="source-grid"><article class="source"><b data-ar="برنامج AUS MSEP" data-en="AUS MSEP">AUS MSEP</b><a data-ar="مصدر رسمي" data-en="Official source" href="https://www.aus.edu/sba/department-of-economics/master-of-science-in-economics-and-policy-msep" rel="noopener" target="_blank">Official source</a><p data-ar="صفحة برنامج AUS الخاصة بالاقتصاد، وتقييم السياسات، وملاءمة تحليل البيانات." data-en="AUS program page for economics, policy evaluation, and data-analysis fit.">AUS program page for economics, policy evaluation, and data-analysis fit.</p></article><article class="source"><b data-ar="مركز دبي لأنظمة المرور الذكية" data-en="Dubai Intelligent Traffic Systems Centre">Dubai Intelligent Traffic Systems Centre</b><a data-ar="مصدر رسمي" data-en="Official source" href="https://mediaoffice.ae/en/news/2020/november/10-11/mohammed-bin-rashid-inaugurates-aed590-million-dubai-intelligent-traffic-systems-centre-at-al-barsha" rel="noopener" target="_blank">Official source</a><p data-ar="مصدر المكتب الإعلامي لحكومة دبي حول حجم DITSC، وتكلفة 590 مليون درهم، وتوسيع تغطية أنظمة النقل الذكية." data-en="Dubai Media Office source for DITSC scale, AED 590m cost, and ITS coverage expansion.">Dubai Media Office source for DITSC scale, AED 590m cost, and ITS coverage expansion.</p></article><article class="source"><b data-ar="ترقية UTC-UX Fusion" data-en="UTC-UX Fusion Upgrade">UTC-UX Fusion Upgrade</b><a data-ar="مصدر رسمي" data-en="Official source" href="https://www.mediaoffice.ae/en/news/2025/september/04-09/rta-traffic-signal-system-upgrade" rel="noopener" target="_blank">Official source</a><p data-ar="مصدر المكتب الإعلامي لحكومة دبي حول مكاسب تدفق المرور المعلنة في المرحلة الأولى بنسبة 16%–37%." data-en="Dubai Media Office source for reported 16%–37% Phase 1 traffic-flow gains.">Dubai Media Office source for reported 16%–37% Phase 1 traffic-flow gains.</p></article><article class="source"><b data-ar="البيانات المفتوحة لدائرة الأراضي والأملاك في دبي" data-en="Dubai Land Department Open Data">Dubai Land Department Open Data</b><a data-ar="مصدر رسمي" data-en="Official source" href="https://dubailand.gov.ae/en/open-data/real-estate-data/" rel="noopener" target="_blank">Official source</a><p data-ar="مصدر رسمي لبيانات العقار المستخدمة في مسار Hedonic البديل." data-en="Official real-estate data source for the hedonic fallback route.">Official real-estate data source for the hedonic fallback route.</p></article><article class="source"><b data-ar="قانون حماية البيانات الشخصية في دولة الإمارات" data-en="UAE Personal Data Protection Law">UAE Personal Data Protection Law</b><a data-ar="مصدر رسمي" data-en="Official source" href="https://uaelegislation.gov.ae/en/legislations/1972/download" rel="noopener" target="_blank">Official source</a><p data-ar="صفحة البوابة الرسمية لحكومة الإمارات حول المرسوم بقانون اتحادي رقم 45 لسنة 2021." data-en="Official UAE Government Portal page for Federal Decree-Law No. 45 of 2021.">Official UAE Government Portal page for Federal Decree-Law No. 45 of 2021.</p></article></div>
+</section>
+</main>
+<div aria-labelledby="summaryTitle" aria-modal="true" class="modal" id="summaryModal" role="dialog"><div class="modal-card"><div class="modal-head"><div><div class="kicker" data-ar="ملخص أكاديمي · دقيقتان" data-en="Academic Summary · 2 minutes">Academic Summary · 2 minutes</div><h2 data-ar="ملخص AUS MSEP: بيانات حضرية ← أدلة اقتصادية ← تقييم سياسات عامة" data-en="AUS MSEP Summary: Urban Data → Economic Evidence → Policy Appraisal" id="summaryTitle">AUS MSEP Summary: Urban Data → Economic Evidence → Policy Appraisal</h2></div><button class="close" data-ar="إغلاق" data-en="Close" id="closeSummary" type="button">Close</button></div><div class="summary-grid"><article class="summary-card"><span class="summary-letter">G</span><h3 data-ar="الفجوة" data-en="Gap">Gap</h3><p data-ar="دبي استثمرت 590 مليون درهم في DITSC ووسعت تغطية ITS من 11% إلى 60%، كما أُعلنت مكاسب UTC-UX بنسبة 16%–37%؛ لكن المطلوب بحثياً هو الأثر مقابل عدم التدخل والعائد الصافي على الرفاه." data-en="Dubai invested AED 590m in DITSC and expanded ITS coverage from 11% to 60%, while UTC-UX gains of 16%–37% were reported; the research question is the counterfactual impact and net welfare return.">Dubai invested AED 590m in DITSC and expanded ITS coverage from 11% to 60%, while UTC-UX gains of 16%–37% were reported; the research question is the counterfactual impact and net welfare return.</p></article><article class="summary-card"><span class="summary-letter">I</span><h3 data-ar="الفكرة" data-en="Idea">Idea</h3><p data-ar="استخدام تصميم قائم على بوابة بيانات: سجل تدخلات، DiD/Event Study عند توفر التوقيت والجغرافيا والضوابط والنتائج، ثم بديل Hedonic، ثم تقييم سيناريوهات عند ضعف البيانات." data-en="Use a data-gated design: treatment registry, DiD/Event Study when timing, geography, controls, and outcomes are available, then hedonic fallback, then scenario appraisal if data are weak.">Use a data-gated design: treatment registry, DiD/Event Study when timing, geography, controls, and outcomes are available, then hedonic fallback, then scenario appraisal if data are weak.</p></article><article class="summary-card"><span class="summary-letter">F</span><h3 data-ar="الجدوى" data-en="Feasibility">Feasibility</h3><p data-ar="تستند الجدوى إلى PFE في QGIS/SUMO وOOH/DOOH، وورقة AI-MCDM التي خفض فيها XGBoost خطأ MAE بنسبة 45.8% وأعاد AROMAN ترتيب 25/25 مقارنة بمنطق NPV فقط." data-en="Feasibility is supported by the QGIS/SUMO and OOH/DOOH PFE, plus the AI-MCDM paper where XGBoost reduced MAE by 45.8% and AROMAN re-ranked 25/25 projects versus NPV-only logic.">Feasibility is supported by the QGIS/SUMO and OOH/DOOH PFE, plus the AI-MCDM paper where XGBoost reduced MAE by 45.8% and AROMAN re-ranked 25/25 projects versus NPV-only logic.</p></article><article class="summary-card"><span class="summary-letter">T</span><h3 data-ar="الجدول الزمني" data-en="Timeline">Timeline</h3><p data-ar="المقترح مؤرخ 17 مايو 2026: تدقيق مصادر، بوابة بيانات، بناء قاعدة بيانات، تشخيص، حساب رفاه، ثم مخرجات سياسة لا تتجاوز مستوى الدليل." data-en="The proposal is dated 17 May 2026: source audit, data gate, dataset construction, diagnostics, welfare accounting, then policy outputs that do not exceed the evidence level.">The proposal is dated 17 May 2026: source audit, data gate, dataset construction, diagnostics, welfare accounting, then policy outputs that do not exceed the evidence level.</p></article></div><div class="small-note dark-note" data-ar="التموضع: هذه محفظة قبول أكاديمية وملخص ملاءمة بحثية. وهي تفصل بين الأدلة المنجزة، والمناهج المقترحة، والافتراضات التي تتطلب إشرافاً أو وصولاً إلى البيانات." data-en="Positioning: this is an academic admissions portfolio and research-fit summary. It separates completed evidence, proposed methods, and assumptions requiring supervision or data access.">Positioning: this is an academic admissions portfolio and research-fit summary. It separates completed evidence, proposed methods, and assumptions requiring supervision or data access.</div></div></div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+<script>
+(function(){
+ 'use strict';
+
+ const EGS_ZONES = {
+ maarif: {
+ label:'Maârif', color:'#FF3355', center:[33.5866,-7.6325], zoom:14,
+ heatmapFile:'maarif_heatmap.json',
+ simulationFile:'maarif_simulation_geo.json',
+ analysis:'Maârif: central dense fabric. The layer can read real SUMO/GIS JSON when present; otherwise it displays a built-in demonstration dataset.',
+ analysisAr:'المعاريف: نسيج حضري مركزي كثيف. تستطيع الطبقة قراءة ملفات SUMO/GIS بصيغة JSON عند توفرها؛ وإلا تعرض مجموعة بيانات تجريبية مدمجة.'
+ },
+ hay_hassani: {
+ label:'Hay Hassani', color:'#FFB830', center:[33.5607,-7.6900], zoom:14,
+ heatmapFile:'hay_hassani_heatmap.json',
+ simulationFile:'hay_hassani_simulation_geo.json',
+ analysis:'Hay Hassani: peripheral flows and transition zones. Useful to inspect localized slowdowns and vehicle accumulation.',
+ analysisAr:'حي الحسني: تدفقات طرفية ومناطق انتقالية. مفيد لفحص التباطؤ المحلي وتراكم المركبات.'
+ },
+ ben_msick: {
+ label:"Ben M'Sick", color:'#00E676', center:[33.5500,-7.5800], zoom:14,
+ heatmapFile:'ben_msick_heatmap.json',
+ simulationFile:'ben_msick_simulation_geo.json',
+ analysis:"Ben M'Sick: dense urban network. The dashboard supports reading conflict points, secondary-road intensity and speed variations.",
+ analysisAr:"بن مسيك: شبكة حضرية كثيفة. تدعم اللوحة قراءة نقاط التعارض وكثافة الطرق الثانوية وتغيرات السرعة."
+ },
+ sidi_maarouf: {
+ label:'Sidi Maârouf', color:'#BF5AF2', center:[33.5250,-7.6500], zoom:14,
+ heatmapFile:'sidi_maarouf_heatmap.json',
+ simulationFile:'sidi_maarouf_simulation_geo.json',
+ analysis:'Sidi Maârouf: strategic employment and arterial area. Simulation shows flows related to business poles and major roads.',
+ analysisAr:'سيدي معروف: منطقة تشغيل ومحاور استراتيجية. تعرض المحاكاة تدفقات مرتبطة بأقطاب الأعمال والطرق الرئيسية.'
+ },
+ bd_mohammed_v: {
+ label:'Bd. Mohammed V', color:'#00B4D8', center:[33.5950,-7.6100], zoom:15,
+ heatmapFile:'bd_mohammed_v_heatmap.json',
+ simulationFile:'bd_mohammed_v_simulation_geo.json',
+ analysis:'Boulevard Mohammed V: major corridor. Heatmap and simulation identify concentration and slowdown segments.',
+ analysisAr:'شارع محمد الخامس: ممر رئيسي. تحدد الخريطة الحرارية والمحاكاة مقاطع التركّز والتباطؤ.'
+ }
+ };
+
+ let map=null, heatLayer=null, canvas=null, ctx=null;
+ let mode='heatmap', zoneKey='maarif', currentData=null, heatPoints=[], stepIndex=0;
+ let playing=false, raf=null, lastFrame=0;
+ const MAX_HEAT_POINTS=12000;
+ const MAX_VEHICLES_PER_FRAME=1600;
+
+ function byId(id){ return document.getElementById(id); }
+ function setText(id,value){ const el=byId(id); if(el) el.textContent=value; }
+ function setHidden(id,hidden){ const el=byId(id); if(el) el.classList.toggle('egs-hidden', !!hidden); }
+ function safeNumber(n, fallback=0){ const v=Number(n); return Number.isFinite(v)?v:fallback; }
+ function fr(n){ return Number(n||0).toLocaleString('fr-FR'); }
+
+ async function loadJson(file){
+ try{
+ const response = await fetch(file + '?v=' + Date.now(), { cache:'no-store' });
+ if(!response.ok) throw new Error('HTTP ' + response.status);
+ return await response.json();
+ }catch(error){
+ console.warn('[EGS SUMO] External JSON unavailable, using built-in demo data:', file, error);
+ return null;
+ }
+ }
+
+ function seeded(seed){
+ let s=seed>>>0;
+ return function(){
+ s=(s*1664525+1013904223)>>>0;
+ return s/4294967296;
+ };
+ }
+
+ function zoneSeed(key){
+ return Array.from(key).reduce((a,c)=>a+c.charCodeAt(0), 2166136261)>>>0;
+ }
+
+ function demoHeatData(zone){
+ const rand=seeded(zoneSeed(zoneKey));
+ const [lat0,lng0]=zone.center;
+ const points=[];
+ const corridors=[
+ {a:-0.018,b:-0.012,c:1.00},
+ {a: 0.015,b:-0.006,c:.75},
+ {a:-0.012,b: 0.015,c:.58},
+ {a: 0.020,b: 0.011,c:.42}
+ ];
+ for(let i=0;i<900;i++){
+ const road=corridors[i%corridors.length];
+ const t=(rand()*2-1);
+ const jitterLat=(rand()-.5)*0.0034;
+ const jitterLng=(rand()-.5)*0.0034;
+ const lat=lat0 + road.a*t + jitterLat;
+ const lng=lng0 + road.b*t + jitterLng;
+ const intensity=Math.max(.08, Math.min(1, road.c*(.45+rand()*.65)));
+ points.push([lat,lng,intensity]);
+ }
+ return {
+ demo:true,
+ points,
+ kpis:{ vehicleRecords:5400, steps:180, averageSpeed:7.35 }
+ };
+ }
+
+ function demoSimulationData(zone){
+ const rand=seeded(zoneSeed(zoneKey)+99);
+ const [lat0,lng0]=zone.center;
+ const timesteps=[];
+ const routes=[
+ {a:-0.018,b:-0.011,phase:0,speed:7.4},
+ {a: 0.016,b:-0.006,phase:1.1,speed:5.8},
+ {a:-0.011,b: 0.016,phase:2.4,speed:9.2},
+ {a: 0.020,b: 0.010,phase:3.2,speed:4.9}
+ ];
+ const vehicleCount=110;
+ for(let t=0;t<220;t++){
+ const vehicles=[];
+ for(let i=0;i<vehicleCount;i++){
+ const route=routes[i%routes.length];
+ const progress=((t*0.006*(route.speed/6))+(i/vehicleCount)+route.phase)%1;
+ const x=(progress*2-1);
+ const pulse=Math.sin((t+i)*0.08);
+ const lat=lat0 + route.a*x + (rand()-.5)*0.00022 + Math.sin(progress*Math.PI*2+route.phase)*0.0011;
+ const lng=lng0 + route.b*x + (rand()-.5)*0.00022 + Math.cos(progress*Math.PI*2+route.phase)*0.0011;
+ const speed=Math.max(.8, route.speed + pulse*2.2 - (i%17===0?3.2:0));
+ const angle=Math.atan2(route.b, route.a)*180/Math.PI + 90;
+ vehicles.push({ id:'demo-'+i, lat, lng, speed, angle });
+ }
+ timesteps.push({ time:t, vehicles });
+ }
+ return {
+ demo:true,
+ timesteps,
+ kpis:{ vehicleRecords:vehicleCount*timesteps.length, steps:timesteps.length, averageSpeed:6.83 }
+ };
+ }
+
+ function initMap(){
+ const container=byId('egsSumoMap');
+ if(!container) return false;
+ if(!window.L || !L.map){
+ container.innerHTML='<div style="display:grid;place-items:center;height:100%;min-height:430px;padding:24px;text-align:center;color:#00FF88;background:#050505;border:1px solid #004400;font-family:monospace;line-height:1.6">Leaflet could not load from the CDN. Check your internet connection or host Leaflet locally.</div>';
+ setText('egsStatusText', document.body.classList.contains('rtl') ? 'مكتبة Leaflet غير متاحة. تحتاج لوحة SUMO إلى leaflet.min.js قبل leaflet-heat.js.' : 'Leaflet library unavailable. The SUMO panel needs leaflet.min.js before leaflet-heat.js.');
+ return false;
+ }
+ if(map) return true;
+ const z=EGS_ZONES[zoneKey];
+ map=L.map('egsSumoMap',{
+ center:z.center,
+ zoom:z.zoom,
+ zoomControl:true,
+ attributionControl:false,
+ preferCanvas:true
+ });
+ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{ maxZoom:19 }).addTo(map);
+ canvas=byId('egsTrafficCanvas');
+ if(canvas) ctx=canvas.getContext('2d');
+ resizeCanvas();
+ map.on('move zoom resize',()=>{ resizeCanvas(); if(mode==='simulation') drawStep(); });
+ window.addEventListener('resize',()=>{ resizeCanvas(); if(mode==='simulation') drawStep(); });
+ setTimeout(()=>map.invalidateSize(),150);
+ return true;
+ }
+
+ function resizeCanvas(){
+ if(!canvas || !ctx) return;
+ const rect=canvas.getBoundingClientRect();
+ const dpr=window.devicePixelRatio || 1;
+ canvas.width=Math.max(1, Math.round(rect.width*dpr));
+ canvas.height=Math.max(1, Math.round(rect.height*dpr));
+ ctx.setTransform(dpr,0,0,dpr,0,0);
+ }
+
+ function clearCanvas(){
+ if(!ctx || !canvas) return;
+ const rect=canvas.getBoundingClientRect();
+ ctx.clearRect(0,0,rect.width,rect.height);
+ }
+
+ function removeHeat(){
+ if(heatLayer && map){
+ map.removeLayer(heatLayer);
+ heatLayer=null;
+ }
+ }
+
+ function updateUI(){
+ const isHeat=mode==='heatmap';
+ const z=EGS_ZONES[zoneKey];
+ document.querySelectorAll('.egs-mode-btn').forEach(btn=>{
+ btn.classList.toggle('active', btn.dataset.egsMode===mode);
+ btn.setAttribute('aria-pressed', String(btn.dataset.egsMode===mode));
+ });
+ document.querySelectorAll('.egs-zone-btn').forEach(btn=>{
+ btn.classList.toggle('active', btn.dataset.egsZone===zoneKey);
+ btn.setAttribute('aria-pressed', String(btn.dataset.egsZone===zoneKey));
+ });
+
+ setHidden('egsHeatControls', !isHeat);
+ setHidden('egsSimulationControls', isHeat);
+ setHidden('egsHeatLegend', !isHeat);
+ setHidden('egsSimulationLegend', isHeat);
+
+ setText('egsZoneTitle', z.label);
+ setText('egsAnalysisText', document.body.classList.contains('rtl') ? (z.analysisAr || z.analysis) : z.analysis);
+ setText('egsMainLabel', document.body.classList.contains('rtl') ? (isHeat ? 'النقاط' : 'الظاهر') : (isHeat ? 'POINTS' : 'VISIBLE'));
+ setText('egsKpiMain','—');
+ setText('egsKpiVehicles','—');
+ setText('egsKpiSteps','—');
+ setText('egsKpiSpeed','—');
+ setText('egsKpiMode', document.body.classList.contains('rtl') ? (isHeat ? 'حرارة' : 'محاكاة') : (isHeat ? 'HEAT' : 'SIM'));
+ setText('egsStatusTitle', z.label + ' · ' + (document.body.classList.contains('rtl') ? (isHeat ? 'خريطة حرارية' : 'محاكاة') : (isHeat ? 'Heatmap' : 'Simulation')));
+ }
+
+ async function loadCurrent(){
+ if(!map) return;
+ cancelAnimationFrame(raf);
+ raf=null;
+ playing=false;
+ stepIndex=0;
+ removeHeat();
+ clearCanvas();
+ updateUI();
+ const z=EGS_ZONES[zoneKey];
+ map.setView(z.center,z.zoom);
+ if(mode==='heatmap') await loadHeatmap();
+ else await loadSimulation();
+ setTimeout(()=>map.invalidateSize(),100);
+ }
+
+ async function loadHeatmap(){
+ const z=EGS_ZONES[zoneKey];
+ setText('egsStatusText', document.body.classList.contains('rtl') ? 'جارٍ تحميل طبقة الخريطة الحرارية من SUMO...' : 'Loading SUMO heatmap layer...');
+ const external=await loadJson(z.heatmapFile);
+ currentData=(external && Array.isArray(external.points)) ? external : demoHeatData(z);
+ heatPoints=normalizeHeat(currentData.points || []);
+ if(currentData.demo){
+ setText('egsStatusText', document.body.classList.contains('rtl') ? ('تُعرض خريطة حرارية تجريبية لأن الملف '+z.heatmapFile+' غير موجود أو لا يمكن جلبه محلياً.') : ('Demo heatmap shown because '+z.heatmapFile+' was not found or cannot be fetched locally.'));
+ }else{
+ setText('egsStatusText', document.body.classList.contains('rtl') ? ('تم تحميل البيانات الحقيقية: '+z.heatmapFile) : ('Loaded real data: '+z.heatmapFile));
+ }
+ drawHeatmap();
+ updateHeatKpis();
+ }
+
+ function normalizeHeat(points){
+ const arr=[];
+ for(const p of points){
+ if(!Array.isArray(p) || p.length<2) continue;
+ const lat=safeNumber(p[0], NaN);
+ const lng=safeNumber(p[1], NaN);
+ const intensity=safeNumber(p[2], .4);
+ if(Number.isFinite(lat) && Number.isFinite(lng)){
+ arr.push([lat,lng,Math.max(.05,Math.min(intensity,1))]);
+ }
+ }
+ if(arr.length<=MAX_HEAT_POINTS) return arr;
+ const interval=Math.ceil(arr.length/MAX_HEAT_POINTS);
+ return arr.filter((_,i)=>i%interval===0).slice(0,MAX_HEAT_POINTS);
+ }
+
+ function drawHeatmap(){
+ removeHeat();
+ clearCanvas();
+ if(!map || !heatPoints.length) return;
+ const radius=safeNumber(byId('egsRadiusRange')?.value,18);
+ const blur=safeNumber(byId('egsBlurRange')?.value,20);
+ const mult=safeNumber(byId('egsIntensityRange')?.value,5)/8;
+ const points=heatPoints.map(p=>[p[0],p[1],Math.min(1,p[2]*mult)]);
+
+ if(L.heatLayer){
+ heatLayer=L.heatLayer(points,{
+ radius, blur, maxZoom:18, minOpacity:.08, max:1,
+ gradient:{0.15:'#00FF88',0.35:'#FFD700',0.60:'#FF8A00',1:'#FF3355'}
+ }).addTo(map);
+ }else{
+ heatLayer=L.layerGroup(points.slice(0,350).map(p=>
+ L.circleMarker([p[0],p[1]],{
+ radius:Math.max(2, radius/5),
+ stroke:false,
+ fill:true,
+ fillOpacity:Math.max(.25, Math.min(.85,p[2])),
+ fillColor:p[2]>.65?'#FF3355':p[2]>.35?'#FFD700':'#00FF88'
+ })
+ )).addTo(map);
+ setText('egsStatusText', document.body.classList.contains('rtl') ? 'إضافة Leaflet للخرائط الحرارية غير متاحة. يتم عرض طبقة نقاط بديلة.' : 'Leaflet heat plugin unavailable. Showing point fallback layer.');
+ }
+ fitPoints(points);
+ }
+
+ function updateHeatKpis(){
+ const k=currentData?.kpis || {};
+ setText('egsKpiMain',fr(heatPoints.length));
+ setText('egsKpiVehicles',fr(k.vehicleRecords || heatPoints.length));
+ setText('egsKpiSteps',fr(k.steps || 0));
+ setText('egsKpiSpeed',safeNumber(k.averageSpeed,0).toFixed(2)+' m/s');
+ setText('egsKpiMode', document.body.classList.contains('rtl') ? 'حرارة' : 'HEAT');
+ }
+
+ async function loadSimulation(){
+ const z=EGS_ZONES[zoneKey];
+ setText('egsStatusText', document.body.classList.contains('rtl') ? 'جارٍ تحميل محاكاة SUMO الجغرافية...' : 'Loading SUMO geo simulation...');
+ const external=await loadJson(z.simulationFile);
+ currentData=(external && Array.isArray(external.timesteps)) ? external : demoSimulationData(z);
+ if(currentData.demo){
+ setText('egsStatusText', document.body.classList.contains('rtl') ? ('تُعرض محاكاة تجريبية لأن الملف '+z.simulationFile+' غير موجود أو لا يمكن جلبه محلياً.') : ('Demo simulation shown because '+z.simulationFile+' was not found or cannot be fetched locally.'));
+ }else{
+ setText('egsStatusText', document.body.classList.contains('rtl') ? ('تم تحميل البيانات الحقيقية: '+z.simulationFile) : ('Loaded real data: '+z.simulationFile));
+ }
+ setText('egsKpiSteps',fr(currentData.timesteps.length));
+ setText('egsKpiMode', document.body.classList.contains('rtl') ? 'محاكاة' : 'SIM');
+ if(currentData.kpis){
+ setText('egsKpiVehicles',fr(currentData.kpis.vehicleRecords || 0));
+ setText('egsKpiSpeed',safeNumber(currentData.kpis.averageSpeed,0).toFixed(2)+' m/s');
+ }
+ setTimeout(()=>{
+ resizeCanvas();
+ fitSimulation();
+ playing=true;
+ startAnimation();
+ },160);
+ }
+
+ function getLL(vehicle){
+ const lat=safeNumber(vehicle?.lat, NaN);
+ const lng=safeNumber(vehicle?.lng, NaN);
+ return Number.isFinite(lat) && Number.isFinite(lng) ? [lat,lng] : null;
+ }
+
+ function fitSimulation(){
+ if(!currentData?.timesteps?.length) return;
+ const points=[];
+ for(const step of currentData.timesteps){
+ for(const vehicle of (step.vehicles || [])){
+ const ll=getLL(vehicle);
+ if(ll) points.push(ll);
+ }
+ if(points.length>3000) break;
+ }
+ fitPoints(points);
+ drawStep();
+ }
+
+ function drawStep(){
+ if(mode!=='simulation' || !currentData?.timesteps?.length || !map || !ctx) return;
+ const step=currentData.timesteps[stepIndex % currentData.timesteps.length];
+ if(!step) return;
+ clearCanvas();
+ const vehicles=sampleVehicles(step.vehicles || [], MAX_VEHICLES_PER_FRAME);
+ let n=0, sum=0;
+ for(const vehicle of vehicles){
+ const ll=getLL(vehicle);
+ if(!ll) continue;
+ const pt=map.latLngToContainerPoint(ll);
+ const speed=safeNumber(vehicle.speed,0);
+ const angle=safeNumber(vehicle.angle,0);
+ if(!Number.isFinite(pt.x) || !Number.isFinite(pt.y)) continue;
+ drawVehicle(pt.x,pt.y,speed,angle);
+ n++;
+ sum+=speed;
+ }
+ setText('egsKpiMain',fr(n));
+ setText('egsKpiVehicles',fr(n));
+ setText('egsKpiSpeed',(n?sum/n:0).toFixed(2)+' m/s');
+ setText('egsKpiMode', document.body.classList.contains('rtl') ? 'محاكاة' : 'SIM');
+ }
+
+ function sampleVehicles(vehicles,max){
+ if(vehicles.length<=max) return vehicles;
+ const interval=Math.ceil(vehicles.length/max);
+ return vehicles.filter((_,i)=>i%interval===0);
+ }
+
+ function colorSpeed(speed){
+ return speed<3 ? '#FF3355' : speed<8 ? '#FFD700' : '#00FF88';
+ }
+
+ function drawVehicle(x,y,speed,angle){
+ const size=safeNumber(byId('egsVehicleSizeRange')?.value,6);
+ const color=colorSpeed(speed);
+ const a=(safeNumber(angle,0)-90)*Math.PI/180;
+ ctx.save();
+ ctx.translate(x,y);
+ ctx.rotate(a);
+ ctx.fillStyle=color;
+ ctx.strokeStyle='rgba(255,255,255,.95)';
+ ctx.lineWidth=1.4;
+ ctx.shadowBlur=10;
+ ctx.shadowColor=color;
+ roundedRect(-size,-size/2,size*2.4,size*1.15,Math.max(2,size/2));
+ ctx.fill();
+ ctx.stroke();
+ ctx.restore();
+ }
+
+ function roundedRect(x,y,w,h,r){
+ ctx.beginPath();
+ ctx.moveTo(x+r,y);
+ ctx.lineTo(x+w-r,y);
+ ctx.quadraticCurveTo(x+w,y,x+w,y+r);
+ ctx.lineTo(x+w,y+h-r);
+ ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
+ ctx.lineTo(x+r,y+h);
+ ctx.quadraticCurveTo(x,y+h,x,y+h-r);
+ ctx.lineTo(x,y+r);
+ ctx.quadraticCurveTo(x,y,x+r,y);
+ ctx.closePath();
+ }
+
+ function startAnimation(){
+ cancelAnimationFrame(raf);
+ lastFrame=0;
+ raf=requestAnimationFrame(loop);
+ }
+
+ function loop(timestamp){
+ if(mode!=='simulation' || !currentData?.timesteps?.length) return;
+ const delay=Math.max(20,280-safeNumber(byId('egsSpeedRange')?.value,6)*20);
+ if(playing && timestamp-lastFrame>=delay){
+ drawStep();
+ stepIndex=(stepIndex+1)%currentData.timesteps.length;
+ lastFrame=timestamp;
+ }
+ raf=requestAnimationFrame(loop);
+ }
+
+ function fitPoints(points){
+ if(!map || !points || !points.length) return;
+ const bounds=L.latLngBounds(points.map(p=>[p[0],p[1]]));
+ if(bounds.isValid()) map.fitBounds(bounds,{ padding:[30,30], maxZoom:EGS_ZONES[zoneKey].zoom });
+ }
+
+ function bindEvents(){
+ document.querySelectorAll('.egs-mode-btn').forEach(btn=>{
+ btn.addEventListener('click',()=>{
+ mode=btn.dataset.egsMode || 'heatmap';
+ loadCurrent();
+ });
+ });
+ document.querySelectorAll('.egs-zone-btn').forEach(btn=>{
+ btn.addEventListener('click',()=>{
+ zoneKey=btn.dataset.egsZone || 'maarif';
+ loadCurrent();
+ });
+ });
+ ['egsRadiusRange','egsBlurRange','egsIntensityRange'].forEach(id=>{
+ const el=byId(id);
+ if(el) el.addEventListener('input',()=>{ if(mode==='heatmap') drawHeatmap(); });
+ });
+ const resetHeat=byId('egsResetHeatmapBtn');
+ if(resetHeat) resetHeat.addEventListener('click',()=>{ if(mode==='heatmap') drawHeatmap(); });
+ const play=byId('egsPlayBtn');
+ if(play) play.addEventListener('click',()=>{ playing=true; if(mode==='simulation' && !raf) startAnimation(); });
+ const pause=byId('egsPauseBtn');
+ if(pause) pause.addEventListener('click',()=>{ playing=false; });
+ const restart=byId('egsRestartBtn');
+ if(restart) restart.addEventListener('click',()=>{ stepIndex=0; drawStep(); });
+ const vehicleSize=byId('egsVehicleSizeRange');
+ if(vehicleSize) vehicleSize.addEventListener('input',drawStep);
+ const resetSim=byId('egsResetSimulationBtn');
+ if(resetSim) resetSim.addEventListener('click',fitSimulation);
+ }
+
+ document.addEventListener('DOMContentLoaded',()=>{
+ const panel=byId('sumo-dashboard');
+ if(!panel) return;
+ bindEvents();
+ const boot=()=>{
+ if(initMap()) loadCurrent();
+ };
+ if('IntersectionObserver' in window){
+ const observer=new IntersectionObserver(entries=>{
+ if(entries[0] && entries[0].isIntersecting){
+ boot();
+ observer.disconnect();
+ }
+ },{threshold:.10});
+ observer.observe(panel);
+ }else{
+ boot();
+ }
+ });
+})();
+</script>
+<script>
+const $=(s,root=document)=>root.querySelector(s);const $$=(s,root=document)=>Array.from(root.querySelectorAll(s));
+function showToast(msg){const t=$('#toast');if(!t)return;t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),4200)}
+function translatePage(toArabic){document.body.classList.toggle('rtl',toArabic);document.documentElement.dir=toArabic?'rtl':'ltr';document.documentElement.lang=toArabic?'ar':'en';$$('[data-ar]').forEach(el=>{if(!el.dataset.en)el.dataset.en=el.textContent;el.textContent=toArabic?el.dataset.ar:el.dataset.en;});const lang=$('#langBtn');if(lang){lang.textContent=toArabic?'English':'العربية';lang.classList.toggle('active',toArabic);lang.setAttribute('aria-pressed',String(toArabic));lang.setAttribute('aria-label',toArabic?'Switch to English':'التبديل إلى العربية');}const brandHome=$('.brand-card');if(brandHome){brandHome.setAttribute('aria-label',toArabic?'الصفحة الرئيسية لمحفظة الغالي ساني لبرنامج AUS MSEP':'El Ghali Sany AUS MSEP portfolio home');}document.title=toArabic?'الغالي ساني | محفظة أدلة أكاديمية لبرنامج AUS MSEP':'El Ghali Sany | AUS MSEP Academic Evidence Portfolio';$$('.ltr,#sumo-dashboard,.smart-map,.egs-sumo-shell').forEach(el=>{el.setAttribute('dir','ltr');el.style.unicodeBidi='isolate';});const activeMode=$('.switch-row button[data-mode].active')?.dataset.mode||'ooh';if(window.modeTexts&&$('#mapLabel')&&$('#modeText')){const langKey=toArabic?'ar':'en';$('#mapLabel').textContent=modeTexts[activeMode][langKey].label;$('#modeText').textContent=modeTexts[activeMode][langKey].text;}updateSustainabilityTexts();renderLab();}
+const summary=$('#summaryModal');function openSummary(){if(!summary)return;summary.classList.add('open');$('#closeSummary')?.focus()}function closeSummary(){summary?.classList.remove('open')}$('#summaryBtn')?.addEventListener('click',openSummary);$('#summaryBtn2')?.addEventListener('click',openSummary);$('#closeSummary')?.addEventListener('click',closeSummary);$('#modalVault')?.addEventListener('click',openSummary);summary?.addEventListener('click',e=>{if(e.target===summary)closeSummary()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSummary()});
+$('#langBtn')?.addEventListener('click',()=>{translatePage(!document.body.classList.contains('rtl'));showToast(document.body.classList.contains('rtl')?'تم تفعيل العربية مع عكس انتقائي للواجهة وحفظ الخرائط والأرقام باتجاه LTR.':'English restored.');});
+const modeTexts=window.modeTexts={ooh:{en:{label:'Traditional Asset Mode · Lower CAPEX, static exposure, accelerated break-even.',text:'Traditional assets emphasize low CAPEX and limited technical complexity. In the UAE context, this becomes the baseline against future-ready digital assets with higher yield and stronger governance requirements.'},ar:{label:'وضع الأصول التقليدية · CAPEX أقل، تعرّض ثابت، ونقطة تعادل أسرع.',text:'تركّز الأصول التقليدية على CAPEX أقل وتعقيد تقني محدود. وفي السياق الإماراتي، تصبح خط الأساس للمقارنة مع أصول رقمية أعلى تكلفة وقابلة للتقييم وتتطلب حوكمة أقوى.'}},dooh:{en:{label:'Higher-CAPEX Asset Mode · Higher CAPEX, dynamic monetization, stronger governance.',text:'Higher-CAPEX infrastructure requires higher initial investment but can support dynamic pricing, real-time reporting, carbon-aware operations, and premium urban services.'},ar:{label:'وضع الأصول الأعلى تكلفة وقابلة للتقييم · CAPEX أعلى، تحقيق قيمة ديناميكي، وحوكمة أقوى.',text:'البنية المستقبلية تتطلب استثماراً أولياً أعلى، لكنها تدعم التسعير الديناميكي، التقارير اللحظية، التشغيل الواعي بالكربون، والخدمات الحضرية عالية القيمة.'}},hybrid:{en:{label:'Hybrid Mode · Risk-adjusted portfolio optimization.',text:'Hybrid allocation combines low-risk baseline assets with high-upside smart infrastructure, matching UAE-style portfolio logic: diversification, resilience, and long-term optionality.'},ar:{label:'الوضع الهجين · تحسين محفظة معدّلة بالمخاطر.',text:'التخصيص الهجين يجمع الأصول منخفضة المخاطر مع البنية الذكية عالية العائد، بما ينسجم مع منطق المحافظ الإماراتية: التنويع والمرونة والاختيارية طويلة الأجل.'}}};
+$$('.switch-row button[data-mode]').forEach(btn=>btn.addEventListener('click',()=>{const m=btn.dataset.mode;$$('.switch-row button[data-mode]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const map=$('#smartMap');if(map)map.className='smart-map mode-'+m;const lang=document.body.classList.contains('rtl')?'ar':'en';if($('#mapLabel'))$('#mapLabel').textContent=modeTexts[m][lang].label;if($('#modeText'))$('#modeText').textContent=modeTexts[m][lang].text;}));
+$$('.skill').forEach(card=>{card.addEventListener('mouseenter',()=>{$$('.tl-item').forEach(i=>i.classList.toggle('active-map',i.dataset.step===card.dataset.highlight));});card.addEventListener('mouseleave',()=>$$('.tl-item').forEach(i=>i.classList.remove('active-map')));});
+const BASE_METRICS={metric1:{value:'AED 590m',en:"Scale of Dubai's DITSC investment, with ITS coverage expansion from 11% to 60%; used as research motivation, not a personal delivery claim.",ar:'حجم استثمار DITSC في دبي، مع توسيع تغطية ITS من 11% إلى 60%؛ يُستخدم كدافع بحثي لا كادعاء إنجاز شخصي.'},metric2:{value:'45.8%',en:'MAE reduction of XGBoost versus Ridge in the AI-MCDM paper; treated as forecasting evidence, not causal proof.',ar:'انخفاض MAE لـ XGBoost مقارنةً بـ Ridge في ورقة AI-MCDM؛ يُعامل كدليل تنبؤي لا كدليل سببي.'},metric3:{value:'25/25',en:'Infrastructure investment cases whose MCDA/AROMAN ranking differed from NPV-only logic across return, carbon exposure, risk, and institutional readiness.',ar:'حالات استثمار في البنية التحتية اختلف ترتيبها عن NPV فقط عند استخدام MCDA/AROMAN عبر العائد والكربون والمخاطر والجاهزية المؤسسية.'},metric4:{value:'17 May 2026',en:'Proposal submission date: a data-gated quasi-experimental evaluation of Dubai smart-traffic investment with CBA and downgrade rules.',ar:'تاريخ تقديم المقترح: تقييم شبه تجريبي مشروط بالبيانات لاستثمارات المرور الذكي في دبي مع CBA وقواعد خفض الادعاء.'}};
+const carbonSteps=[{v:0,en:'€0 · Baseline',ar:'€0 · خط أساس'},{v:30,en:'€30 · Moderate',ar:'€30 · متوسط'},{v:85,en:'€85 · Below 2°C',ar:'€85 · أقل من 2°C'},{v:150,en:'€150 · Net Zero',ar:'€150 · حياد كربوني'}];
+const PROJECT_AR={'Smart Grid Coastal':'الشبكة الذكية الساحلية','Water Management':'إدارة المياه','EV Corridors':'ممرات المركبات الكهربائية','District Cooling / Data Center Efficiency':'تبريد المناطق / كفاءة مراكز البيانات','Solar Mobility Hub':'مركز تنقل شمسي'};function projectLabel(name){return document.body.classList.contains('rtl')?(PROJECT_AR[name]||name):name;}
+const rankSets={base:[{name:'Smart Grid Coastal'},{name:'Water Management'},{name:'EV Corridors'}],cost:[{name:'Water Management'},{name:'Smart Grid Coastal'},{name:'EV Corridors'}],benefit:[{name:'Smart Grid Coastal'},{name:'EV Corridors'},{name:'Solar Mobility Hub'}],carbon85:[{name:'Smart Grid Coastal'},{name:'EV Corridors'},{name:'Water Management'}],carbon150:[{name:'District Cooling / Data Center Efficiency'},{name:'Solar Mobility Hub'},{name:'Smart Grid Coastal'}],policyBase:[{name:'Solar Mobility Hub',green:true},{name:'District Cooling / Data Center Efficiency',green:true},{name:'Water Management',green:true}],policyCost:[{name:'District Cooling / Data Center Efficiency',green:true},{name:'Water Management',green:true},{name:'Smart Grid Coastal',green:true}],policyBenefit:[{name:'Solar Mobility Hub',green:true},{name:'EV Corridors',green:true},{name:'Smart Grid Coastal',green:true}],policy85:[{name:'Solar Mobility Hub',green:true},{name:'District Cooling / Data Center Efficiency',green:true},{name:'EV Corridors',green:true}],policy150:[{name:'District Cooling / Data Center Efficiency',green:true},{name:'Solar Mobility Hub',green:true},{name:'Water Management',green:true}]};
+function setMetric(id,data,active=false){const card=$('#'+id);if(!card)return;$('#'+id+'Value')&&($('#'+id+'Value').textContent=data.value);$('#'+id+'Text')&&($('#'+id+'Text').textContent=data.text);const n=$('#'+id+'Note');if(n){if(data.note){n.hidden=false;n.textContent=data.note}else{n.hidden=true;n.textContent='';}}card.setAttribute('data-policy-focus',active?'true':'false');}
+function updateSustainabilityTexts(){const lang=document.body.classList.contains('rtl')?'ar':'en';Object.entries(BASE_METRICS).forEach(([id,d])=>setMetric(id,{value:d.value,text:d[lang]||d.en},false));}
+function renderLab(){if(!$('#lambdaRange')||!$('#carbonRange'))return;const lambda=parseFloat($('#lambdaRange').value);const c=carbonSteps[parseInt($('#carbonRange').value,10)];const lang=document.body.classList.contains('rtl')?'ar':'en';$('#lambdaOut').textContent=lambda.toFixed(1)+' · '+(lang==='ar'?(lambda<0.5?'تقليل التكلفة':lambda>0.5?'تعظيم المنفعة':'متوازن'):(lambda<0.5?'Cost-minimization':lambda>0.5?'Benefit-maximization':'Balanced'));$('#carbonOut').textContent=lang==='ar'?c.ar:c.en;let list=lambda<0.5?rankSets.cost:lambda>0.5?rankSets.benefit:rankSets.base;let insight=lang==='ar'?'تنبيه شفافية: الترتيب معياري ويحتاج معايرة أصحاب المصلحة.':'Transparency alert: rankings are normative and require stakeholder calibration.';if(c.v===85){list=rankSets.carbon85;insight=lang==='ar'?'عند €85/tCO₂ يبدأ أثر الكربون في تغيير ترتيب الأصول.':'At €85/tCO₂, carbon-cost exposure begins to reorder assets.'}if(c.v===150){list=rankSets.carbon150;insight=lang==='ar'?'عند €150/tCO₂ يصبح اختبار الحياد الكربوني حاسماً في الترتيب.':'At €150/tCO₂, the net-zero stress test becomes decisive.'}$('#stressLab')?.classList.toggle('netzero',c.v===150);const roles=lang==='ar'?['المرشح الأول','منافس قوي','حساس للفرضيات']:['Lead candidate','Robust contender','Sensitive to assumptions'];if($('#rankList'))$('#rankList').innerHTML=list.map((item,i)=>'<div class="rank-row"><b>#'+(i+1)+'</b><span>'+projectLabel(item.name)+'</span><em>'+roles[i]+'</em></div>').join('');const ins=$('#labInsight');if(ins){ins.textContent=insight;ins.classList.remove('flash');void ins.offsetWidth;ins.classList.add('flash');}}
+function applySustainabilityMode(){updateSustainabilityTexts();renderLab();}
+$('#lambdaRange')?.addEventListener('input',renderLab);$('#carbonRange')?.addEventListener('input',renderLab);$('#copyCitation')?.addEventListener('click',async()=>{const cite='Sany, E. G. (2026). From Traffic Claims to Welfare Evidence: A data-gated quasi-experimental evaluation of smart-traffic investments in Dubai [Research proposal for AUS MSEP].';try{await navigator.clipboard.writeText(cite);showToast(document.body.classList.contains('rtl')?'تم نسخ صيغة APA.':'APA draft citation copied.')}catch(e){showToast(cite)}});applySustainabilityMode();
+</script>
+<script>
+(function(){
+ const line=document.querySelector('.fixed-line');
+ if(line){
+ const update=()=>{const max=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);const p=Math.min(1,window.scrollY/max);document.documentElement.style.setProperty('--scroll-scale',String(Math.max(.12,p)));};
+ update(); window.addEventListener('scroll',update,{passive:true});
+ }
+ const stops=[...document.querySelectorAll('.method-cycle-stop')];
+ const spokes=document.getElementById('methodCycleSpokeGroup');
+ const dots=document.getElementById('methodCycleDots');
+ if(spokes&&dots){
+ const cx=110,cy=110,r=94;
+ const colors=['#00A6B4','#C9A227','#7C3AED','#32D3C8','#102A43','#00A6B4','#C9A227'];
+ stops.forEach((stop,i)=>{
+ const angle=(-90+i*(360/stops.length))*Math.PI/180;
+ const x=cx+r*Math.cos(angle), y=cy+r*Math.sin(angle);
+ const line=document.createElementNS('http://www.w3.org/2000/svg','line');
+ line.setAttribute('x1',cx);line.setAttribute('y1',cy);line.setAttribute('x2',x);line.setAttribute('y2',y);line.setAttribute('stroke',colors[i]);line.setAttribute('stroke-width','1.6');line.setAttribute('opacity','.35');
+ spokes.appendChild(line);
+ const circle=document.createElementNS('http://www.w3.org/2000/svg','circle');
+ circle.setAttribute('cx',x);circle.setAttribute('cy',y);circle.setAttribute('r',i===0?'6':'4.8');circle.setAttribute('fill',colors[i]);circle.setAttribute('opacity',i===0?'1':'.72');circle.dataset.dot=String(i);
+ dots.appendChild(circle);
+ stop.addEventListener('mouseenter',()=>activate(i));
+ stop.addEventListener('focus',()=>activate(i));
+ });
+ function activate(i){
+ stops.forEach((s,idx)=>s.classList.toggle('active',idx===i));
+ dots.querySelectorAll('circle').forEach((c,idx)=>{c.setAttribute('r',idx===i?'6':'4.8');c.setAttribute('opacity',idx===i?'1':'.72');});
+ }
+ }
+})();
+</script>
+</body>
+</html>
+
+
+
+

@@ -3,255 +3,1849 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="El Ghali Sany — Malaysia-facing Islamic Finance admissions portfolio for INCEIF MSc Islamic Finance. Evidence portfolio connecting sukuk, Maqasid al-Shariah, ESG, MCDM, infrastructure finance, smart-city investment appraisal and financial modelling." />
-<title>El Ghali Sany | Malaysia Islamic Finance Evidence Portfolio</title>
+<meta name="description" content="El Ghali Sany — Malaysia-facing MSc Islamic Finance evidence portfolio for INCEIF. Trilingual English, Bahasa Melayu and Arabic interface connecting sukuk, Maqasid al-Shariah, ESG, MCDM, infrastructure finance and smart-city investment appraisal." />
+<title>El Ghali Sany | INCEIF MSc Islamic Finance Portfolio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230e5a43'/%3E%3Cpath d='M32 10l20 11.5v21L32 54 12 42.5v-21L32 10z' fill='none' stroke='%23ffffff' stroke-width='4'/%3E%3Cpath d='M22 33l7 7 14-17' fill='none' stroke='%23c8a24a' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<meta name="theme-color" content="#0e5a43" />
+<meta name="color-scheme" content="light" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="El Ghali Sany | MSc Islamic Finance Portfolio" />
+<meta property="og:description" content="Malaysia-facing Islamic Finance portfolio connecting sukuk, Maqasid al-Shariah, ESG, MCDM and smart infrastructure finance." />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="El Ghali Sany | MSc Islamic Finance Portfolio" />
+<meta name="twitter:description" content="Evidence portfolio for MSc Islamic Finance: sukuk readiness, Shariah governance, ESG, Maqasid and MCDM." />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --emerald:#0f6b4e; --emerald-2:#0a4d3a; --mint:#dff5ec; --gold:#c69b45; --gold-2:#8b6728;
-  --ink:#101820; --muted:#5f6b75; --paper:#fffdf6; --cream:#f6f0df; --line:rgba(15,107,78,.16);
-  --white:#fff; --shadow:0 24px 70px rgba(12,32,28,.11); --soft:0 12px 30px rgba(12,32,28,.08);
-  --radius:28px; --font:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --green-950:#073a2c;
+  --green-850:#0e5a43;
+  --green-700:#177255;
+  --green-100:#ecf7f1;
+  --blue-950:#0b3146;
+  --blue-800:#145779;
+  --blue-650:#2479a8;
+  --blue-100:#eaf5fb;
+  --ink:#101a23;
+  --muted:#546476;
+  --soft:#f7fbfa;
+  --paper:#ffffff;
+  --line:#d9e7e2;
+  --line2:#c6d9d3;
+  --ok:#177255;
+  --warn:#946b19;
+  --risk:#8a2c2c;
+  --shadow:0 22px 70px rgba(12,35,47,.075);
+  --soft-shadow:0 10px 28px rgba(12,35,47,.045);
+  --radius:24px;
+  --latin:'Inter','Noto Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --arabic:'Noto Sans Arabic','Noto Sans',Tahoma,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:96px}
-body{font-family:var(--font);color:var(--ink);background:
-  radial-gradient(circle at 12% 5%,rgba(15,107,78,.14),transparent 25%),
-  radial-gradient(circle at 86% 12%,rgba(198,155,69,.15),transparent 26%),
-  linear-gradient(135deg,#fffdf7 0%,#f7f1e3 42%,#eef8f2 100%);min-height:100vh;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;z-index:-1;opacity:.045;background-image:
-  linear-gradient(45deg, transparent 42%, var(--emerald) 43% 44%, transparent 45% 55%, var(--gold) 56% 57%, transparent 58%),
-  linear-gradient(-45deg, transparent 42%, var(--emerald) 43% 44%, transparent 45% 55%, var(--gold) 56% 57%, transparent 58%);
-  background-size:54px 54px;pointer-events:none}
-a{color:inherit;text-decoration:none} a:hover{text-decoration:underline;text-underline-offset:.22em}
-button{font:inherit;cursor:pointer} :focus-visible{outline:4px solid #111;outline-offset:3px;border-radius:12px}
-.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:12px;z-index:9999}
-.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,246,.86);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);box-shadow:0 10px 30px rgba(15,107,78,.05)}
-.nav-inner{max-width:1360px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.045em;line-height:1.05;min-width:max-content}.mark{width:48px;height:48px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--emerald),var(--emerald-2));color:#fff;box-shadow:0 14px 28px rgba(15,107,78,.22)}
-.mark svg{width:27px;height:27px}.brand small{display:block;color:var(--muted);font-weight:800;letter-spacing:0;font-size:.72rem;margin-top:3px}.navlinks{display:flex;align-items:center;gap:7px;flex-wrap:wrap;justify-content:flex-end}
-.navlinks a,.navlinks button{border:1px solid var(--line);background:rgba(255,255,255,.76);border-radius:999px;padding:10px 12px;font-size:.82rem;font-weight:900;color:var(--ink);min-height:42px}.navlinks a:hover,.navlinks button:hover{border-color:rgba(15,107,78,.38);box-shadow:var(--soft);text-decoration:none}.navlinks button.active{background:var(--emerald);color:#fff;border-color:var(--emerald)}
-.container{max-width:1360px;margin:auto;padding:24px 22px}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:stretch;padding-top:14px}.card,.panel,.doc,.method,.project{background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);backdrop-filter:blur(16px)}
-.hero-main{padding:44px;position:relative;overflow:hidden}.hero-main::after{content:"";position:absolute;right:-120px;bottom:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(15,107,78,.16),transparent 62%);pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(15,107,78,.17);background:rgba(15,107,78,.10);color:var(--emerald);border-radius:999px;padding:8px 12px;font-weight:900;font-size:.82rem;margin-bottom:24px}.eyebrow .dot{width:8px;height:8px;border-radius:99px;background:var(--gold)}
-h1{font-size:clamp(2.3rem,5.2vw,5.4rem);line-height:.96;letter-spacing:-.076em;max-width:980px;margin-bottom:24px}.gradient{background:linear-gradient(110deg,var(--emerald-2),var(--emerald),var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:clamp(1rem,1.5vw,1.22rem);line-height:1.76;color:var(--muted);font-weight:650;max-width:880px}.hero-proof{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}.proof{padding:16px;border-radius:20px;background:rgba(255,255,255,.76);border:1px solid var(--line)}.proof b{display:block;font-size:1.25rem;color:var(--emerald);margin-bottom:5px}.proof span{font-size:.88rem;color:var(--muted);font-weight:700;line-height:1.5}.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:16px;padding:13px 16px;font-weight:900;border:1px solid var(--line);background:#fff}.cta.primary{background:linear-gradient(135deg,var(--emerald),var(--emerald-2));color:#fff;border:0}.cta.gold{background:rgba(198,155,69,.13);color:var(--gold-2);border-color:rgba(198,155,69,.26)}
-.hero-side{display:grid;gap:14px}.metric{padding:24px;border-radius:24px;background:rgba(255,255,255,.82);border:1px solid var(--line);box-shadow:var(--soft);position:relative;overflow:hidden}.metric::before{content:"";position:absolute;inset:0 auto 0 0;width:6px;background:linear-gradient(var(--emerald),var(--gold))}.metric b{display:block;font-size:clamp(2rem,4vw,3.25rem);line-height:1;color:var(--gold-2);letter-spacing:-.05em;margin:4px 0 8px}.metric span{display:block;color:var(--muted);line-height:1.62;font-weight:700}.metric em{font-style:normal;color:var(--emerald);font-weight:900}
-section{padding:38px 0}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:18px}.kicker{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--emerald);font-weight:950;margin-bottom:8px}h2{font-size:clamp(1.75rem,3.3vw,3.1rem);line-height:1.07;letter-spacing:-.052em;max-width:930px}.note{max-width:700px;color:var(--muted);line-height:1.72;font-weight:650}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.panel,.project,.method,.doc{padding:24px;box-shadow:var(--soft)}.panel h3,.project h3,.method h3,.doc h3{color:var(--gold-2);font-size:1.07rem;margin-bottom:10px}.panel p,.project p,.method p,.doc p{color:var(--muted);line-height:1.72;font-weight:650}.tagrow{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.tag{display:inline-flex;align-items:center;border-radius:999px;padding:6px 9px;font-size:.74rem;font-weight:900;background:rgba(15,107,78,.10);color:var(--emerald);border:1px solid rgba(15,107,78,.16)}.tag.gold{background:rgba(198,155,69,.13);color:var(--gold-2);border-color:rgba(198,155,69,.24)}.tag.warn{background:rgba(16,24,32,.06);color:var(--muted);border-color:rgba(16,24,32,.10)}
-.fit-matrix{display:grid;grid-template-columns:.95fr 1.05fr;gap:16px;align-items:start}.pathway{display:grid;gap:11px}.path{display:flex;gap:12px;align-items:flex-start;padding:15px;border-radius:19px;background:rgba(255,255,255,.82);border:1px solid var(--line)}.num{flex:0 0 34px;width:34px;height:34px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--emerald),var(--emerald-2));color:#fff;font-weight:950}.path b{display:block;color:var(--ink);margin-bottom:4px}.path span{display:block;color:var(--muted);font-size:.9rem;line-height:1.55;font-weight:650}.bars{display:grid;gap:12px;margin-top:14px}.bar{display:grid;gap:7px}.bar-head{display:flex;justify-content:space-between;gap:12px;color:var(--ink);font-weight:900;font-size:.86rem}.track{height:12px;background:rgba(15,107,78,.10);border-radius:999px;overflow:hidden;border:1px solid rgba(15,107,78,.09)}.fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--emerald),var(--gold));width:var(--w)}
-.pipeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px}.pipe{position:relative;padding:18px;border-radius:20px;background:rgba(255,255,255,.85);border:1px solid var(--line);min-height:150px}.pipe:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);font-weight:950;color:var(--gold-2);background:var(--paper);border:1px solid var(--line);width:24px;height:24px;display:grid;place-items:center;border-radius:50%}.pipe b{display:block;color:var(--emerald);margin-bottom:8px}.pipe span{display:block;color:var(--muted);line-height:1.55;font-size:.86rem;font-weight:650}
-.evidence-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.research-card{padding:28px;background:linear-gradient(135deg,rgba(255,255,255,.86),rgba(223,245,236,.58));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--soft)}.research-title{font-size:clamp(1.45rem,2.8vw,2.2rem);line-height:1.12;letter-spacing:-.04em;color:var(--ink);margin:8px 0 16px}.research-title span{color:var(--emerald)}.research-card p{color:var(--muted);font-weight:650;line-height:1.75}.quote{padding:18px;border-left:5px solid var(--emerald);border-radius:16px;background:rgba(255,255,255,.75);color:var(--muted);line-height:1.65;font-weight:650;margin-top:16px}.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}.mini{padding:15px;border-radius:16px;background:#fff;border:1px solid var(--line)}.mini b{display:block;color:var(--gold-2);margin-bottom:5px}.mini span{color:var(--muted);font-size:.88rem;line-height:1.55;font-weight:650}
-.lab{padding:26px;border-radius:var(--radius);background:linear-gradient(135deg,rgba(15,107,78,.94),rgba(10,77,58,.98));color:#fff;box-shadow:var(--shadow);overflow:hidden;position:relative}.lab::after{content:"";position:absolute;right:-100px;top:-110px;width:280px;height:280px;border-radius:50%;border:45px solid rgba(255,255,255,.06)}.lab h3{font-size:1.3rem;margin-bottom:10px}.lab p{color:rgba(255,255,255,.78);line-height:1.7;font-weight:650;margin-bottom:16px}.slider-row{display:grid;gap:10px;margin:16px 0}.slider-row label{display:flex;justify-content:space-between;font-weight:800;color:rgba(255,255,255,.92)}input[type=range]{width:100%;accent-color:var(--gold)}.scorebox{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.score{padding:15px;border-radius:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}.score b{font-size:2rem;display:block;line-height:1}.score span{font-size:.8rem;color:rgba(255,255,255,.78);font-weight:800}.decision{padding:14px;border-radius:18px;background:rgba(198,155,69,.18);border:1px solid rgba(198,155,69,.28);font-weight:900;color:#fff;margin-top:12px;line-height:1.5}
-.timeline{display:grid;gap:12px}.time{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:16px;border-radius:20px;background:rgba(255,255,255,.82);border:1px solid var(--line)}.time b{color:var(--emerald)}.time div:last-child strong{display:block;margin-bottom:5px}.time span{display:block;color:var(--muted);font-weight:650;line-height:1.55}.methods{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.method{min-height:205px}.method .icon{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;background:rgba(15,107,78,.11);color:var(--emerald);font-weight:950;margin-bottom:13px}.method ul{margin:10px 0 0 18px;color:var(--muted);font-weight:650;line-height:1.65}.method li{margin:4px 0}.docs{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.doc{display:flex;flex-direction:column;min-height:260px}.doc .doc-meta{font-size:.82rem;color:var(--muted);font-weight:750;line-height:1.55;margin:7px 0 14px}.doc a{margin-top:auto;display:inline-flex;justify-content:center;align-items:center;padding:11px 12px;border-radius:14px;background:var(--emerald);color:#fff;font-weight:900;text-decoration:none}.doc a.secondary{background:rgba(198,155,69,.14);color:var(--gold-2);border:1px solid rgba(198,155,69,.26)}
-.skills{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.skill{padding:16px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.82);min-height:150px}.skill b{display:block;color:var(--emerald);margin-bottom:9px}.skill span{display:block;color:var(--muted);font-weight:650;font-size:.88rem;line-height:1.55}.contact-card{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;align-items:stretch}.contact-main{padding:34px}.contact-main h2{margin-bottom:12px}.contact-list{display:grid;gap:10px;margin-top:20px}.contact-list a,.contact-list div{padding:14px;border-radius:16px;background:rgba(255,255,255,.82);border:1px solid var(--line);font-weight:850}.integrity{padding:24px;border-radius:var(--radius);background:rgba(16,24,32,.92);color:#fff}.integrity h3{margin-bottom:10px;color:#fff}.integrity p{color:rgba(255,255,255,.76);line-height:1.72;font-weight:650}.integrity ul{margin:15px 0 0 18px;color:rgba(255,255,255,.78);line-height:1.7;font-weight:650}footer{padding:30px 22px;text-align:center;color:var(--muted);font-weight:700}.hidden{display:none!important}
-@media(max-width:1100px){.hero,.fit-matrix,.evidence-grid,.contact-card{grid-template-columns:1fr}.methods,.docs,.skills{grid-template-columns:repeat(2,1fr)}.pipeline{grid-template-columns:1fr}.pipe:not(:last-child)::after{content:"↓";right:50%;top:auto;bottom:-16px;transform:translateX(50%)}}
-@media(max-width:720px){.nav-inner{align-items:flex-start;flex-direction:column}.navlinks{justify-content:flex-start}.hero-main{padding:28px}.hero-proof,.grid-2,.grid-3,.grid-4,.mini-grid,.methods,.docs,.skills{grid-template-columns:1fr}.time{grid-template-columns:1fr}.section-head{display:block}.scorebox{grid-template-columns:1fr}h1{font-size:2.7rem}.container{padding:18px 14px}}
-@media print{.nav,.cta-row,.lab,.skip{display:none!important}body{background:#fff}.card,.panel,.doc,.method,.project,.research-card{box-shadow:none;break-inside:avoid}.container{max-width:none}}
+body{
+  font-family:var(--latin);
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 7% -2%,rgba(23,114,85,.08),transparent 26%),
+    radial-gradient(circle at 100% 4%,rgba(36,121,168,.08),transparent 25%),
+    linear-gradient(180deg,#fcfffe 0%,#f7fbfa 100%);
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+body[dir="rtl"]{font-family:var(--arabic);letter-spacing:0}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:.18em}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--blue-650);outline-offset:3px;border-radius:12px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:16px;z-index:2000;background:var(--blue-950);color:#fff;padding:10px 14px;border-radius:12px;font-weight:800}
+[lang="ar"],.ar-script{font-family:var(--arabic);direction:rtl}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1260px;margin:auto;padding:12px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.brand{display:flex;align-items:center;gap:12px;min-width:max-content;font-weight:900;letter-spacing:-.035em;line-height:1.04}
+body[dir="rtl"] .brand{letter-spacing:0}
+.logo{
+  width:46px;height:46px;border-radius:15px;display:grid;place-items:center;color:#fff;
+  background:linear-gradient(135deg,var(--green-700),var(--blue-800));
+  box-shadow:0 12px 30px rgba(20,87,121,.16);
+}
+.logo svg{width:26px;height:26px}
+.brand small{display:block;color:var(--muted);font-weight:750;letter-spacing:0;font-size:.73rem;margin-top:3px}
+.navlinks{display:flex;align-items:center;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.navlinks a,.nav-action{
+  min-height:42px;border:1px solid var(--line);background:#fff;border-radius:999px;
+  padding:9px 12px;font-size:.82rem;font-weight:850;color:var(--ink);
+}
+.navlinks a:hover,.nav-action:hover{border-color:var(--line2);box-shadow:var(--soft-shadow);text-decoration:none}
+
+/* Notion-like language switch */
+.lang-switch{
+  display:flex;align-items:center;gap:4px;padding:4px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;box-shadow:var(--soft-shadow);
+}
+.lang-switch button{
+  border:0;background:transparent;color:var(--muted);
+  padding:8px 11px;border-radius:999px;min-width:42px;
+  font-size:.78rem;font-weight:950;
+}
+.lang-switch button[aria-pressed="true"]{
+  color:#fff;background:linear-gradient(135deg,var(--green-700),var(--blue-800));
+  box-shadow:0 6px 18px rgba(20,87,121,.18);
+}
+.lang-switch .ar{font-family:var(--arabic)}
+body[dir="rtl"] .nav-inner{direction:rtl}
+
+/* LAYOUT */
+.container{max-width:1260px;margin:auto;padding:26px 22px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch;padding-top:12px}
+.card,.panel,.proof,.metric,.project,.method,.doc,.research-card,.lab,.time,.integrity,.evidence-row{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--soft-shadow);
+}
+.hero-main{padding:46px;position:relative;overflow:hidden}
+.hero-main:after{
+  content:"";position:absolute;right:-160px;top:-160px;width:360px;height:360px;border-radius:50%;
+  background:radial-gradient(circle,rgba(36,121,168,.12),transparent 68%);
+}
+body[dir="rtl"] .hero-main:after{right:auto;left:-160px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;padding:8px 12px;border-radius:999px;
+  border:1px solid var(--line);background:var(--green-100);color:var(--green-950);font-size:.82rem;font-weight:900;
+}
+.eyebrow .dot{width:8px;height:8px;background:var(--blue-650);border-radius:99px}
+h1{max-width:980px;margin-bottom:20px;font-size:clamp(2.4rem,5vw,5.05rem);line-height:1;letter-spacing:-.064em}
+body[dir="rtl"] h1{letter-spacing:0;line-height:1.16}
+.gradient{background:linear-gradient(115deg,var(--green-950),var(--green-700),var(--blue-800));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:860px;color:var(--muted);font-size:clamp(1rem,1.45vw,1.18rem);line-height:1.78;font-weight:520}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:15px;padding:13px 16px;font-weight:900;border:1px solid var(--line);background:#fff}
+.cta.primary{background:linear-gradient(135deg,var(--green-700),var(--blue-800));color:#fff;border-color:transparent}
+.cta.blue{background:var(--blue-100);color:var(--blue-800);border-color:#d5e8f1}
+.hero-proof{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
+.proof{padding:17px;border-radius:18px}
+.proof b{display:block;color:var(--green-950);font-size:1rem;margin-bottom:5px}
+.proof span{display:block;color:var(--muted);line-height:1.55;font-size:.9rem;font-weight:620}
+.hero-side{display:grid;gap:14px}
+.metric{padding:24px;border-radius:20px;position:relative;overflow:hidden}
+.metric:before{content:"";position:absolute;inset:0 auto auto 0;height:4px;width:100%;background:linear-gradient(90deg,var(--green-700),var(--blue-650))}
+.metric b{display:block;font-size:clamp(2rem,3.2vw,3.05rem);line-height:1;color:var(--green-950);letter-spacing:-.05em;margin:4px 0 8px}
+body[dir="rtl"] .metric b{letter-spacing:0}
+.metric span{display:block;color:var(--muted);font-weight:620;line-height:1.62}
+.metric em{font-style:normal;color:var(--blue-800);font-weight:850}
+
+/* SECTIONS */
+section{padding:42px 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:20px}
+.kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-800);font-weight:950;margin-bottom:8px}
+body[dir="rtl"] .kicker{letter-spacing:0}
+h2{max-width:930px;font-size:clamp(1.8rem,3.2vw,2.9rem);line-height:1.08;letter-spacing:-.045em}
+body[dir="rtl"] h2{letter-spacing:0;line-height:1.22}
+.note{max-width:730px;color:var(--muted);line-height:1.72;font-weight:520}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.panel,.project,.method,.doc{padding:24px}
+.panel h3,.project h3,.method h3,.doc h3,.research-card h3{color:var(--green-950);font-size:1.08rem;margin-bottom:10px}
+.panel p,.project p,.method p,.doc p,.research-card p{color:var(--muted);line-height:1.72;font-weight:520}
+.tagrow{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.tag{display:inline-flex;align-items:center;border-radius:999px;padding:6px 10px;background:var(--green-100);border:1px solid #dcebe6;color:var(--green-950);font-size:.74rem;font-weight:900}
+.tag.blue{background:var(--blue-100);border-color:#d5e8f1;color:var(--blue-800)}
+.tag.neutral{background:#f3f6f7;border-color:#e3eaee;color:var(--muted)}
+.fit-matrix{display:grid;grid-template-columns:.92fr 1.08fr;gap:16px;align-items:start}
+.bars{display:grid;gap:12px;margin-top:16px}
+.bar{display:grid;gap:7px}
+.bar-head{display:flex;justify-content:space-between;gap:12px;color:var(--ink);font-size:.86rem;font-weight:850}
+.track{height:11px;background:#eef5f2;border-radius:99px;overflow:hidden}
+.fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--green-700),var(--blue-650));width:var(--w)}
+.pathway{display:grid;gap:11px}
+.path{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:18px;background:#fff;border:1px solid var(--line)}
+body[dir="rtl"] .path{flex-direction:row-reverse}
+.num{flex:0 0 34px;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--green-700),var(--blue-800));color:#fff;font-weight:950}
+.path b{display:block;color:var(--ink);margin-bottom:4px}
+.path span{display:block;color:var(--muted);font-size:.92rem;line-height:1.58;font-weight:520}
+
+.evidence-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+.research-card{padding:28px}
+.research-title{font-size:clamp(1.5rem,2.6vw,2.15rem);line-height:1.14;letter-spacing:-.032em;margin:8px 0 16px}
+body[dir="rtl"] .research-title{letter-spacing:0;line-height:1.25}
+.research-title span{color:var(--blue-800)}
+.quote{padding:18px;border-left:4px solid var(--green-700);border-radius:14px;background:var(--green-100);color:var(--muted);line-height:1.68;font-weight:520;margin-top:16px}
+body[dir="rtl"] .quote{border-left:0;border-right:4px solid var(--green-700)}
+.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
+.mini{padding:15px;border-radius:14px;background:#fbfefd;border:1px solid var(--line)}
+.mini b{display:block;color:var(--green-950);margin-bottom:5px}
+.mini span{display:block;color:var(--muted);font-size:.89rem;line-height:1.56;font-weight:520}
+
+.lab{padding:26px;background:linear-gradient(180deg,var(--green-950),var(--blue-800));color:#fff;overflow:hidden}
+.lab h3{color:#fff;font-size:1.24rem;margin-bottom:10px}
+.lab p{color:rgba(255,255,255,.84);line-height:1.7;font-weight:500;margin-bottom:16px}
+.slider-row{display:grid;gap:10px;margin:16px 0}
+.slider-row label{display:flex;justify-content:space-between;gap:12px;color:#fff;font-weight:800}
+input[type=range]{width:100%;accent-color:#7fd2ff}
+.scorebox{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.score{padding:15px;border-radius:16px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.18)}
+.score b{display:block;font-size:2rem;line-height:1}
+.score span{font-size:.8rem;color:rgba(255,255,255,.8);font-weight:800}
+.decision{margin-top:12px;padding:14px;border-radius:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.17);font-weight:850;line-height:1.5}
+
+.evidence-ledger{display:grid;gap:10px}
+.evidence-row{display:grid;grid-template-columns:210px 1fr 200px;gap:14px;align-items:center;padding:15px}
+.evidence-row b{color:var(--green-950)}
+.evidence-row span{color:var(--muted);line-height:1.55;font-weight:520}
+.evidence-row a{justify-self:end;display:inline-flex;padding:10px 12px;border-radius:12px;background:var(--blue-100);color:var(--blue-800);font-weight:850}
+
+.methods{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.method{min-height:210px}
+.icon{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--blue-100);color:var(--blue-800);font-weight:950;margin-bottom:12px}
+.method ul{margin:10px 0 0 18px;color:var(--muted);line-height:1.65;font-weight:520}
+body[dir="rtl"] .method ul{margin:10px 18px 0 0}
+
+.timeline{display:grid;gap:12px}
+.time{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:16px;border-radius:18px}
+.time b{color:var(--blue-800)}
+.time strong{display:block;margin-bottom:5px}
+.time span{display:block;color:var(--muted);line-height:1.58;font-weight:520}
+.docs{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.doc{display:flex;flex-direction:column;min-height:260px}
+.doc .meta{font-size:.83rem;color:var(--muted);line-height:1.56;font-weight:600;margin:7px 0 14px}
+.doc a{margin-top:auto;display:inline-flex;justify-content:center;align-items:center;padding:11px 12px;border-radius:14px;background:linear-gradient(135deg,var(--green-700),var(--blue-800));color:#fff;font-weight:900;text-decoration:none}
+.doc a.secondary{background:var(--blue-100);color:var(--blue-800);border:1px solid #d5e8f1}
+.contact-card{display:grid;grid-template-columns:1.08fr .92fr;gap:16px;align-items:stretch}
+.contact-main{padding:34px}
+.contact-list{display:grid;gap:10px;margin-top:20px}
+.contact-list a,.contact-list div{padding:14px;border-radius:14px;background:#fff;border:1px solid var(--line);font-weight:780}
+.integrity{padding:24px;background:linear-gradient(180deg,#102330,#15384c);color:#fff}
+.integrity h3{margin-bottom:10px;color:#fff}
+.integrity p{color:rgba(255,255,255,.82);line-height:1.72}
+.integrity ul{margin:14px 0 0 18px;color:rgba(255,255,255,.82);line-height:1.7}
+body[dir="rtl"] .integrity ul{margin:14px 18px 0 0}
+
+body[dir="rtl"] .hero-main,
+body[dir="rtl"] .panel,
+body[dir="rtl"] .project,
+body[dir="rtl"] .method,
+body[dir="rtl"] .doc,
+body[dir="rtl"] .research-card,
+body[dir="rtl"] .integrity,
+body[dir="rtl"] .contact-main{text-align:right}
+body[dir="rtl"] .section-head{direction:rtl}
+body[dir="rtl"] .navlinks{justify-content:flex-start}
+.hidden{display:none!important}
+
+@media(max-width:1120px){
+  .hero,.fit-matrix,.evidence-grid,.contact-card{grid-template-columns:1fr}
+  .methods,.docs{grid-template-columns:repeat(2,1fr)}
+  .evidence-row{grid-template-columns:1fr}
+  .evidence-row a{justify-self:start}
+}
+@media(max-width:720px){
+  .nav-inner{flex-direction:column;align-items:flex-start}
+  .navlinks{justify-content:flex-start}
+  .hero-main,.contact-main{padding:28px}
+  .hero-proof,.grid-3,.grid-4,.mini-grid,.methods,.docs{grid-template-columns:1fr}
+  .time{grid-template-columns:1fr}
+  .section-head{display:block}
+  .scorebox{grid-template-columns:1fr}
+  h1{font-size:2.55rem}
+  .container{padding:18px 14px}
+}
+@media print{
+  .nav,.cta-row,.skip,.lang-switch,.lab{display:none!important}
+  body{background:#fff}
+  .card,.panel,.doc,.method,.project,.research-card{box-shadow:none;break-inside:avoid}
+  .container{max-width:none}
+}
+
+/* Original Leaflet/SUMO dashboard layer — copied into Malaysia portfolio */
+:root{--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;}
+#sumo{scroll-margin-top:96px}
+.egs-sumo-shell {
+ background: #050505;
+ color: #E8FCEE;
+ border: 1px solid #004400;
+ font-family: var(--font-mono);
+ overflow:hidden;
+}
+.egs-sumo-toolbar {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 6px;
+ padding: 7px;
+ border-bottom: 1px solid #004400;
+ background: #071107;
+}
+.egs-mode-btn,
+.egs-zone-btn,
+.egs-control-btn {
+ border: 1px solid #004400;
+ background: #101b10;
+ color: #75a875;
+ border-radius: 3px;
+ padding: 5px 9px;
+ font-family: var(--font-mono);
+ font-size: 10px;
+ cursor: pointer;
+ line-height: 1.15;
+}
+.egs-mode-btn:hover,
+.egs-zone-btn:hover,
+.egs-control-btn:hover { color: #00FF88; border-color: #00AA55; }
+.egs-mode-btn.active,
+.egs-zone-btn.active {
+ background: rgba(0,255,136,.12);
+ color: var(--tc, #00FF88);
+ border-color: var(--tc, #00FF88);
+ box-shadow: inset 0 -2px 0 var(--tc, #00FF88);
+}
+.egs-sumo-grid {
+ display: grid;
+ grid-template-columns: minmax(0, 1fr) 220px;
+ min-height: 430px;
+}
+.egs-map-wrap { position: relative; min-height: 430px; background: #0A0A0A; }
+#egsSumoMap { position:absolute; inset:0; z-index:1; min-height:430px; }
+#egsTrafficCanvas { position:absolute; inset:0; z-index:500; width:100%; height:100%; pointer-events:none; }
+.egs-map-badge {
+ position: absolute;
+ z-index: 700;
+ top: 10px; left: 10px;
+ max-width: calc(100% - 20px);
+ background: rgba(0, 10, 0, .82);
+ border: 1px solid #004400;
+ border-radius: 3px;
+ padding: 7px 9px;
+ color: #00FF88;
+ pointer-events: none;
+}
+.egs-map-badge strong { display:block; font-size: 11px; margin-bottom:2px; }
+.egs-map-badge span { display:block; font-size: 9px; color:#77aa77; line-height:1.35; }
+.egs-legend {
+ position: absolute;
+ z-index: 700;
+ left: 10px; bottom: 10px;
+ display:flex; gap:8px; flex-wrap:wrap;
+ background: rgba(0, 10, 0, .82);
+ border: 1px solid #004400;
+ border-radius: 3px;
+ padding: 6px 8px;
+ font-size: 9px;
+ color:#77aa77;
+ pointer-events:none;
+}
+.egs-dot { display:inline-block; width:10px; height:10px; border-radius:99px; margin-right:4px; vertical-align:-1px; }
+.egs-dot.green { background:#00FF88; }
+.egs-dot.yellow { background:#FFD700; }
+.egs-dot.red { background:#FF3355; }
+.egs-side {
+ background: #050505;
+ border-left: 1px solid #004400;
+ display:flex;
+ flex-direction:column;
+}
+.egs-kpis { display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #004400; }
+.egs-kpi { padding:8px 7px; border-right:1px solid #004400; border-bottom:1px solid #004400; text-align:center; }
+.egs-kpi:nth-child(2n) { border-right:none; }
+.egs-kpi-label { color:#446644; font-size:8px; margin-bottom:3px; }
+.egs-kpi-val { color:#00FF88; font-size:18px; font-weight:700; line-height:1; }
+.egs-controls { padding:8px; border-bottom:1px solid #004400; }
+.egs-control-row { margin-bottom:8px; }
+.egs-control-row label { display:block; color:#668866; font-size:8px; margin-bottom:3px; }
+.egs-control-row input[type="range"] { width:100%; accent-color:#00FF88; }
+.egs-control-buttons { display:grid; grid-template-columns:1fr 1fr; gap:5px; margin-bottom:8px; }
+.egs-note { padding:8px; color:#668866; font-size:9px; line-height:1.5; overflow-y:auto; }
+.egs-hidden { display:none !important; }
+.egs-link-row { display:flex; gap:5px; flex-wrap:wrap; padding:7px; border-top:1px solid #004400; }
+.egs-small-tag { border:1px solid #004400; color:#668866; padding:2px 6px; border-radius:2px; font-size:8px; }
+#sumo-dashboard{
+ margin-top:18px;
+ overflow:hidden;
+}
+#sumo-dashboard .ph{
+ padding:10px 14px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:12px;
+ border-radius:20px 20px 0 0;
+ min-height:48px;
+}
+#sumo-dashboard .ph-en{
+ font-size:.72rem;
+ font-weight:700;
+ white-space:normal;
+ color:#75a875;
+}
+#sumo-dashboard .pb{
+ border-radius:0 0 20px 20px;
+ overflow:hidden;
+}
+body[dir="rtl"] #sumo-dashboard{direction:ltr;font-family:var(--font-mono);}
+body[dir="rtl"] .egs-map-badge, body[dir="rtl"] .egs-legend{text-align:left}
+.sumo-source-note{
+ margin-top:12px;
+ padding:14px 16px;
+ border:1px solid var(--line);
+ border-radius:18px;
+ background:#fff;
+ color:var(--muted);
+ line-height:1.65;
+ font-weight:560;
+}
+@media (max-width: 760px) {
+ .egs-sumo-grid { grid-template-columns: 1fr; }
+ .egs-side { border-left:none; border-top:1px solid #004400; }
+ .egs-map-wrap, #egsSumoMap { min-height: 360px; }
+}
+
+
+/* =========================================================
+   Amanah Signal Easter Egg
+   Clean Islamic Finance / Malaysia / VBI micro-experience
+   ========================================================= */
+:root {
+  --amanah-green-deep: #073a2c;
+  --amanah-green: #0e5a43;
+  --amanah-blue: #145779;
+  --amanah-blue-soft: #eaf5fb;
+  --amanah-gold: #c8a24a;
+  --amanah-ink: #10202c;
+  --amanah-muted: #536575;
+  --amanah-glass: rgba(255, 255, 255, 0.9);
+  --amanah-border: rgba(14, 90, 67, 0.18);
+  --amanah-shadow: 0 22px 70px rgba(7, 58, 44, 0.18);
+}
+
+body.amanah-signal-active::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  pointer-events: none;
+  opacity: 0.55;
+  background:
+    radial-gradient(circle at 10% 12%, rgba(14, 90, 67, 0.10), transparent 26%),
+    radial-gradient(circle at 88% 18%, rgba(20, 87, 121, 0.10), transparent 28%),
+    linear-gradient(135deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));
+}
+
+body.amanah-signal-active::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9991;
+  pointer-events: none;
+  opacity: 0.055;
+  background-image:
+    linear-gradient(30deg, transparent 45%, var(--amanah-gold) 46%, transparent 47%),
+    linear-gradient(150deg, transparent 45%, var(--amanah-green) 46%, transparent 47%);
+  background-size: 42px 42px;
+  background-position: center;
+}
+
+.amanah-signal {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 10000;
+  width: min(420px, calc(100vw - 32px));
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 14px;
+  border: 1px solid var(--amanah-border);
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.94), rgba(234,245,251,0.88)),
+    radial-gradient(circle at 20% 0%, rgba(14,90,67,0.12), transparent 35%);
+  box-shadow: var(--amanah-shadow);
+  backdrop-filter: blur(18px);
+  color: var(--amanah-ink);
+  transform: translateY(18px) scale(0.98);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 240ms ease,
+    transform 240ms ease,
+    visibility 240ms ease;
+}
+
+.amanah-signal.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.amanah-signal[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+  grid-template-columns: 1fr 46px;
+}
+
+.amanah-signal[dir="rtl"] .amanah-signal__mark {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.amanah-signal[dir="rtl"] .amanah-signal__content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.amanah-signal__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(16, 32, 44, 0.10);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.78);
+  color: var(--amanah-muted);
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.amanah-signal[dir="rtl"] .amanah-signal__close {
+  right: auto;
+  left: 12px;
+}
+
+.amanah-signal__close:hover {
+  color: var(--amanah-green-deep);
+  border-color: rgba(14, 90, 67, 0.22);
+}
+
+.amanah-signal__close:focus-visible,
+.amanah-signal__cta:focus-visible {
+  outline: 3px solid var(--amanah-blue);
+  outline-offset: 3px;
+}
+
+.amanah-signal__mark {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--amanah-green), var(--amanah-blue));
+  position: relative;
+  box-shadow: 0 14px 28px rgba(20, 87, 121, 0.18);
+}
+
+.amanah-signal__mark::before,
+.amanah-signal__mark::after {
+  content: "";
+  position: absolute;
+  inset: 11px;
+  border: 1.6px solid rgba(255,255,255,0.78);
+  transform: rotate(45deg);
+  border-radius: 4px;
+}
+
+.amanah-signal__mark::after {
+  inset: 16px;
+  border-color: rgba(200,162,74,0.82);
+}
+
+.amanah-signal__kicker {
+  margin: 0 0 4px;
+  color: var(--amanah-green);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.amanah-signal__title {
+  margin: 0 34px 6px 0;
+  color: var(--amanah-ink);
+  font-size: 1.06rem;
+  line-height: 1.25;
+  font-weight: 850;
+}
+
+.amanah-signal[dir="rtl"] .amanah-signal__title {
+  margin: 0 0 6px 34px;
+}
+
+.amanah-signal__text {
+  margin: 0;
+  color: var(--amanah-muted);
+  font-size: 0.92rem;
+  line-height: 1.58;
+  font-weight: 520;
+}
+
+.amanah-signal__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 13px 0 14px;
+}
+
+.amanah-signal__badges span {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 9px;
+  background: rgba(14, 90, 67, 0.09);
+  border: 1px solid rgba(14, 90, 67, 0.13);
+  color: var(--amanah-green-deep);
+  font-size: 0.73rem;
+  font-weight: 820;
+}
+
+.amanah-signal__badges span:nth-child(3) {
+  background: rgba(20, 87, 121, 0.09);
+  border-color: rgba(20, 87, 121, 0.13);
+  color: var(--amanah-blue);
+}
+
+.amanah-signal__cta {
+  border: 0;
+  border-radius: 14px;
+  padding: 10px 13px;
+  background: linear-gradient(135deg, var(--amanah-green), var(--amanah-blue));
+  color: #fff;
+  font-size: 0.84rem;
+  font-weight: 850;
+  box-shadow: 0 12px 26px rgba(20, 87, 121, 0.16);
+}
+
+.amanah-signal__cta:hover {
+  filter: brightness(1.04);
+}
+
+.amanah-signal__cta[hidden] {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .amanah-signal {
+    right: 50%;
+    bottom: 16px;
+    transform: translate(50%, 18px) scale(0.98);
+    width: min(430px, calc(100vw - 24px));
+  }
+
+  .amanah-signal.is-visible {
+    transform: translate(50%, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amanah-signal {
+    transition: opacity 80ms linear, visibility 80ms linear;
+    transform: none;
+  }
+
+  .amanah-signal.is-visible {
+    transform: none;
+  }
+
+  body.amanah-signal-active::before,
+  body.amanah-signal-active::after {
+    transition: none;
+  }
+}
+
+
+/* =========================================================
+   Path number fix
+   Keeps pathway numbers centered, readable and not clipped.
+   ========================================================= */
+.path .num,
+.fit-matrix .num,
+.pathway .num {
+  box-sizing: border-box !important;
+  flex: 0 0 42px !important;
+  width: 42px !important;
+  min-width: 42px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, var(--green-700), var(--blue-800)) !important;
+  color: #ffffff !important;
+  font-size: 0.95rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  letter-spacing: 0 !important;
+  text-indent: 0 !important;
+  overflow: hidden !important;
+  align-self: flex-start !important;
+}
+
+.path .num::before,
+.path .num::after,
+.fit-matrix .num::before,
+.fit-matrix .num::after,
+.pathway .num::before,
+.pathway .num::after {
+  content: none !important;
+}
+
+body[dir="rtl"] .path .num,
+body[dir="rtl"] .fit-matrix .num,
+body[dir="rtl"] .pathway .num {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+
+
+/* =========================================================
+   GitHub final polish
+   Small finishing fixes for deployment, accessibility and polish.
+   ========================================================= */
+html {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+.navlinks a,
+.lang-switch button,
+.cta,
+.doc a,
+.evidence-row a,
+.amanah-signal__cta,
+.amanah-signal__close {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navlinks a:focus-visible,
+.lang-switch button:focus-visible,
+.cta:focus-visible,
+.doc a:focus-visible,
+.evidence-row a:focus-visible {
+  outline: 3px solid var(--blue-650, #2479a8);
+  outline-offset: 3px;
+}
+
+.lang-switch button[aria-pressed="true"] {
+  cursor: default;
+}
+
+.doc a,
+.evidence-row a,
+.cta {
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+
+.doc a:hover,
+.evidence-row a:hover,
+.cta:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    min-width: 0;
+  }
+
+  .brand small {
+    max-width: 230px;
+  }
+
+  .navlinks {
+    width: 100%;
+  }
+
+  .lang-switch {
+    order: -1;
+  }
+}
+
+/* Document links should remain legible if PDFs are unavailable during local preview. */
+.doc a[href=""],
+.doc a:not([href]) {
+  opacity: .55;
+  pointer-events: none;
+}
+
+/* Prevent accidental clipping in numbered pathway cards across browsers. */
+.path {
+  overflow: visible !important;
+}
+
+.path > div {
+  min-width: 0;
+}
+
 </style>
 </head>
+
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
 <nav class="nav" aria-label="Main navigation">
   <div class="nav-inner">
-    <a class="brand" href="#top" aria-label="El Ghali Sany portfolio home">
-      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8.3 4.8v9.6L12 21.2l-8.3-4.8V6.8L12 2z" stroke="currentColor" stroke-width="1.8"/><path d="M7.8 12.3l3 3.1 5.7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <span>El Ghali Sany<small>Malaysia Islamic Finance Evidence Portfolio</small></span>
+    <a class="brand candidate-name brand-name" href="#top" aria-label="El Ghali Sany portfolio home">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 2l8.3 4.8v9.6L12 21.2l-8.3-4.8V6.8L12 2z" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M7.6 12.3l3.1 3.1 5.8-7.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>El Ghali Sany<small data-i18n="brandSmall">Malaysia Islamic Finance Evidence Portfolio</small></span>
     </a>
+
     <div class="navlinks">
-      <a href="#fit">Fit</a><a href="#research">Research</a><a href="#evidence">Evidence</a><a href="#methods">Methods</a><a href="#documents">Documents</a><a href="#contact">Contact</a>
-      <button type="button" id="lensAdmissions" class="active">Admissions lens</button>
-      <button type="button" id="lensResearch">Research lens</button>
+      <a href="#fit" data-i18n="navFit">Fit</a>
+      <a href="#research" data-i18n="navResearch">Research</a>
+      <a href="#evidence" data-i18n="navEvidence">Evidence</a>
+      <a href="#sumo" data-sumo-en="SUMO" data-sumo-ms="SUMO" data-sumo-ar="SUMO">SUMO</a>
+      <a href="#methods" data-i18n="navMethods">Methods</a>
+      <a href="#documents" data-i18n="navDocuments">Documents</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+      <div class="lang-switch" role="group" aria-label="Language switch">
+        <button type="button" data-lang="en" aria-pressed="true" aria-label="Switch language to English">EN</button>
+        <button type="button" data-lang="ms" aria-pressed="false" aria-label="Tukar bahasa ke Bahasa Melayu">BM</button>
+        <button type="button" data-lang="ar" aria-pressed="false" class="ar" aria-label="تغيير اللغة إلى العربية">AR</button>
+      </div>
     </div>
   </div>
 </nav>
+
 <main id="main" class="container">
   <header class="hero" id="top">
     <div class="card hero-main">
-      <div class="eyebrow"><span class="dot"></span> MSc Islamic Finance • Malaysia-facing portfolio</div>
-      <h1>From investment appraisal to <span class="gradient">Shariah-governed sukuk readiness</span>.</h1>
-      <p class="lead">This portfolio reframes my finance, infrastructure analytics and MCDM work for a Malaysia-based Islamic finance application. The core positioning is precise: sukuk, Maqasid al-Shariah, ESG, financial viability and auditable decision support for smart infrastructure projects.</p>
+      <div class="eyebrow"><span class="dot"></span><span data-i18n="eyebrow">MSc Islamic Finance • Malaysia-facing portfolio</span></div>
+      <h1 data-i18n-html="heroTitle">From investment appraisal to <span class="gradient">Shariah-governed sukuk readiness</span>.</h1>
+      <p class="lead" data-i18n="heroLead">This portfolio brings together my work in finance, infrastructure analytics and decision modelling, then connects it to sukuk readiness, Maqasid al-Shariah, ESG, financial viability and accountable governance.</p>
+
       <div class="hero-proof">
-        <div class="proof"><b>INCEIF focus</b><span>MSc Islamic Finance application, School of Graduate and Professional Studies, Department of Islamic Finance.</span></div>
-        <div class="proof"><b>SC-SIIRS</b><span>Research proposal: Shariah-Compliant Smart Infrastructure Investment Readiness Score.</span></div>
-        <div class="proof"><b>MCDM stack</b><span>AHP, TOPSIS, MEREC, COPRAS, Fuzzy-AHP and AROMAN across prior and proposed research.</span></div>
-        <div class="proof"><b>Evidence base</b><span>CV, PFE, AI-MCDM manuscript and research proposal consolidated into one admissions narrative.</span></div>
+        <div class="proof"><b data-i18n="proof1Title">INCEIF fit</b><span data-i18n="proof1Text">MSc Islamic Finance, SGPS, Department of Islamic Finance, with a research focus on sukuk and Shariah governance.</span></div>
+        <div class="proof"><b data-i18n="proof2Title">SC-SIIRS</b><span data-i18n="proof2Text">A proposed readiness score for screening smart infrastructure sukuk before formal structuring.</span></div>
+        <div class="proof"><b data-i18n="proof3Title">Evidence chain</b><span data-i18n="proof3Text">PFE → AI-MCDM manuscript → Islamic finance research proposal → CV evidence.</span></div>
+        <div class="proof"><b data-i18n="proof4Title">Trilingual UI</b><span data-i18n="proof4Text">Notion-style switch for English, Bahasa Melayu and Arabic with RTL support.</span></div>
       </div>
+
       <div class="cta-row">
-        <a class="cta primary" href="#research">View research fit</a>
-        <a class="cta" href="#documents">Download evidence</a>
-        <a class="cta gold" href="mailto:sanyghali@gmail.com">Contact</a>
+        <a class="cta primary" href="#research" data-i18n="ctaResearch">View research fit</a>
+        <a class="cta" href="#documents" data-i18n="ctaDocs">Download evidence</a>
+        <a class="cta blue" href="mailto:sanyghali@gmail.com" data-i18n="ctaContact">Contact</a>
       </div>
     </div>
+
     <aside class="hero-side" aria-label="Key evidence metrics">
-      <div class="metric"><b>45.8%</b><span>Lower MAE reported for XGBoost versus Ridge regression in the AI-MCDM smart-city manuscript; used as evidence of model-validation discipline.</span></div>
-      <div class="metric"><b>25</b><span>Representative smart-city infrastructure projects ranked across five domains in prior AI-MCDM work.</span></div>
-      <div class="metric"><b>4</b><span>OOH/DOOH investment scenarios modelled over five years in the Casablanca PFE, linking traffic exposure to investment appraisal.</span></div>
-      <div class="metric"><b>533%</b><span>Maximum projected ROI in the strongest advertising-infrastructure scenario from the CV evidence record. <em>Used as prior applied-finance evidence, not as a sukuk claim.</em></span></div>
+      <div class="metric"><b>45.8%</b><span data-i18n-html="metric1">Lower MAE reported for XGBoost versus Ridge regression in prior AI-MCDM work; used as model-validation evidence, not as an investment-performance claim.</span></div>
+      <div class="metric"><b>25</b><span data-i18n="metric2">Representative smart-city infrastructure projects ranked across five domains in the AI-MCDM manuscript.</span></div>
+      <div class="metric"><b>4</b><span data-i18n="metric3">OOH/DOOH investment scenarios modelled over five years in the Casablanca PFE.</span></div>
+      <div class="metric"><b>533%</b><span data-i18n-html="metric4">Maximum projected ROI in the strongest advertising-infrastructure scenario from the CV evidence record. <em>Used only as prior applied-finance proof.</em></span></div>
     </aside>
   </header>
 
   <section id="fit">
     <div class="section-head">
-      <div><div class="kicker">Programme fit</div><h2>Why this is a stronger Malaysia portfolio than a generic finance page.</h2></div>
-      <p class="note">The old positioning was finance-and-banking generic. This version forces every section toward Islamic capital markets, sukuk readiness, Shariah governance, ESG-Maqasid integration and project-level financial appraisal.</p>
+      <div><div class="kicker" data-i18n="fitKicker">Programme fit</div><h2 data-i18n="fitTitle">Designed for Islamic finance, not generic banking.</h2></div>
+      <p class="note" data-i18n="fitNote">The portfolio avoids a generic “finance applicant” narrative. It centers Islamic capital markets, sukuk readiness, Shariah governance, ESG-Maqasid integration and project-level appraisal.</p>
     </div>
+
     <div class="fit-matrix">
       <div class="panel">
-        <h3>Positioning statement</h3>
-        <p>I am applying to the MSc in Islamic Finance with a research agenda focused on how Islamic capital markets can evaluate smart infrastructure projects before sukuk structuring. My comparative advantage is not jurisprudential authority; it is the ability to build transparent appraisal tools that combine finance, data, infrastructure evidence and governance controls.</p>
-        <div class="tagrow"><span class="tag">Sukuk</span><span class="tag">Maqasid</span><span class="tag">ESG</span><span class="tag">Infrastructure finance</span><span class="tag gold">MCDM</span></div>
+        <h3 data-i18n="positionTitle">Admissions positioning</h3>
+        <p data-i18n="positionText">My fit is analytical and research-oriented: I can translate financial, infrastructure and data evidence into transparent appraisal tools for Islamic finance decision-makers, while keeping Shariah authority with qualified boards and scholars.</p>
+        <div class="tagrow">
+          <span class="tag">Sukuk</span><span class="tag">Maqasid</span><span class="tag">ESG</span><span class="tag">Infrastructure finance</span><span class="tag blue">MCDM</span>
+        </div>
         <div class="bars" aria-label="Fit indicators">
-          <div class="bar"><div class="bar-head"><span>Islamic finance research fit</span><span>92%</span></div><div class="track"><div class="fill" style="--w:92%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>Quantitative / decision-support fit</span><span>95%</span></div><div class="track"><div class="fill" style="--w:95%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>Professional finance evidence</span><span>86%</span></div><div class="track"><div class="fill" style="--w:86%"></div></div></div>
-          <div class="bar"><div class="bar-head"><span>Shariah-specialist experience</span><span>Developing</span></div><div class="track"><div class="fill" style="--w:52%"></div></div></div>
+          <div class="bar"><div class="bar-head"><span data-i18n="bar1">Islamic finance research fit</span><span>92%</span></div><div class="track"><div class="fill" style="--w:92%"></div></div></div>
+          <div class="bar"><div class="bar-head"><span data-i18n="bar2">Decision-support methods</span><span>95%</span></div><div class="track"><div class="fill" style="--w:95%"></div></div></div>
+          <div class="bar"><div class="bar-head"><span data-i18n="bar3">Applied finance evidence</span><span>88%</span></div><div class="track"><div class="fill" style="--w:88%"></div></div></div>
+          <div class="bar"><div class="bar-head"><span data-i18n="bar4">Formal Shariah scholarship</span><span data-i18n="developing">Developing</span></div><div class="track"><div class="fill" style="--w:52%"></div></div></div>
         </div>
       </div>
+
       <div class="pathway">
-        <div class="path"><span class="num">1</span><div><b>Start from asset-linked finance.</b><span>The application narrative begins with infrastructure as real-economy capital allocation, then moves toward sukuk as a Shariah-compliant financing route.</span></div></div>
-        <div class="path"><span class="num">2</span><div><b>Make Maqasid operational.</b><span>Maqasid is presented through measurable project proxies: public welfare, harm reduction, accessibility, wealth preservation and environmental stewardship.</span></div></div>
-        <div class="path"><span class="num">3</span><div><b>Use MCDM responsibly.</b><span>The model ranks alternatives, but the page repeatedly states that it does not replace Shariah boards, legal review or investment committees.</span></div></div>
-        <div class="path"><span class="num">4</span><div><b>Show proof, not decoration.</b><span>PFE, CV, AI-MCDM manuscript and proposal are converted into an evidence chain: data → modelling → ranking → governance.</span></div></div>
+        <div class="path"><span class="num">1</span><div><b data-i18n="path1Title">Anchor the profile in real assets.</b><span data-i18n="path1Text">The narrative starts with infrastructure as real-economy capital allocation, then moves to sukuk as the Shariah-compliant financing channel.</span></div></div>
+        <div class="path"><span class="num">2</span><div><b data-i18n="path2Title">Convert Maqasid into indicators.</b><span data-i18n="path2Text">Public welfare, harm reduction, accessibility, wealth preservation and environmental stewardship are treated as measurable project dimensions.</span></div></div>
+        <div class="path"><span class="num">3</span><div><b data-i18n="path3Title">Keep MCDM subordinate to governance.</b><span data-i18n="path3Text">The score supports comparison and auditability; it does not replace Shariah boards, legal review or investment committees.</span></div></div>
+        <div class="path"><span class="num">4</span><div><b data-i18n="path4Title">Let the documents carry the claim.</b><span data-i18n="path4Text">The proposal, PFE, AI-MCDM paper, CV and original portfolio file are all included in the evidence package.</span></div></div>
       </div>
     </div>
   </section>
 
   <section id="research">
     <div class="section-head">
-      <div><div class="kicker">Research anchor</div><h2>SC-SIIRS: the main intellectual product.</h2></div>
-      <p class="note">This is the portfolio’s academic center. It gives Malaysia admissions reviewers a clear reason to connect your background to Islamic finance rather than seeing it as a conventional finance application.</p>
+      <div><div class="kicker" data-i18n="researchKicker">Research anchor</div><h2 data-i18n="researchHead">SC-SIIRS is the main intellectual product.</h2></div>
+      <p class="note" data-i18n="researchNote">The portfolio is built around one defensible research idea: a Shariah-governed readiness framework for smart infrastructure sukuk.</p>
     </div>
+
     <div class="evidence-grid">
       <article class="research-card">
-        <span class="tag gold">Research proposal for MSc Islamic Finance</span>
-        <h3 class="research-title"><span>A Shariah-Governed MCDM Readiness Framework</span> for Smart Infrastructure Sukuk</h3>
-        <p>The proposal develops SC-SIIRS, a Shariah-Compliant Smart Infrastructure Investment Readiness Score. It integrates financial viability, Maqasid al-Shariah alignment, ESG contribution, smart infrastructure performance, Shariah governance and risk exposure into one auditable pre-screening architecture for sukuk candidates.</p>
-        <div class="quote">The model is deliberately advisory. It organizes evidence and exposes trade-offs before formal sukuk structuring; it does not issue fatwas, price sukuk, certify Shariah compliance or override human governance.</div>
+        <span class="tag blue" data-i18n="proposalTag">Research proposal for MSc Islamic Finance</span>
+        <h3 class="research-title" data-i18n-html="researchTitle"><span>A Shariah-Governed MCDM Readiness Framework</span> for Smart Infrastructure Sukuk</h3>
+        <p data-i18n="researchText">The proposed SC-SIIRS framework integrates financial viability, Maqasid al-Shariah alignment, ESG contribution, smart infrastructure performance, Shariah governance and risk exposure into an auditable pre-screening architecture for sukuk candidates.</p>
+        <div class="quote" data-i18n="researchQuote">The model is advisory. It organizes evidence and exposes trade-offs before formal sukuk structuring; it does not issue fatwas, price sukuk, certify Shariah compliance or override human governance.</div>
         <div class="mini-grid">
-          <div class="mini"><b>Primary method</b><span>AHP expert weighting + TOPSIS scenario ranking.</span></div>
-          <div class="mini"><b>Robustness</b><span>MEREC and COPRAS to test ranking stability.</span></div>
-          <div class="mini"><b>Validation</b><span>Expert interviews for Shariah-governance fit and usability.</span></div>
-          <div class="mini"><b>Decision moment</b><span>Pre-structuring stage before sukuk approval.</span></div>
+          <div class="mini"><b data-i18n="mini1Title">Primary method</b><span data-i18n="mini1Text">AHP expert weighting + TOPSIS scenario ranking.</span></div>
+          <div class="mini"><b data-i18n="mini2Title">Robustness</b><span data-i18n="mini2Text">MEREC and COPRAS test ranking stability.</span></div>
+          <div class="mini"><b data-i18n="mini3Title">Validation</b><span data-i18n="mini3Text">Expert interviews test Shariah-governance fit and usability.</span></div>
+          <div class="mini"><b data-i18n="mini4Title">Decision moment</b><span data-i18n="mini4Text">Pre-structuring stage before sukuk approval.</span></div>
         </div>
       </article>
-      <aside class="lab" aria-label="SC-SIIRS demo calculator">
-        <h3>SC-SIIRS mini-readiness lab</h3>
-        <p>Interactive demonstration of the logic, not a real investment decision. Move the sliders to see how the advisory readiness band reacts to financial, Maqasid, ESG and governance evidence.</p>
-        <div class="slider-row"><label for="financial">Financial viability <span id="vFinancial">78</span></label><input id="financial" min="0" max="100" value="78" type="range"></div>
-        <div class="slider-row"><label for="maqasid">Maqasid alignment <span id="vMaqasid">82</span></label><input id="maqasid" min="0" max="100" value="82" type="range"></div>
-        <div class="slider-row"><label for="esg">ESG contribution <span id="vEsg">74</span></label><input id="esg" min="0" max="100" value="74" type="range"></div>
-        <div class="slider-row"><label for="governance">Shariah governance + auditability <span id="vGovernance">88</span></label><input id="governance" min="0" max="100" value="88" type="range"></div>
-        <div class="scorebox"><div class="score"><b id="score">81</b><span>Composite readiness</span></div><div class="score"><b id="band">Moderate</b><span>Advisory band</span></div></div>
+
+      <aside class="lab" aria-label="SC-SIIRS demonstration calculator">
+        <h3 data-i18n="labTitle">SC-SIIRS mini-readiness lab</h3>
+        <p data-i18n="labText">A demonstration of the score logic. It is not a real investment recommendation.</p>
+        <div class="slider-row"><label for="financial"><span data-i18n="sliderFinancial">Financial viability</span> <span id="vFinancial">78</span></label><input id="financial" min="0" max="100" value="78" type="range"></div>
+        <div class="slider-row"><label for="maqasid"><span data-i18n="sliderMaqasid">Maqasid alignment</span> <span id="vMaqasid">82</span></label><input id="maqasid" min="0" max="100" value="82" type="range"></div>
+        <div class="slider-row"><label for="esg"><span data-i18n="sliderEsg">ESG contribution</span> <span id="vEsg">74</span></label><input id="esg" min="0" max="100" value="74" type="range"></div>
+        <div class="slider-row"><label for="governance"><span data-i18n="sliderGov">Shariah governance + auditability</span> <span id="vGovernance">88</span></label><input id="governance" min="0" max="100" value="88" type="range"></div>
+        <div class="scorebox"><div class="score"><b id="score">81</b><span data-i18n="scoreLabel">Composite readiness</span></div><div class="score"><b id="band">Moderate</b><span data-i18n="bandLabel">Advisory band</span></div></div>
         <div class="decision" id="decisionText">Proceed conditionally with targeted remediation.</div>
       </aside>
-    </div>
-    <div class="pipeline" aria-label="SC-SIIRS pipeline">
-      <div class="pipe"><b>Evidence intake</b><span>Project documents, asset logic, CAPEX/OPEX, cash-flow mechanism, ESG and smart infrastructure metrics.</span></div>
-      <div class="pipe"><b>Shariah gate</b><span>Permissibility, revenue acceptability, asset linkage and documentation adequacy checked before scoring.</span></div>
-      <div class="pipe"><b>Weighted scoring</b><span>AHP translates expert judgment into dimension and sub-criterion weights.</span></div>
-      <div class="pipe"><b>Ranking and robustness</b><span>TOPSIS ranks candidate scenarios; MEREC and COPRAS test stability.</span></div>
-      <div class="pipe"><b>Human review</b><span>Readiness bands guide Shariah boards, issuers and investment committees without replacing them.</span></div>
     </div>
   </section>
 
   <section id="evidence">
     <div class="section-head">
-      <div><div class="kicker">Evidence chain</div><h2>The portfolio converts previous work into a credible Islamic-finance research trajectory.</h2></div>
-      <p class="note">Each project is shown for what it proves. No inflated claim. No unrelated decoration.</p>
+      <div><div class="kicker" data-i18n="evidenceKicker">Evidence chain</div><h2 data-i18n="evidenceTitle">Every document has a specific admissions function.</h2></div>
+      <p class="note" data-i18n="evidenceNote">The portfolio uses your uploaded files as evidence, not decoration.</p>
     </div>
-    <div class="grid-3">
-      <article class="project"><h3>1. Casablanca traffic-to-ROI PFE</h3><p>Built the applied foundation: SUMO traffic simulation, GIS mapping, socio-economic proxies, regulatory constraints, CAPEX/OPEX/TCO modelling and a Potential Profitability Index for OOH/DOOH assets.</p><div class="tagrow"><span class="tag">SUMO</span><span class="tag">QGIS</span><span class="tag">ROI</span><span class="tag">CAPEX/OPEX</span><span class="tag gold">IRP</span></div></article>
-      <article class="project"><h3>2. AI-MCDM smart-city scorecard</h3><p>Extended the PFE logic from local advertising infrastructure to broader smart-city investment ranking under carbon, energy and geoeconomic risk uncertainty.</p><div class="tagrow"><span class="tag">XGBoost</span><span class="tag">DNPV</span><span class="tag">Real Options</span><span class="tag">Fuzzy-AHP</span><span class="tag gold">AROMAN</span></div></article>
-      <article class="project"><h3>3. Islamic finance research proposal</h3><p>Repositions the same analytical capability for Malaysia and INCEIF: sukuk pre-screening, Maqasid-ESG integration, Shariah governance and transparent MCDM.</p><div class="tagrow"><span class="tag">Sukuk</span><span class="tag">Maqasid</span><span class="tag">AHP</span><span class="tag">TOPSIS</span><span class="tag gold">SC-SIIRS</span></div></article>
+
+    <div class="evidence-ledger">
+      <article class="evidence-row"><b data-i18n="ev1Title">Research proposal</b><span data-i18n="ev1Text">Proves MSc Islamic Finance fit through sukuk, Maqasid, ESG, Shariah governance and MCDM.</span><a href="#research" data-i18n="evView">View section</a></article>
+      <article class="evidence-row"><b data-i18n="ev2Title">PFE Casablanca</b><span data-i18n="ev2Text">Proves applied investment appraisal: SUMO, GIS/QGIS, CAPEX, OPEX, TCO, ROI and IRP.</span><a href="#documents" data-i18n="evDownload">Download</a></article>
+      <article class="evidence-row"><b data-i18n="ev3Title">AI-MCDM manuscript</b><span data-i18n="ev3Text">Proves methodological depth: XGBoost, DNPV, Real Options, Fuzzy-AHP/MEREC and AROMAN.</span><a href="#methods" data-i18n="evMethods">View methods</a></article>
+      <article class="evidence-row"><b data-i18n="ev4Title">CV evidence</b><span data-i18n="ev4Text">Proves professional execution: financial performance, dashboards, portfolio risk and reporting automation.</span><a href="#documents" data-i18n="evDownload2">Download</a></article>
+      <article class="evidence-row"><b data-i18n="ev5Title">Original uploaded portfolio file</b><span data-i18n="ev5Text">Used as a base reference for the portfolio structure and multilingual interaction logic.</span><a href="docs/Original_Uploaded_Portfolio_Index.html" download data-i18n="evDownload3">Download original</a></article>
     </div>
   </section>
 
+
+  <section id="sumo" aria-labelledby="sumoTitle">
+    <div class="section-head">
+      <div>
+        <div class="kicker" data-sumo-en="SUMO / Leaflet layer" data-sumo-ms="Lapisan SUMO / Leaflet" data-sumo-ar="طبقة SUMO / Leaflet">SUMO / Leaflet layer</div>
+        <h2 id="sumoTitle" data-sumo-en="Casablanca traffic simulation, brought into the Malaysia portfolio as applied evidence." data-sumo-ms="Simulasi trafik Casablanca dimasukkan ke dalam portfolio Malaysia sebagai bukti gunaan." data-sumo-ar="تم إدماج محاكاة مرور الدار البيضاء في بورتفوليو ماليزيا كدليل تطبيقي.">Casablanca traffic simulation layer restored inside the Malaysia portfolio.</h2>
+      </div>
+      <p class="note" data-sumo-en="The Leaflet/SUMO layer is kept as method evidence: map, heatmap, vehicle canvas, zones, KPIs and JSON fallback logic." data-sumo-ms="Lapisan Leaflet/SUMO dikekalkan sebagai bukti kaedah: peta, peta haba, kanvas kenderaan, zon, KPI dan logik sandaran JSON." data-sumo-ar="تم الحفاظ على طبقة Leaflet/SUMO كدليل منهجي: خريطة، خريطة حرارية، Canvas للمركبات، مناطق، مؤشرات KPI ومنطق JSON احتياطي.">The same Leaflet/SUMO architecture is kept as methodological evidence: map, heatmap, vehicle canvas, zone buttons, KPI panel and JSON fallback logic.</p>
+    </div>
+
+    <div aria-label="Leaflet SUMO traffic simulation dashboard" class="egs-sumo-shell panel" id="sumo-dashboard">
+      <div class="ph">
+        <b data-sumo-en="Leaflet/SUMO Transfer Lab" data-sumo-ms="Makmal Leaflet/SUMO" data-sumo-ar="مختبر Leaflet/SUMO">Leaflet/SUMO Transfer Lab</b>
+        <span class="ph-en" data-sumo-en="Casablanca traffic simulation kept as the applied method layer." data-sumo-ms="Simulasi trafik Casablanca dikekalkan sebagai lapisan kaedah gunaan." data-sumo-ar="تم الاحتفاظ بمحاكاة مرور الدار البيضاء كطبقة منهجية تطبيقية.">Casablanca traffic simulation preserved as the empirical method layer.</span>
+      </div>
+      <div class="pb">
+        <div class="egs-sumo-toolbar">
+          <button class="egs-mode-btn active" data-egs-mode="heatmap" data-sumo-en="Heatmap" data-sumo-ms="Peta haba" data-sumo-ar="خريطة حرارية">Heatmap</button>
+          <button class="egs-mode-btn" data-egs-mode="simulation" data-sumo-en="Simulation" data-sumo-ms="Simulasi" data-sumo-ar="محاكاة">Simulation</button>
+          <button class="egs-zone-btn active" data-egs-zone="maarif">Maârif</button>
+          <button class="egs-zone-btn" data-egs-zone="hay_hassani">Hay Hassani</button>
+          <button class="egs-zone-btn" data-egs-zone="ben_msick">Ben M'Sick</button>
+          <button class="egs-zone-btn" data-egs-zone="sidi_maarouf">Sidi Maârouf</button>
+          <button class="egs-zone-btn" data-egs-zone="bd_mohammed_v">Bd. Mohammed V</button>
+        </div>
+
+        <div class="egs-sumo-grid">
+          <div class="egs-map-wrap">
+            <div id="egsSumoMap" aria-label="Leaflet traffic heatmap"></div>
+            <canvas id="egsTrafficCanvas" aria-hidden="true"></canvas>
+            <div class="egs-map-badge">
+              <strong id="egsStatusTitle">SUMO / Leaflet</strong>
+              <span id="egsStatusText">Loading traffic layer…</span>
+            </div>
+            <div class="egs-legend" id="egsHeatLegend">
+              <span><i class="egs-dot red"></i>Slow</span>
+              <span><i class="egs-dot yellow"></i>Medium</span>
+              <span><i class="egs-dot green"></i>Fast</span>
+            </div>
+          </div>
+
+          <aside class="egs-side">
+            <div class="egs-kpis">
+              <div class="egs-kpi"><div class="egs-kpi-label">POINTS</div><div class="egs-kpi-val" id="kpiPoints">—</div></div>
+              <div class="egs-kpi"><div class="egs-kpi-label">VEHICLES</div><div class="egs-kpi-val" id="kpiVehicles">—</div></div>
+              <div class="egs-kpi"><div class="egs-kpi-label">AVG SPEED</div><div class="egs-kpi-val" id="kpiSpeed">—</div></div>
+              <div class="egs-kpi"><div class="egs-kpi-label">MODE</div><div class="egs-kpi-val" id="kpiMode">—</div></div>
+            </div>
+
+            <div class="egs-controls">
+              <div class="egs-control-row" id="egsHeatControls">
+                <label for="heatIntensity">HEAT INTENSITY</label>
+                <input id="heatIntensity" type="range" min="1" max="10" value="6" aria-label="Heatmap intensity">
+              </div>
+              <div id="egsSimulationControls">
+                <div class="egs-control-row">
+                  <label for="vehicleSpeed">VEHICLE SPEED</label>
+                  <input id="vehicleSpeed" type="range" min="1" max="10" value="6" aria-label="Vehicle animation speed">
+                </div>
+                <div class="egs-control-row">
+                  <label for="vehicleSize">VEHICLE SIZE</label>
+                  <input id="vehicleSize" type="range" min="2" max="12" value="6" aria-label="Vehicle marker size">
+                </div>
+                <div class="egs-control-buttons">
+                  <button class="egs-control-btn" id="egsPlayBtn" type="button">PLAY</button>
+                  <button class="egs-control-btn" id="egsResetBtn" type="button">RESET</button>
+                </div>
+              </div>
+            </div>
+
+            <p class="egs-note" id="sumoAnalysis">Maârif: central dense urban area. The layer can read real SUMO/GIS JSON when present; otherwise it displays embedded demonstration data.</p>
+            <div class="egs-link-row">
+              <span class="egs-small-tag">Leaflet 1.9.4</span>
+              <span class="egs-small-tag">Leaflet.heat</span>
+              <span class="egs-small-tag">SUMO FCD</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <p class="sumo-source-note" data-sumo-en="Deployment note: for real exported SUMO data, place the JSON files in /data using the original filenames: maarif_heatmap.json, maarif_animation.json, fcd_maarif.json, and the equivalent files for Hay Hassani, Ben M'Sick, Sidi Maârouf and Bd. Mohammed V." data-sumo-ms="Nota deployment: untuk data SUMO sebenar, letakkan fail JSON dalam /data menggunakan nama fail asal: maarif_heatmap.json, maarif_animation.json, fcd_maarif.json, serta fail setara untuk Hay Hassani, Ben M\'Sick, Sidi Maârouf dan Bd. Mohammed V." data-sumo-ar="ملاحظة النشر: لاستخدام بيانات SUMO الحقيقية، ضع ملفات JSON داخل /data بنفس الأسماء الأصلية: maarif_heatmap.json و maarif_animation.json و fcd_maarif.json وما يعادلها لـ Hay Hassani و Ben M'Sick و Sidi Maârouf و Bd. Mohammed V.">Deployment note: for real exported SUMO data, place the JSON files in /data using the original filenames: maarif_heatmap.json, maarif_animation.json, fcd_maarif.json, and the equivalent files for Hay Hassani, Ben M'Sick, Sidi Maârouf and Bd. Mohammed V.</p>
+
+    <noscript><p class="sumo-source-note">JavaScript is disabled. The portfolio still displays the research narrative, but the SUMO Leaflet demonstration requires JavaScript.</p></noscript>
+  </section>
+
+
   <section id="methods">
     <div class="section-head">
-      <div><div class="kicker">Methods and skills</div><h2>Methodological credibility before aesthetic appeal.</h2></div>
-      <p class="note">Admissions readers should see a coherent technical spine: financial appraisal, decision science, infrastructure analytics and governance controls.</p>
+      <div><div class="kicker" data-i18n="methodsKicker">Methods and skills</div><h2 data-i18n="methodsTitle">Methodological credibility before aesthetic appeal.</h2></div>
+      <p class="note" data-i18n="methodsNote">The technical spine is finance, decision science, infrastructure analytics and governance controls.</p>
     </div>
+
     <div class="methods">
-      <article class="method"><div class="icon">₁</div><h3>Financial appraisal</h3><p>Investment logic used across the PFE and CV evidence.</p><ul><li>NPV, ROI, break-even</li><li>CAPEX/OPEX/TCO</li><li>Scenario analysis</li><li>Credit-risk exposure</li></ul></article>
-      <article class="method"><div class="icon">₂</div><h3>MCDM / ranking</h3><p>Used to structure trade-offs instead of hiding them.</p><ul><li>AHP / Fuzzy-AHP</li><li>TOPSIS</li><li>MEREC / COPRAS</li><li>AROMAN</li></ul></article>
-      <article class="method"><div class="icon">₃</div><h3>Smart infrastructure analytics</h3><p>Evidence that the application is grounded in real project appraisal.</p><ul><li>SUMO simulation</li><li>QGIS mapping</li><li>Traffic-exposure analysis</li><li>Location scoring</li></ul></article>
-      <article class="method"><div class="icon">₄</div><h3>Governance discipline</h3><p>Essential for Islamic finance: model output must stay explainable.</p><ul><li>Auditability controls</li><li>Data-quality checks</li><li>Human-in-the-loop review</li><li>Boundary statements</li></ul></article>
-    </div>
-    <div class="skills" style="margin-top:14px">
-      <div class="skill"><b>Excel / VBA</b><span>Reporting automation, dashboards, financial models and KPI tracking.</span></div>
-      <div class="skill"><b>Power Query / Power BI</b><span>Data cleaning, structured reporting and management dashboards.</span></div>
-      <div class="skill"><b>Python fundamentals</b><span>Model validation logic, data-quality checks and quantitative workflows.</span></div>
-      <div class="skill"><b>Languages</b><span>Arabic native, French C2/bilingual level, English B2.</span></div>
-      <div class="skill"><b>Professional exposure</b><span>SAN MAROC, 2ACOM and MAGHREBAIL experience across financial performance, risk and reporting.</span></div>
+      <article class="method"><div class="icon">1</div><h3 data-i18n="method1Title">Financial appraisal</h3><p data-i18n="method1Text">Investment logic used across the PFE and CV evidence.</p><ul><li>NPV, ROI, break-even</li><li>CAPEX/OPEX/TCO</li><li>Scenario analysis</li><li>Credit-risk exposure</li></ul></article>
+      <article class="method"><div class="icon">2</div><h3 data-i18n="method2Title">MCDM / ranking</h3><p data-i18n="method2Text">Used to structure trade-offs instead of hiding them.</p><ul><li>AHP / Fuzzy-AHP</li><li>TOPSIS</li><li>MEREC / COPRAS</li><li>AROMAN</li></ul></article>
+      <article class="method"><div class="icon">3</div><h3 data-i18n="method3Title">Smart infrastructure analytics</h3><p data-i18n="method3Text">Grounds the application in real project appraisal.</p><ul><li>SUMO simulation</li><li>QGIS mapping</li><li>Traffic exposure</li><li>Location scoring</li></ul></article>
+      <article class="method"><div class="icon">4</div><h3 data-i18n="method4Title">Governance discipline</h3><p data-i18n="method4Text">Essential for Islamic finance: model output must stay explainable.</p><ul><li>Auditability controls</li><li>Data-quality checks</li><li>Human-in-the-loop review</li><li>Boundary statements</li></ul></article>
     </div>
   </section>
 
   <section id="timeline">
     <div class="section-head">
-      <div><div class="kicker">Academic trajectory</div><h2>A cleaner narrative for Malaysia admissions.</h2></div>
+      <div><div class="kicker" data-i18n="timelineKicker">Academic trajectory</div><h2 data-i18n="timelineTitle">A clean narrative for Malaysia admissions.</h2></div>
     </div>
     <div class="timeline">
-      <div class="time"><b>2022–2025</b><div><strong>Bachelor’s in Management, Finance & Accounting — UIC</strong><span>High Honors / Mention Très Bien. Finance, accounting, management control, statistics, economics and business law foundation.</span></div></div>
-      <div class="time"><b>2025</b><div><strong>PFE: traffic-based financial profitability of advertising infrastructure</strong><span>Converted urban mobility and location data into ROI, CAPEX, OPEX, TCO and IRP outputs.</span></div></div>
-      <div class="time"><b>2025–Present</b><div><strong>MSc Procurement & Supply Chain Management — INSEEC Lyon</strong><span>Cost analysis, procurement performance, operational decision-making, KPI modelling and forecasting.</span></div></div>
-      <div class="time"><b>2026</b><div><strong>AI-MCDM manuscript</strong><span>Smart-city investment scorecard under carbon, energy and geoeconomic risk; XGBoost, DNPV, Real Options, Fuzzy-AHP/MEREC and AROMAN.</span></div></div>
-      <div class="time"><b>Malaysia target</b><div><strong>MSc Islamic Finance</strong><span>Research focus: Shariah-governed MCDM readiness framework for smart infrastructure sukuk.</span></div></div>
+      <div class="time"><b>2022–2025</b><div><strong data-i18n="time1Title">Bachelor’s in Management, Finance & Accounting — UIC</strong><span data-i18n="time1Text">High Honors / Mention Très Bien. Finance, accounting, management control, statistics, economics and business law foundation.</span></div></div>
+      <div class="time"><b>2025</b><div><strong data-i18n="time2Title">PFE: traffic-based financial profitability of advertising infrastructure</strong><span data-i18n="time2Text">Converted urban mobility and location data into ROI, CAPEX, OPEX, TCO and IRP outputs.</span></div></div>
+      <div class="time"><b>2025–Present</b><div><strong data-i18n="time3Title">MSc Procurement & Supply Chain Management — INSEEC Lyon</strong><span data-i18n="time3Text">Cost analysis, procurement performance, operational decision-making, KPI modelling and forecasting.</span></div></div>
+      <div class="time"><b>2026</b><div><strong data-i18n="time4Title">AI-MCDM manuscript</strong><span data-i18n="time4Text">Smart-city investment scorecard under carbon, energy and geoeconomic risk; XGBoost, DNPV, Real Options, Fuzzy-AHP/MEREC and AROMAN.</span></div></div>
+      <div class="time"><b data-i18n="malaysiaTarget">Malaysia target</b><div><strong data-i18n="time5Title">MSc Islamic Finance</strong><span data-i18n="time5Text">Research focus: Shariah-governed MCDM readiness framework for smart infrastructure sukuk.</span></div></div>
     </div>
   </section>
 
   <section id="documents">
     <div class="section-head">
-      <div><div class="kicker">Document evidence</div><h2>Downloadable files included in the portfolio package.</h2></div>
-      <p class="note">Keep these files in the same <strong>docs/</strong> folder when uploading the website to GitHub Pages or another host.</p>
+      <div><div class="kicker" data-i18n="docsKicker">Document evidence</div><h2 data-i18n="docsTitle">Downloadable evidence package.</h2></div>
+      <p class="note" data-i18n-html="docsNote">All files are stored in the same <strong>docs/</strong> folder for GitHub Pages deployment.</p>
     </div>
+
     <div class="docs">
-      <article class="doc"><h3>INCEIF Research Proposal</h3><span class="tag gold">Primary application document</span><p class="doc-meta">SC-SIIRS proposal for MSc Islamic Finance: sukuk, Maqasid, ESG, Shariah governance and MCDM readiness.</p><a href="docs/Research_Proposal_INCEIF_SC-SIIRS_Sukuk_El_Ghali_Sany.pdf" download>Download proposal</a></article>
-      <article class="doc"><h3>CV Evidence File</h3><span class="tag">Applicant profile</span><p class="doc-meta">Education, projects, internships, technical skills and languages. The page reframes it for Islamic Finance.</p><a class="secondary" href="docs/CV_El_Ghali_Sany_MSc_Islamic_Finance_Profile.pdf" download>Download CV</a></article>
-      <article class="doc"><h3>Casablanca PFE</h3><span class="tag">Applied finance proof</span><p class="doc-meta">Traffic simulation, GIS, OOH/DOOH profitability, CAPEX/OPEX/TCO, ROI and IRP.</p><a class="secondary" href="docs/PFE_Casablanca_Traffic_ROI_El_Ghali_Sany.pdf" download>Download PFE</a></article>
-      <article class="doc"><h3>AI-MCDM Manuscript</h3><span class="tag">Technical proof</span><p class="doc-meta">Smart-city investment ranking under carbon, energy and geoeconomic risk using AI-MCDM methods.</p><a class="secondary" href="docs/AI_MCDM_Smart_Cities_Investment_Scoring_El_Ghali_Sany.pdf" download>Download manuscript</a></article>
+      <article class="doc"><h3 data-i18n="doc1Title">INCEIF Research Proposal</h3><span class="tag blue" data-i18n="doc1Tag">Primary application document</span><p class="meta" data-i18n="doc1Text">SC-SIIRS proposal for MSc Islamic Finance: sukuk, Maqasid, ESG, Shariah governance and MCDM readiness.</p><a href="docs/Research_Proposal_INCEIF_SC_SIIRS_Sukuk_El_Ghali_Sany.pdf" download data-i18n="downloadProposal">Download proposal</a></article>
+      <article class="doc"><h3 data-i18n="doc2Title">CV Evidence File</h3><span class="tag" data-i18n="doc2Tag">Applicant profile</span><p class="meta" data-i18n="doc2Text">Education, projects, internships, technical skills and language evidence reframed for Islamic finance.</p><a class="secondary" href="docs/CV_El_Ghali_Sany_MSc_Islamic_Finance_Profile.pdf" download data-i18n="downloadCv">Download CV</a></article>
+      <article class="doc"><h3 data-i18n="doc3Title">Casablanca PFE</h3><span class="tag" data-i18n="doc3Tag">Applied finance proof</span><p class="meta" data-i18n="doc3Text">Traffic simulation, GIS, OOH/DOOH profitability, CAPEX/OPEX/TCO, ROI and IRP.</p><a class="secondary" href="docs/PFE_Casablanca_Traffic_ROI_El_Ghali_Sany.pdf" download data-i18n="downloadPfe">Download PFE</a></article>
+      <article class="doc"><h3 data-i18n="doc4Title">AI-MCDM Manuscript</h3><span class="tag" data-i18n="doc4Tag">Technical proof</span><p class="meta" data-i18n="doc4Text">Smart-city investment ranking under carbon, energy and geoeconomic risk using AI-MCDM methods.</p><a class="secondary" href="docs/AI_MCDM_Smart_Cities_Investment_Scoring_El_Ghali_Sany.pdf" download data-i18n="downloadManuscript">Download manuscript</a></article>
     </div>
   </section>
 
   <section id="contact">
     <div class="contact-card card">
       <div class="contact-main">
-        <div class="kicker">Contact</div><h2>El Ghali Sany</h2>
-        <p class="note">MSc Islamic Finance applicant focused on sukuk readiness, Islamic capital markets, infrastructure finance, ESG-Maqasid integration and auditable MCDM decision support.</p>
+        <div class="kicker" data-i18n="contactKicker">Contact</div>
+        <h2>El Ghali Sany</h2>
+        <p class="note" data-i18n="contactText">MSc Islamic Finance applicant focused on sukuk readiness, Islamic capital markets, infrastructure finance, ESG-Maqasid integration and auditable MCDM decision support.</p>
         <div class="contact-list">
           <a href="mailto:sanyghali@gmail.com">sanyghali@gmail.com</a>
-          <div>Lyon, France</div>
-          <div>Arabic: native • French: C2/bilingual • English: B2</div>
-          <a href="https://el2545.github.io/Portfolio-Italy" target="_blank" rel="noopener">Current portfolio link</a>
+          <div>+33 7 81 95 70 70</div>
+          <div data-i18n="location">Lyon, France</div>
+          <div data-i18n="langs">Arabic: native • French: C2/bilingual • English: B2</div>
         </div>
       </div>
+
       <aside class="integrity">
-        <h3>Integrity note</h3>
-        <p>This portfolio separates evidence from ambition. It does not claim that the applicant is a Shariah scholar, sukuk arranger or certified Islamic finance practitioner. It claims a narrower and stronger fit: applied finance, modelling and infrastructure appraisal skills redirected toward Islamic finance research.</p>
-        <ul><li>SC-SIIRS is academic decision support.</li><li>All model outputs remain advisory.</li><li>Formal Shariah review stays with qualified boards and scholars.</li></ul>
+        <h3 data-i18n="integrityTitle">Integrity note</h3>
+        <p data-i18n="integrityText">This portfolio does not claim Shariah authority. It presents finance, analytics and project-appraisal evidence for advanced study in Islamic finance.</p>
+        <ul>
+          <li data-i18n="integrity1">SC-SIIRS is a decision-support framework, not a fatwa.</li>
+          <li data-i18n="integrity2">MCDM rankings support judgment; they do not replace governance.</li>
+          <li data-i18n="integrity3">Prior ROI and AI-MCDM evidence is used as methodological proof, not as a sukuk performance claim.</li>
+        </ul>
       </aside>
     </div>
   </section>
 </main>
-<footer>© 2026 El Ghali Sany — Malaysia Islamic Finance Evidence Portfolio. Built as a single-file admissions portfolio with document links.</footer>
+
+<footer data-i18n="footer">© 2026 El Ghali Sany — Malaysia MSc Islamic Finance Evidence Portfolio.</footer>
+
+
+<div
+  id="amanahSignalOverlay"
+  class="amanah-signal"
+  aria-live="polite"
+  aria-hidden="true"
+>
+  <button
+    type="button"
+    class="amanah-signal__close"
+    aria-label="Close Amanah Signal"
+    data-amanah-close
+  >
+    ×
+  </button>
+
+  <div class="amanah-signal__mark" aria-hidden="true"></div>
+
+  <div class="amanah-signal__content">
+    <p class="amanah-signal__kicker">Amanah Signal</p>
+    <h3 class="amanah-signal__title" data-amanah-title>
+      Amanah Signal Activated
+    </h3>
+    <p class="amanah-signal__text" data-amanah-text>
+      Finance guided by trust, Shariah discipline, and real economic value.
+    </p>
+
+    <div class="amanah-signal__badges" data-amanah-badges>
+      <span>Amanah</span>
+      <span>Maqasid</span>
+      <span>VBI</span>
+      <span>Risk-sharing</span>
+    </div>
+
+    <button
+      type="button"
+      class="amanah-signal__cta"
+      data-amanah-cta
+    >
+      View Islamic Finance Focus
+    </button>
+  </div>
+</div>
+
+
 <script>
-const sliders=['financial','maqasid','esg','governance'];
-function band(score){ if(score>=85) return ['High','Proceed to detailed legal, financial and Shariah due diligence.']; if(score>=70) return ['Moderate','Proceed conditionally with targeted remediation.']; if(score>=55) return ['Conditional','Do not proceed until weak evidence is corrected.']; return ['Not recommended','Reject, redesign or rebuild the project evidence base.']; }
+const dict = {
+  en:{"skip":"Skip to content","brandSmall":"Islamic Finance Portfolio — Malaysia","navFit":"Fit","navResearch":"Research","navEvidence":"Evidence","navMethods":"Methods","navDocuments":"Documents","navContact":"Contact","eyebrow":"MSc Islamic Finance • Malaysia-focused portfolio","heroTitle":"Turning investment analysis into <span class=\"gradient\">Shariah-governed sukuk readiness</span>.","heroLead":"This portfolio brings together my work in finance, infrastructure analytics and decision modelling, then connects it to the questions that matter in Islamic finance: sukuk readiness, Maqasid al-Shariah, ESG, financial viability and accountable governance.","proof1Title":"INCEIF fit","proof1Text":"A clear MSc Islamic Finance direction, with a research focus on sukuk, Shariah governance and real-economy infrastructure.","proof2Title":"SC-SIIRS","proof2Text":"A proposed readiness score to help screen smart infrastructure projects before sukuk structuring begins.","proof3Title":"Evidence chain","proof3Text":"PFE → AI-MCDM manuscript → Islamic finance research proposal → CV evidence.","proof4Title":"Trilingual access","proof4Text":"English, Bahasa Melayu and Arabic are available through a clean Notion-style switch, with RTL support for Arabic.","ctaResearch":"See the research focus","ctaDocs":"Download the evidence","ctaContact":"Contact","metric1":"XGBoost reported 45.8% lower MAE than Ridge regression in my AI-MCDM work. I use this here as evidence of model-validation discipline, not as an investment claim.","metric2":"Twenty-five smart-city infrastructure projects were ranked across five domains in the AI-MCDM manuscript.","metric3":"Four OOH/DOOH investment scenarios were modelled over five years in the Casablanca PFE.","metric4":"The strongest advertising-infrastructure scenario in my CV evidence reached a projected 533% ROI. <em>Here, it serves only as proof of applied financial modelling.</em>","fitKicker":"Programme fit","fitTitle":"Built for Islamic finance, not generic banking.","fitNote":"The page avoids a broad “finance applicant” story. It focuses on Islamic capital markets, sukuk readiness, Shariah governance, ESG-Maqasid alignment and project-level appraisal.","positionTitle":"Admissions positioning","positionText":"My strength is not claiming Shariah authority. It is translating financial, infrastructure and data evidence into transparent appraisal tools that qualified Shariah boards, investment committees and policy actors can scrutinize.","bar1":"Islamic finance research fit","bar2":"Decision-support methods","bar3":"Applied finance evidence","bar4":"Formal Shariah training","developing":"Developing","path1Title":"Start from real assets.","path1Text":"The story begins with infrastructure as capital allocated to the real economy, then moves to sukuk as a Shariah-compliant financing channel.","path2Title":"Make Maqasid measurable.","path2Text":"Public benefit, harm reduction, access, wealth preservation and environmental stewardship become project-level indicators.","path3Title":"Keep the model under governance.","path3Text":"The score can organize evidence and compare alternatives. It cannot replace Shariah review, legal due diligence or investment judgment.","path4Title":"Let the documents do the work.","path4Text":"The research proposal, PFE, AI-MCDM paper, CV and original portfolio file are all included so the claims can be checked.","researchKicker":"Research anchor","researchHead":"SC-SIIRS is the main research idea.","researchNote":"The portfolio is built around one focused proposal: a Shariah-governed readiness framework for smart infrastructure sukuk.","proposalTag":"Research proposal for MSc Islamic Finance","researchTitle":"<span>A Shariah-Governed MCDM Readiness Framework</span> for Smart Infrastructure Sukuk","researchText":"SC-SIIRS brings financial viability, Maqasid alignment, ESG contribution, smart-infrastructure performance, Shariah governance and risk exposure into one pre-screening framework for potential sukuk-backed projects.","researchQuote":"The framework is advisory. It clarifies evidence and trade-offs before formal sukuk structuring; it does not issue fatwas, price sukuk, certify compliance or replace human governance.","mini1Title":"Core method","mini1Text":"AHP expert weighting combined with TOPSIS scenario ranking.","mini2Title":"Robustness","mini2Text":"MEREC and COPRAS are used to test ranking stability.","mini3Title":"Validation","mini3Text":"Expert interviews test whether the framework is usable and credible for Shariah-governed contexts.","mini4Title":"Decision point","mini4Text":"Designed for the pre-structuring stage, before a sukuk candidate moves into formal approval.","labTitle":"SC-SIIRS mini-readiness lab","labText":"A small demonstration of the scoring logic. It is not an investment recommendation.","sliderFinancial":"Financial viability","sliderMaqasid":"Maqasid alignment","sliderEsg":"ESG contribution","sliderGov":"Shariah governance + auditability","scoreLabel":"Composite readiness","bandLabel":"Advisory band","bandHigh":"High","bandModerate":"Moderate","bandConditional":"Conditional","bandReject":"Not recommended","decisionHigh":"Move to detailed legal, financial and Shariah due diligence.","decisionModerate":"Proceed conditionally, with targeted remediation.","decisionConditional":"Pause until the evidence gaps are corrected.","decisionReject":"Reject or redesign the project structure and documentation.","evidenceKicker":"Evidence chain","evidenceTitle":"Each document has a job in the application.","evidenceNote":"The uploaded files are used as evidence, not decoration.","ev1Title":"Research proposal","ev1Text":"Shows the MSc Islamic Finance fit through sukuk, Maqasid, ESG, Shariah governance and MCDM.","ev2Title":"Casablanca PFE","ev2Text":"Shows applied investment appraisal through SUMO, GIS/QGIS, CAPEX, OPEX, TCO, ROI and IRP.","ev3Title":"AI-MCDM manuscript","ev3Text":"Shows methodological depth through XGBoost, DNPV, Real Options, Fuzzy-AHP/MEREC and AROMAN.","ev4Title":"CV evidence","ev4Text":"Shows execution: financial performance work, dashboards, portfolio-risk analysis and reporting automation.","ev5Title":"Original portfolio file","ev5Text":"Used as a reference for the structure and multilingual interaction logic.","evView":"View section","evDownload":"Download","evMethods":"View methods","evDownload2":"Download","evDownload3":"Download original","methodsKicker":"Methods and skills","methodsTitle":"The method comes before the visual effect.","methodsNote":"The technical backbone is finance, decision science, infrastructure analytics and governance discipline.","method1Title":"Financial appraisal","method1Text":"The investment logic behind the PFE and CV evidence.","method2Title":"MCDM / ranking","method2Text":"Used to structure trade-offs instead of hiding them.","method3Title":"Smart infrastructure analytics","method3Text":"Evidence that the application is grounded in real project appraisal.","method4Title":"Governance discipline","method4Text":"For Islamic finance, the model must remain explainable and reviewable.","timelineKicker":"Academic trajectory","timelineTitle":"A focused narrative for Malaysia admissions.","time1Title":"Bachelor’s in Management, Finance & Accounting — UIC","time1Text":"High Honors / Mention Très Bien, with foundations in finance, accounting, management control, statistics, economics and business law.","time2Title":"PFE: traffic-based financial profitability of advertising infrastructure","time2Text":"Turned urban mobility and location data into ROI, CAPEX, OPEX, TCO and IRP outputs.","time3Title":"MSc Procurement & Supply Chain Management — INSEEC Lyon","time3Text":"Work in cost analysis, procurement performance, operational decision-making, KPI modelling and forecasting.","time4Title":"AI-MCDM manuscript","time4Text":"Smart-city investment scoring under carbon, energy and geoeconomic risk, using XGBoost, DNPV, Real Options, Fuzzy-AHP/MEREC and AROMAN.","malaysiaTarget":"Malaysia target","time5Title":"MSc Islamic Finance","time5Text":"Research focus: a Shariah-governed MCDM readiness framework for smart infrastructure sukuk.","docsKicker":"Document evidence","docsTitle":"Downloadable evidence package.","docsNote":"All files are kept in the same <strong>docs/</strong> folder for GitHub Pages deployment.","doc1Title":"INCEIF Research Proposal","doc1Tag":"Main application document","doc1Text":"SC-SIIRS proposal for MSc Islamic Finance: sukuk, Maqasid, ESG, Shariah governance and MCDM readiness.","downloadProposal":"Download proposal","doc2Title":"CV Evidence File","doc2Tag":"Applicant profile","doc2Text":"Education, projects, internships, technical skills and language evidence, reframed for Islamic finance.","downloadCv":"Download CV","doc3Title":"Casablanca PFE","doc3Tag":"Applied finance proof","doc3Text":"Traffic simulation, GIS, OOH/DOOH profitability, CAPEX/OPEX/TCO, ROI and IRP.","downloadPfe":"Download PFE","doc4Title":"AI-MCDM Manuscript","doc4Tag":"Technical proof","doc4Text":"Smart-city investment ranking under carbon, energy and geoeconomic risk using AI-MCDM methods.","downloadManuscript":"Download manuscript","contactKicker":"Contact","contactText":"MSc Islamic Finance applicant focused on sukuk readiness, Islamic capital markets, infrastructure finance, ESG-Maqasid integration and auditable MCDM decision support.","location":"Lyon, France","langs":"Arabic: native • French: C2/bilingual • English: B2","integrityTitle":"Integrity note","integrityText":"This portfolio does not claim Shariah authority. It presents finance, analytics and project-appraisal evidence for advanced study in Islamic finance.","integrity1":"SC-SIIRS is a decision-support framework, not a fatwa.","integrity2":"MCDM rankings support judgment; they do not replace governance.","integrity3":"Prior ROI and AI-MCDM evidence is used as methodological proof, not as a sukuk performance claim.","footer":"© 2026 El Ghali Sany — Malaysia MSc Islamic Finance Portfolio."},
+  ms:{"skip":"Langkau ke kandungan","brandSmall":"Portfolio Kewangan Islam — Malaysia","navFit":"Kesesuaian","navResearch":"Penyelidikan","navEvidence":"Bukti","navMethods":"Kaedah","navDocuments":"Dokumen","navContact":"Hubungi","eyebrow":"MSc Kewangan Islam • Portfolio untuk Malaysia","heroTitle":"Daripada analisis pelaburan kepada <span class=\"gradient\">kesediaan sukuk berpandukan Syariah</span>.","heroLead":"Portfolio ini menghimpunkan kerja saya dalam kewangan, analitik infrastruktur dan pemodelan keputusan, kemudian menghubungkannya dengan persoalan utama dalam Kewangan Islam: kesediaan sukuk, Maqasid al-Shariah, ESG, daya maju kewangan dan tadbir urus yang boleh diaudit.","proof1Title":"Kesesuaian INCEIF","proof1Text":"Arah MSc Islamic Finance yang jelas, dengan fokus penyelidikan pada sukuk, tadbir urus Syariah dan infrastruktur ekonomi sebenar.","proof2Title":"SC-SIIRS","proof2Text":"Skor kesediaan yang dicadangkan untuk membantu menyaring projek infrastruktur pintar sebelum penstrukturan sukuk bermula.","proof3Title":"Rantaian bukti","proof3Text":"PFE → manuskrip AI-MCDM → cadangan penyelidikan Kewangan Islam → bukti CV.","proof4Title":"Akses tiga bahasa","proof4Text":"English, Bahasa Melayu dan Bahasa Arab tersedia melalui penukar bahasa yang ringkas, dengan sokongan RTL untuk Bahasa Arab.","ctaResearch":"Lihat fokus penyelidikan","ctaDocs":"Muat turun bukti","ctaContact":"Hubungi","metric1":"Dalam kerja AI-MCDM saya, XGBoost mencatat MAE 45.8% lebih rendah berbanding Ridge regression. Di sini, angka itu digunakan sebagai bukti disiplin pengesahan model, bukan sebagai dakwaan pelaburan.","metric2":"Dua puluh lima projek infrastruktur bandar pintar telah diberi ranking merentas lima domain dalam manuskrip AI-MCDM.","metric3":"Empat senario pelaburan OOH/DOOH dimodelkan selama lima tahun dalam PFE Casablanca.","metric4":"Senario infrastruktur pengiklanan terkuat dalam bukti CV menunjukkan ROI unjuran 533%. <em>Di sini, ia hanya digunakan sebagai bukti pemodelan kewangan gunaan.</em>","fitKicker":"Kesesuaian program","fitTitle":"Dibina untuk Kewangan Islam, bukan perbankan umum.","fitNote":"Halaman ini mengelakkan naratif “pemohon kewangan” yang terlalu luas. Fokusnya ialah pasaran modal Islam, kesediaan sukuk, tadbir urus Syariah, penjajaran ESG-Maqasid dan penilaian projek pada tahap aset.","positionTitle":"Posisi kemasukan","positionText":"Kekuatan saya bukan mendakwa autoriti Syariah. Kekuatan saya ialah menterjemahkan bukti kewangan, infrastruktur dan data kepada alat penilaian yang telus, supaya lembaga Syariah, jawatankuasa pelaburan dan pembuat dasar yang berkelayakan boleh menilainya dengan jelas.","bar1":"Kesesuaian penyelidikan Kewangan Islam","bar2":"Kaedah sokongan keputusan","bar3":"Bukti kewangan gunaan","bar4":"Latihan Syariah formal","developing":"Sedang dibangunkan","path1Title":"Bermula daripada aset sebenar.","path1Text":"Naratif bermula dengan infrastruktur sebagai modal yang dialirkan ke ekonomi sebenar, kemudian bergerak kepada sukuk sebagai saluran pembiayaan patuh Syariah.","path2Title":"Jadikan Maqasid boleh diukur.","path2Text":"Maslahah awam, pengurangan mudarat, akses, pemeliharaan kekayaan dan penjagaan alam sekitar diterjemahkan menjadi indikator projek.","path3Title":"Kekalkan model di bawah tadbir urus.","path3Text":"Skor boleh menyusun bukti dan membandingkan pilihan. Ia tidak menggantikan semakan Syariah, due diligence undang-undang atau pertimbangan pelaburan.","path4Title":"Biarkan dokumen membawa hujah.","path4Text":"Cadangan penyelidikan, PFE, kertas AI-MCDM, CV dan fail portfolio asal disertakan supaya setiap tuntutan boleh disemak.","researchKicker":"Teras penyelidikan","researchHead":"SC-SIIRS ialah idea penyelidikan utama.","researchNote":"Portfolio ini dibina sekitar satu cadangan yang fokus: rangka kerja kesediaan berpandukan Syariah untuk sukuk infrastruktur pintar.","proposalTag":"Cadangan penyelidikan untuk MSc Islamic Finance","researchTitle":"<span>Rangka Kerja Kesediaan MCDM Berpandukan Syariah</span> untuk Sukuk Infrastruktur Pintar","researchText":"SC-SIIRS menggabungkan daya maju kewangan, penjajaran Maqasid, sumbangan ESG, prestasi infrastruktur pintar, tadbir urus Syariah dan pendedahan risiko dalam satu rangka kerja pra-saringan untuk projek yang berpotensi dibiayai melalui sukuk.","researchQuote":"Rangka kerja ini bersifat nasihat. Ia menjelaskan bukti dan trade-off sebelum penstrukturan sukuk rasmi; ia tidak mengeluarkan fatwa, menetapkan harga sukuk, mengesahkan kepatuhan atau menggantikan tadbir urus manusia.","mini1Title":"Kaedah teras","mini1Text":"Pemberatan pakar AHP digabungkan dengan ranking senario TOPSIS.","mini2Title":"Keteguhan","mini2Text":"MEREC dan COPRAS digunakan untuk menguji kestabilan ranking.","mini3Title":"Pengesahan","mini3Text":"Temu bual pakar menilai sama ada rangka kerja ini boleh digunakan dan dipercayai dalam konteks tadbir urus Syariah.","mini4Title":"Titik keputusan","mini4Text":"Direka untuk peringkat pra-penstrukturan, sebelum calon sukuk bergerak kepada kelulusan formal.","labTitle":"Makmal mini kesediaan SC-SIIRS","labText":"Demonstrasi ringkas logik skor. Ini bukan cadangan pelaburan.","sliderFinancial":"Daya maju kewangan","sliderMaqasid":"Penjajaran Maqasid","sliderEsg":"Sumbangan ESG","sliderGov":"Tadbir urus Syariah + auditabiliti","scoreLabel":"Kesediaan komposit","bandLabel":"Jalur nasihat","bandHigh":"Tinggi","bandModerate":"Sederhana","bandConditional":"Bersyarat","bandReject":"Tidak disyorkan","decisionHigh":"Bergerak kepada due diligence undang-undang, kewangan dan Syariah yang lebih terperinci.","decisionModerate":"Teruskan secara bersyarat, dengan pembetulan yang disasarkan.","decisionConditional":"Tangguhkan dahulu sehingga jurang bukti diperbaiki.","decisionReject":"Tolak atau reka semula struktur dan dokumentasi projek.","evidenceKicker":"Rantaian bukti","evidenceTitle":"Setiap dokumen mempunyai peranan dalam permohonan.","evidenceNote":"Fail yang dimuat naik digunakan sebagai bukti, bukan hiasan.","ev1Title":"Cadangan penyelidikan","ev1Text":"Menunjukkan kesesuaian MSc Islamic Finance melalui sukuk, Maqasid, ESG, tadbir urus Syariah dan MCDM.","ev2Title":"PFE Casablanca","ev2Text":"Menunjukkan penilaian pelaburan gunaan melalui SUMO, GIS/QGIS, CAPEX, OPEX, TCO, ROI dan IRP.","ev3Title":"Manuskrip AI-MCDM","ev3Text":"Menunjukkan kedalaman metodologi melalui XGBoost, DNPV, Real Options, Fuzzy-AHP/MEREC dan AROMAN.","ev4Title":"Bukti CV","ev4Text":"Menunjukkan pelaksanaan kerja: prestasi kewangan, dashboard, analisis risiko portfolio dan automasi pelaporan.","ev5Title":"Fail portfolio asal","ev5Text":"Digunakan sebagai rujukan untuk struktur dan logik interaksi berbilang bahasa.","evView":"Lihat bahagian","evDownload":"Muat turun","evMethods":"Lihat kaedah","evDownload2":"Muat turun","evDownload3":"Muat turun asal","methodsKicker":"Kaedah dan kemahiran","methodsTitle":"Kaedah didahulukan sebelum kesan visual.","methodsNote":"Tulang belakang teknikal portfolio ini ialah kewangan, sains keputusan, analitik infrastruktur dan disiplin tadbir urus.","method1Title":"Penilaian kewangan","method1Text":"Logik pelaburan di sebalik bukti PFE dan CV.","method2Title":"MCDM / ranking","method2Text":"Digunakan untuk menyusun trade-off, bukan menyembunyikannya.","method3Title":"Analitik infrastruktur pintar","method3Text":"Bukti bahawa permohonan ini berpijak pada penilaian projek sebenar.","method4Title":"Disiplin tadbir urus","method4Text":"Dalam Kewangan Islam, model mesti kekal boleh dijelaskan dan boleh disemak.","timelineKicker":"Trajektori akademik","timelineTitle":"Naratif yang fokus untuk kemasukan Malaysia.","time1Title":"Sarjana Muda Pengurusan, Kewangan & Perakaunan — UIC","time1Text":"Kepujian Tinggi / Mention Très Bien, dengan asas dalam kewangan, perakaunan, kawalan pengurusan, statistik, ekonomi dan undang-undang perniagaan.","time2Title":"PFE: keuntungan kewangan infrastruktur pengiklanan berdasarkan trafik","time2Text":"Menukar data mobiliti bandar dan lokasi kepada output ROI, CAPEX, OPEX, TCO dan IRP.","time3Title":"MSc Procurement & Supply Chain Management — INSEEC Lyon","time3Text":"Kerja berkaitan analisis kos, prestasi perolehan, pembuatan keputusan operasi, pemodelan KPI dan ramalan.","time4Title":"Manuskrip AI-MCDM","time4Text":"Pemeringkatan pelaburan bandar pintar di bawah risiko karbon, tenaga dan geoekonomi, menggunakan XGBoost, DNPV, Real Options, Fuzzy-AHP/MEREC dan AROMAN.","malaysiaTarget":"Sasaran Malaysia","time5Title":"MSc Islamic Finance","time5Text":"Fokus penyelidikan: rangka kerja kesediaan MCDM berpandukan Syariah untuk sukuk infrastruktur pintar.","docsKicker":"Bukti dokumen","docsTitle":"Pakej bukti yang boleh dimuat turun.","docsNote":"Semua fail disimpan dalam folder <strong>docs/</strong> yang sama untuk deployment GitHub Pages.","doc1Title":"Cadangan Penyelidikan INCEIF","doc1Tag":"Dokumen utama permohonan","doc1Text":"Cadangan SC-SIIRS untuk MSc Islamic Finance: sukuk, Maqasid, ESG, tadbir urus Syariah dan kesediaan MCDM.","downloadProposal":"Muat turun cadangan","doc2Title":"Fail Bukti CV","doc2Tag":"Profil pemohon","doc2Text":"Pendidikan, projek, latihan industri, kemahiran teknikal dan bukti bahasa yang disusun semula untuk Kewangan Islam.","downloadCv":"Muat turun CV","doc3Title":"PFE Casablanca","doc3Tag":"Bukti kewangan gunaan","doc3Text":"Simulasi trafik, GIS, keuntungan OOH/DOOH, CAPEX/OPEX/TCO, ROI dan IRP.","downloadPfe":"Muat turun PFE","doc4Title":"Manuskrip AI-MCDM","doc4Tag":"Bukti teknikal","doc4Text":"Ranking pelaburan bandar pintar di bawah risiko karbon, tenaga dan geoekonomi menggunakan kaedah AI-MCDM.","downloadManuscript":"Muat turun manuskrip","contactKicker":"Hubungi","contactText":"Pemohon MSc Islamic Finance yang memfokuskan kesediaan sukuk, pasaran modal Islam, kewangan infrastruktur, integrasi ESG-Maqasid dan sokongan pembuatan keputusan MCDM yang boleh diaudit.","location":"Lyon, Perancis","langs":"Bahasa Arab: bahasa ibunda • Bahasa Perancis: C2/dwibahasa • Bahasa Inggeris: B2","integrityTitle":"Nota integriti","integrityText":"Portfolio ini tidak mendakwa autoriti Syariah. Ia mempersembahkan bukti kewangan, analitik dan penilaian projek untuk pengajian lanjutan dalam Kewangan Islam.","integrity1":"SC-SIIRS ialah rangka kerja sokongan keputusan, bukan fatwa.","integrity2":"Ranking MCDM menyokong pertimbangan; ia tidak menggantikan tadbir urus.","integrity3":"Bukti ROI dan AI-MCDM terdahulu digunakan sebagai bukti metodologi, bukan dakwaan prestasi sukuk.","footer":"© 2026 El Ghali Sany — Portfolio MSc Kewangan Islam Malaysia."},
+  ar:{"skip":"تجاوز إلى المحتوى","brandSmall":"بورتفوليو التمويل الإسلامي — ماليزيا","navFit":"الملاءمة","navResearch":"البحث","navEvidence":"الأدلة","navMethods":"المنهجية","navDocuments":"الوثائق","navContact":"التواصل","eyebrow":"ماجستير التمويل الإسلامي • بورتفوليو موجّه لماليزيا","heroTitle":"من تحليل الاستثمار إلى <span class=\"gradient\">جاهزية الصكوك الخاضعة للحوكمة الشرعية</span>.","heroLead":"يجمع هذا البورتفوليو عملي في التمويل، وتحليل البنية التحتية، ونمذجة القرار، ثم يربطه بالأسئلة المركزية في التمويل الإسلامي: جاهزية الصكوك، مقاصد الشريعة، ESG، الجدوى المالية، والحوكمة القابلة للتدقيق.","proof1Title":"ملاءمة INCEIF","proof1Text":"اتجاه واضح نحو ماجستير التمويل الإسلامي، مع تركيز بحثي على الصكوك والحوكمة الشرعية والبنية التحتية المرتبطة بالاقتصاد الحقيقي.","proof2Title":"SC-SIIRS","proof2Text":"درجة جاهزية مقترحة تساعد على فرز مشاريع البنية التحتية الذكية قبل بدء هيكلة الصكوك.","proof3Title":"سلسلة الأدلة","proof3Text":"مشروع التخرج → مخطوط AI-MCDM → مقترح بحث في التمويل الإسلامي → أدلة السيرة الذاتية.","proof4Title":"وصول بثلاث لغات","proof4Text":"الإنجليزية والماليزية والعربية متاحة عبر مبدّل بسيط، مع دعم اتجاه الكتابة من اليمين إلى اليسار للعربية.","ctaResearch":"عرض محور البحث","ctaDocs":"تحميل الأدلة","ctaContact":"التواصل","metric1":"في عملي حول AI-MCDM، سجّل XGBoost انخفاضاً في MAE بنسبة 45.8% مقارنة بانحدار Ridge. يُستخدم هذا الرقم هنا كدليل على انضباط التحقق من النموذج، لا كادعاء استثماري.","metric2":"تم ترتيب خمسة وعشرين مشروعاً للبنية التحتية للمدن الذكية عبر خمسة مجالات في مخطوط AI-MCDM.","metric3":"تمت نمذجة أربعة سيناريوهات استثمار OOH/DOOH على مدى خمس سنوات في مشروع الدار البيضاء.","metric4":"بلغ أقوى سيناريو للبنية التحتية الإعلانية في أدلة السيرة الذاتية عائداً استثمارياً متوقعاً قدره 533%. <em>يُستخدم هنا فقط كدليل على النمذجة المالية التطبيقية.</em>","fitKicker":"ملاءمة البرنامج","fitTitle":"مصمم للتمويل الإسلامي، لا للتمويل المصرفي العام.","fitNote":"تتجنب الصفحة سردية “متقدم في المالية” الواسعة. تركيزها على أسواق رأس المال الإسلامية، وجاهزية الصكوك، والحوكمة الشرعية، ومواءمة ESG مع المقاصد، وتقييم المشاريع على مستوى الأصول.","positionTitle":"تموضع القبول","positionText":"قوتي ليست في ادعاء السلطة الشرعية. قوتي في تحويل الأدلة المالية وأدلة البنية التحتية والبيانات إلى أدوات تقييم شفافة يمكن للهيئات الشرعية ولجان الاستثمار والجهات السياساتية المؤهلة فحصها بوضوح.","bar1":"ملاءمة البحث في التمويل الإسلامي","bar2":"منهجيات دعم القرار","bar3":"أدلة التمويل التطبيقي","bar4":"تكوين شرعي رسمي","developing":"قيد التطوير","path1Title":"ابدأ من الأصول الحقيقية.","path1Text":"تبدأ السردية بالبنية التحتية بوصفها رأس مال موجهاً إلى الاقتصاد الحقيقي، ثم تنتقل إلى الصكوك كقناة تمويل متوافقة مع الشريعة.","path2Title":"اجعل المقاصد قابلة للقياس.","path2Text":"المصلحة العامة، وتقليل الضرر، وإتاحة الوصول، وحفظ المال، والرعاية البيئية تتحول إلى مؤشرات على مستوى المشروع.","path3Title":"أبقِ النموذج تحت الحوكمة.","path3Text":"يمكن للدرجة أن تنظم الأدلة وتقارن البدائل. لكنها لا تستبدل المراجعة الشرعية أو العناية القانونية الواجبة أو الحكم الاستثماري.","path4Title":"دع الوثائق تقوم بالعمل.","path4Text":"المقترح البحثي، ومشروع التخرج، وورقة AI-MCDM، والسيرة الذاتية، وملف البورتفوليو الأصلي كلها مرفقة حتى يمكن فحص الادعاءات.","researchKicker":"محور البحث","researchHead":"SC-SIIRS هي الفكرة البحثية الأساسية.","researchNote":"يقوم البورتفوليو على مقترح مركز: إطار جاهزية خاضع للحوكمة الشرعية لصكوك البنية التحتية الذكية.","proposalTag":"مقترح بحثي لماجستير التمويل الإسلامي","researchTitle":"<span>إطار جاهزية MCDM خاضع للحوكمة الشرعية</span> لصكوك البنية التحتية الذكية","researchText":"يجمع SC-SIIRS بين الجدوى المالية، ومواءمة المقاصد، ومساهمة ESG، وأداء البنية التحتية الذكية، والحوكمة الشرعية، والتعرض للمخاطر في إطار فرز مسبق للمشاريع المحتمل تمويلها بالصكوك.","researchQuote":"الإطار استشاري. يوضح الأدلة والمفاضلات قبل هيكلة الصكوك رسمياً؛ ولا يصدر فتاوى، ولا يسعّر الصكوك، ولا يمنح شهادة امتثال، ولا يستبدل الحوكمة البشرية.","mini1Title":"المنهج الأساسي","mini1Text":"أوزان خبراء باستخدام AHP مع ترتيب السيناريوهات باستخدام TOPSIS.","mini2Title":"اختبار المتانة","mini2Text":"يُستخدم MEREC وCOPRAS لاختبار استقرار الترتيب.","mini3Title":"التحقق","mini3Text":"تختبر مقابلات الخبراء ما إذا كان الإطار قابلاً للاستخدام وذا مصداقية في سياقات الحوكمة الشرعية.","mini4Title":"نقطة القرار","mini4Text":"مصمم لمرحلة ما قبل الهيكلة، قبل انتقال المشروع المرشح للصكوك إلى الاعتماد الرسمي.","labTitle":"مختبر مصغر لجاهزية SC-SIIRS","labText":"عرض بسيط لمنطق الدرجة. هذا ليس توصية استثمارية.","sliderFinancial":"الجدوى المالية","sliderMaqasid":"مواءمة المقاصد","sliderEsg":"مساهمة ESG","sliderGov":"الحوكمة الشرعية + قابلية التدقيق","scoreLabel":"الجاهزية المركبة","bandLabel":"الفئة الاستشارية","bandHigh":"مرتفعة","bandModerate":"متوسطة","bandConditional":"مشروطة","bandReject":"غير موصى به","decisionHigh":"الانتقال إلى عناية واجبة قانونية ومالية وشرعية أكثر تفصيلاً.","decisionModerate":"المتابعة بشروط، مع معالجة محددة للثغرات.","decisionConditional":"التوقف مؤقتاً حتى تُصحّح فجوات الأدلة.","decisionReject":"رفض المشروع أو إعادة تصميم هيكله ووثائقه.","evidenceKicker":"سلسلة الأدلة","evidenceTitle":"لكل وثيقة دور في ملف القبول.","evidenceNote":"تُستخدم الملفات المرفوعة كأدلة، لا كزخرفة.","ev1Title":"المقترح البحثي","ev1Text":"يُظهر ملاءمة ماجستير التمويل الإسلامي من خلال الصكوك، والمقاصد، وESG، والحوكمة الشرعية، وMCDM.","ev2Title":"مشروع الدار البيضاء","ev2Text":"يُظهر تقييم الاستثمار التطبيقي عبر SUMO وGIS/QGIS وCAPEX وOPEX وTCO وROI وIRP.","ev3Title":"مخطوط AI-MCDM","ev3Text":"يُظهر العمق المنهجي عبر XGBoost وDNPV وReal Options وFuzzy-AHP/MEREC وAROMAN.","ev4Title":"أدلة السيرة الذاتية","ev4Text":"تُظهر التنفيذ العملي: أداء مالي، لوحات قيادة، تحليل مخاطر المحافظ، وأتمتة التقارير.","ev5Title":"ملف البورتفوليو الأصلي","ev5Text":"استُخدم مرجعاً للهيكل ومنطق التفاعل متعدد اللغات.","evView":"عرض القسم","evDownload":"تحميل","evMethods":"عرض المنهجية","evDownload2":"تحميل","evDownload3":"تحميل الأصل","methodsKicker":"المنهجية والمهارات","methodsTitle":"المنهجية قبل الأثر البصري.","methodsNote":"العمود التقني هو التمويل، وعلوم القرار، وتحليل البنية التحتية، والانضباط في الحوكمة.","method1Title":"تقييم مالي","method1Text":"منطق الاستثمار وراء أدلة مشروع التخرج والسيرة الذاتية.","method2Title":"MCDM / ترتيب","method2Text":"يُستخدم لتنظيم المفاضلات بدلاً من إخفائها.","method3Title":"تحليل البنية التحتية الذكية","method3Text":"دليل على أن الطلب مبني على تقييم مشاريع حقيقي.","method4Title":"انضباط الحوكمة","method4Text":"في التمويل الإسلامي، يجب أن يبقى النموذج قابلاً للتفسير والمراجعة.","timelineKicker":"المسار الأكاديمي","timelineTitle":"سردية مركزة للقبول في ماليزيا.","time1Title":"بكالوريوس في الإدارة والتمويل والمحاسبة — UIC","time1Text":"تقدير عالٍ / Mention Très Bien، مع أساس في التمويل والمحاسبة والرقابة الإدارية والإحصاء والاقتصاد وقانون الأعمال.","time2Title":"مشروع التخرج: ربحية البنية الإعلانية حسب حركة المرور","time2Text":"تحويل بيانات التنقل الحضري والموقع إلى مخرجات ROI وCAPEX وOPEX وTCO وIRP.","time3Title":"ماجستير المشتريات وإدارة سلسلة الإمداد — INSEEC Lyon","time3Text":"عمل مرتبط بتحليل التكاليف، وأداء المشتريات، واتخاذ القرار التشغيلي، ونمذجة مؤشرات الأداء، والتنبؤ.","time4Title":"مخطوط AI-MCDM","time4Text":"تصنيف استثمارات المدن الذكية تحت مخاطر الكربون والطاقة والجيو-اقتصاد باستخدام XGBoost وDNPV وReal Options وFuzzy-AHP/MEREC وAROMAN.","malaysiaTarget":"هدف ماليزيا","time5Title":"ماجستير التمويل الإسلامي","time5Text":"تركيز بحثي: إطار جاهزية MCDM خاضع للحوكمة الشرعية لصكوك البنية التحتية الذكية.","docsKicker":"أدلة الوثائق","docsTitle":"حزمة أدلة قابلة للتحميل.","docsNote":"جميع الملفات محفوظة في مجلد <strong>docs/</strong> نفسه للنشر عبر GitHub Pages.","doc1Title":"مقترح INCEIF البحثي","doc1Tag":"وثيقة الطلب الأساسية","doc1Text":"مقترح SC-SIIRS لماجستير التمويل الإسلامي: الصكوك، المقاصد، ESG، الحوكمة الشرعية وجاهزية MCDM.","downloadProposal":"تحميل المقترح","doc2Title":"ملف السيرة الذاتية","doc2Tag":"ملف المتقدم","doc2Text":"التعليم، المشاريع، التدريب، المهارات التقنية وأدلة اللغة، معاد صياغتها للتمويل الإسلامي.","downloadCv":"تحميل السيرة الذاتية","doc3Title":"مشروع الدار البيضاء","doc3Tag":"دليل تمويل تطبيقي","doc3Text":"محاكاة المرور، GIS، ربحية OOH/DOOH، CAPEX/OPEX/TCO، ROI وIRP.","downloadPfe":"تحميل مشروع التخرج","doc4Title":"مخطوط AI-MCDM","doc4Tag":"دليل تقني","doc4Text":"ترتيب استثمارات المدن الذكية تحت مخاطر الكربون والطاقة والجيو-اقتصاد باستخدام طرق AI-MCDM.","downloadManuscript":"تحميل المخطوط","contactKicker":"التواصل","contactText":"متقدم لماجستير التمويل الإسلامي يركز على جاهزية الصكوك، وأسواق رأس المال الإسلامية، وتمويل البنية التحتية، ودمج ESG مع المقاصد، ودعم القرار MCDM القابل للتدقيق.","location":"ليون، فرنسا","langs":"العربية: لغة أم • الفرنسية: C2/ثنائية اللغة • الإنجليزية: B2","integrityTitle":"ملاحظة النزاهة","integrityText":"لا يدّعي هذا البورتفوليو سلطة شرعية. إنه يعرض أدلة في التمويل والتحليل وتقييم المشاريع للدراسة المتقدمة في التمويل الإسلامي.","integrity1":"SC-SIIRS إطار لدعم القرار، وليس فتوى.","integrity2":"ترتيبات MCDM تدعم الحكم المهني ولا تستبدل الحوكمة.","integrity3":"تُستخدم أدلة ROI وAI-MCDM السابقة كدليل منهجي، لا كادعاء لأداء الصكوك.","footer":"© 2026 الغالي الساني — بورتفوليو ماجستير التمويل الإسلامي في ماليزيا."}
+};
+
+const root = document.documentElement;
+const body = document.body;
+const buttons = document.querySelectorAll(".lang-switch button");
+let currentLang = localStorage.getItem("portfolioLang") || "en";
+
+function applyLang(lang){
+  const t = dict[lang] || dict.en;
+  root.lang = lang;
+  root.dir = lang === "ar" ? "rtl" : "ltr";
+  body.dir = lang === "ar" ? "rtl" : "ltr";
+  body.dataset.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.dataset.i18n;
+    if(t[key] !== undefined) el.textContent = t[key];
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(el=>{
+    const key = el.dataset.i18nHtml;
+    if(t[key] !== undefined) el.innerHTML = t[key];
+  });
+  buttons.forEach(btn=>btn.setAttribute("aria-pressed", btn.dataset.lang === lang ? "true" : "false"));
+  localStorage.setItem("portfolioLang", lang);
+  currentLang = lang;
+  updateScore();
+}
+buttons.forEach(btn=>btn.addEventListener("click",()=>applyLang(btn.dataset.lang)));
+
+const sliders = ["financial","maqasid","esg","governance"].map(id=>document.getElementById(id));
+const scoreEl = document.getElementById("score");
+const bandEl = document.getElementById("band");
+const decisionEl = document.getElementById("decisionText");
+const valueEls = {
+  financial:document.getElementById("vFinancial"),
+  maqasid:document.getElementById("vMaqasid"),
+  esg:document.getElementById("vEsg"),
+  governance:document.getElementById("vGovernance")
+};
+
 function updateScore(){
-  const f=+document.getElementById('financial').value, m=+document.getElementById('maqasid').value, e=+document.getElementById('esg').value, g=+document.getElementById('governance').value;
-  document.getElementById('vFinancial').textContent=f; document.getElementById('vMaqasid').textContent=m; document.getElementById('vEsg').textContent=e; document.getElementById('vGovernance').textContent=g;
-  const score=Math.round(f*.30 + m*.27 + e*.20 + g*.23); const [b,d]=band(score);
-  document.getElementById('score').textContent=score; document.getElementById('band').textContent=b; document.getElementById('decisionText').textContent=d;
+  const t = dict[currentLang] || dict.en;
+  const values = {
+    financial:+document.getElementById("financial").value,
+    maqasid:+document.getElementById("maqasid").value,
+    esg:+document.getElementById("esg").value,
+    governance:+document.getElementById("governance").value
+  };
+  Object.entries(values).forEach(([k,v])=>valueEls[k].textContent = v);
+  const score = Math.round(values.financial*.32 + values.maqasid*.26 + values.esg*.20 + values.governance*.22);
+  scoreEl.textContent = score;
+  if(score >= 85){ bandEl.textContent = t.bandHigh; decisionEl.textContent = t.decisionHigh; }
+  else if(score >= 70){ bandEl.textContent = t.bandModerate; decisionEl.textContent = t.decisionModerate; }
+  else if(score >= 55){ bandEl.textContent = t.bandConditional; decisionEl.textContent = t.decisionConditional; }
+  else { bandEl.textContent = t.bandReject; decisionEl.textContent = t.decisionReject; }
 }
-sliders.forEach(id=>document.getElementById(id).addEventListener('input',updateScore)); updateScore();
-const lensAdmissions=document.getElementById('lensAdmissions'), lensResearch=document.getElementById('lensResearch');
-function setLens(mode){
-  lensAdmissions.classList.toggle('active',mode==='admissions'); lensResearch.classList.toggle('active',mode==='research');
-  document.querySelectorAll('.project').forEach((el,i)=>{ el.style.borderColor = mode==='research' ? 'rgba(198,155,69,.32)' : 'rgba(15,107,78,.16)'; });
-  document.querySelector('.hero-main .lead').textContent = mode==='research'
-    ? 'Research lens: this portfolio foregrounds SC-SIIRS, the MCDM methodology, robustness checks, expert validation and Shariah-governance boundaries for a Malaysia-based Islamic Finance application.'
-    : 'This portfolio reframes my finance, infrastructure analytics and MCDM work for a Malaysia-based Islamic finance application. The core positioning is precise: sukuk, Maqasid al-Shariah, ESG, financial viability and auditable decision support for smart infrastructure projects.';
-}
-lensAdmissions.addEventListener('click',()=>setLens('admissions')); lensResearch.addEventListener('click',()=>setLens('research'));
+sliders.forEach(s=>s.addEventListener("input",updateScore));
+applyLang(currentLang);
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+
+
+<script>
+(function(){
+  const SUMO_FILES = {
+    maarif: {
+      heatmap: "data/maarif_heatmap.json",
+      animation: "data/maarif_animation.json",
+      fcd: "data/fcd_maarif.json"
+    },
+    hay_hassani: {
+      heatmap: "data/hay_hassani_heatmap.json",
+      animation: "data/hay_hassani_animation.json",
+      fcd: "data/fcd_hay_hassani.json"
+    },
+    ben_msick: {
+      heatmap: "data/ben_msick_heatmap.json",
+      animation: "data/ben_msick_animation.json",
+      fcd: "data/fcd_ben_msick.json"
+    },
+    sidi_maarouf: {
+      heatmap: "data/sidi_maarouf_heatmap.json",
+      animation: "data/sidi_maarouf_animation.json",
+      fcd: "data/fcd_sidi_maarouf.json"
+    },
+    bd_mohammed_v: {
+      heatmap: "data/bd_mohammed_v_heatmap.json",
+      animation: "data/bd_mohammed_v_animation.json",
+      fcd: "data/fcd_bd_mohammed_v.json"
+    }
+  };
+
+  const EGS_ZONES = {
+    maarif: { label:"Maârif", center:[33.5868,-7.6387], zoom:14, scaleLat:.012, scaleLng:.014,
+      note:{en:"Maârif: central dense urban area. The layer can read real SUMO/GIS JSON when present; otherwise it displays embedded demonstration data.", ms:"Maârif: kawasan bandar pusat yang padat. Lapisan ini boleh membaca JSON SUMO/GIS sebenar jika tersedia; jika tidak, ia memaparkan data demonstrasi.", ar:"المعاريف: منطقة حضرية مركزية كثيفة. يمكن لهذه الطبقة قراءة ملفات SUMO/GIS بصيغة JSON عند توفرها؛ وإلا فتعرض بيانات تجريبية مدمجة."}},
+    hay_hassani: { label:"Hay Hassani", center:[33.5580,-7.6900], zoom:13, scaleLat:.016, scaleLng:.017,
+      note:{en:"Hay Hassani: residential expansion zone with dispersed flows and mixed corridor intensity.", ms:"Hay Hassani: zon pengembangan kediaman dengan aliran tersebar dan intensiti koridor bercampur.", ar:"حي الحسني: منطقة توسع سكني بتدفقات موزعة وكثافة ممرات مختلطة."}},
+    ben_msick: { label:"Ben M'Sick", center:[33.5486,-7.5820], zoom:13, scaleLat:.015, scaleLng:.016,
+      note:{en:"Ben M'Sick: eastern urban corridor with uneven traffic density and local access roads.", ms:"Ben M'Sick: koridor bandar timur dengan kepadatan trafik tidak sekata dan jalan akses tempatan.", ar:"بن مسيك: ممر حضري شرقي بكثافة حركة غير متجانسة وطرق وصول محلية."}},
+    sidi_maarouf: { label:"Sidi Maârouf", center:[33.5192,-7.6512], zoom:13, scaleLat:.016, scaleLng:.017,
+      note:{en:"Sidi Maârouf: business and peripheral corridor where traffic exposure supports investment-location scoring.", ms:"Sidi Maârouf: koridor perniagaan dan pinggir bandar di mana pendedahan trafik menyokong penilaian lokasi pelaburan.", ar:"سيدي معروف: ممر أعمال وحزام حضري طرفي تدعم فيه كثافة المرور تقييم مواقع الاستثمار."}},
+    bd_mohammed_v: { label:"Bd. Mohammed V", center:[33.5937,-7.6122], zoom:14, scaleLat:.010, scaleLng:.018,
+      note:{en:"Boulevard Mohammed V: linear urban axis suited to corridor-based traffic visualization.", ms:"Boulevard Mohammed V: paksi bandar linear yang sesuai untuk visualisasi trafik berasaskan koridor.", ar:"شارع محمد الخامس: محور حضري خطي مناسب لتصوير حركة المرور على مستوى الممر."}}
+  };
+
+  let map=null, heatLayer=null, canvas=null, ctx=null, mode="heatmap", zoneKey="maarif", animationData=[], heatData=[], raf=null, tick=0, paused=false;
+
+  function byId(id){ return document.getElementById(id); }
+  function lang(){ return document.body.dataset.lang || document.documentElement.lang || "en"; }
+  function tr(obj){ const l=lang(); return obj[l] || obj.en || ""; }
+  function setText(id, text){ const el=byId(id); if(el) el.textContent=text; }
+  function setHidden(id, val){ const el=byId(id); if(el) el.classList.toggle("egs-hidden", !!val); }
+
+  function applySumoLanguage(){
+    const l=lang();
+    document.querySelectorAll("[data-sumo-en]").forEach(el=>{
+      el.textContent = el.getAttribute("data-sumo-" + l) || el.getAttribute("data-sumo-en");
+    });
+    const z=EGS_ZONES[zoneKey];
+    if(z) setText("sumoAnalysis", tr(z.note));
+  }
+
+  function fallbackHeat(zone){
+    const z=EGS_ZONES[zone];
+    const pts=[];
+    for(let i=0;i<160;i++){
+      const a=i/160*Math.PI*2;
+      const r=.15 + ((i*37)%100)/100;
+      const lat=z.center[0] + Math.sin(a*1.7)*z.scaleLat*r + (Math.random()-.5)*z.scaleLat*.2;
+      const lng=z.center[1] + Math.cos(a*1.15)*z.scaleLng*r + (Math.random()-.5)*z.scaleLng*.2;
+      const intensity=.25 + ((i*13)%75)/100;
+      pts.push([lat,lng,intensity]);
+    }
+    return pts;
+  }
+
+  function fallbackVehicles(zone){
+    const z=EGS_ZONES[zone];
+    const arr=[];
+    for(let i=0;i<48;i++){
+      const lane=(i%6)-2.5;
+      const phase=(i*19)%100/100;
+      const speed=0.45 + (i%7)*0.12;
+      arr.push({ lane, phase, speed, color:i%3===0?"#FF3355":(i%3===1?"#FFD700":"#00FF88") });
+    }
+    return arr.map(v=>{
+      const steps=[];
+      for(let t=0;t<120;t++){
+        const p=(v.phase + t/120*v.speed)%1;
+        const lat=z.center[0] + (p-.5)*z.scaleLat*1.55 + Math.sin(p*Math.PI*2)*z.scaleLat*.05 + v.lane*z.scaleLat*.025;
+        const lng=z.center[1] + (p-.5)*z.scaleLng*1.65 + Math.cos(p*Math.PI*2)*z.scaleLng*.05 + v.lane*z.scaleLng*.018;
+        steps.push({lat,lng,speed:18+Math.round(v.speed*22), color:v.color});
+      }
+      return steps;
+    });
+  }
+
+  function normalizeHeat(data){
+    if(Array.isArray(data)){
+      return data.map(p=>{
+        if(Array.isArray(p)) return [Number(p[0]), Number(p[1]), Number(p[2] ?? .55)];
+        return [Number(p.lat ?? p.latitude), Number(p.lng ?? p.lon ?? p.longitude), Number(p.intensity ?? p.value ?? .55)];
+      }).filter(p=>Number.isFinite(p[0]) && Number.isFinite(p[1]));
+    }
+    if(data && Array.isArray(data.points)) return normalizeHeat(data.points);
+    return [];
+  }
+
+  function normalizeVehicles(data){
+    if(Array.isArray(data) && Array.isArray(data[0])) return data;
+    const rows = Array.isArray(data) ? data : (data && (data.vehicles || data.points || data.frames)) || [];
+    if(!Array.isArray(rows) || !rows.length) return [];
+    const grouped={};
+    rows.forEach((r,i)=>{
+      const id = r.id || r.vehicle || r.veh || ("v"+(i%32));
+      const lat = Number(r.lat ?? r.latitude);
+      const lng = Number(r.lng ?? r.lon ?? r.longitude);
+      if(!Number.isFinite(lat) || !Number.isFinite(lng)) return;
+      if(!grouped[id]) grouped[id]=[];
+      grouped[id].push({lat,lng,speed:Number(r.speed ?? 20), color:r.color || "#00FF88"});
+    });
+    return Object.values(grouped).filter(x=>x.length>1);
+  }
+
+  async function tryJson(url){
+    const res = await fetch(url, {cache:"no-store"});
+    if(!res.ok) throw new Error("missing " + url);
+    return await res.json();
+  }
+
+  async function loadSUMOLayer(zone, selectedMode){
+    const z=EGS_ZONES[zone];
+    setText("egsStatusTitle", "SUMO / Leaflet");
+    setText("egsStatusText", "Loading " + z.label + " " + selectedMode + " layer…");
+    try {
+      if(selectedMode === "heatmap"){
+        const data = await tryJson(SUMO_FILES[zone].heatmap);
+        heatData = normalizeHeat(data);
+        if(!heatData.length) throw new Error("empty heatmap");
+      } else {
+        const data = await tryJson(SUMO_FILES[zone].animation);
+        animationData = normalizeVehicles(data);
+        if(!animationData.length) throw new Error("empty animation");
+      }
+    } catch(error) {
+      if(selectedMode === "heatmap") heatData = fallbackHeat(zone);
+      else animationData = fallbackVehicles(zone);
+    }
+    renderLayer();
+  }
+
+  function initMap(){
+    const container=byId("egsSumoMap");
+    if(!container) return false;
+    if(!window.L || !L.map){
+      container.innerHTML='<div style="display:grid;place-items:center;height:100%;min-height:430px;padding:24px;text-align:center;color:#00FF88;background:#050505;border:1px solid #004400;font-family:monospace;line-height:1.6">Leaflet could not load from the CDN. Check your internet connection or host Leaflet locally.</div>';
+      setText("egsStatusText", "Leaflet library unavailable. The SUMO panel needs leaflet.min.js before leaflet-heat.js.");
+      return false;
+    }
+    if(map) return true;
+    const z=EGS_ZONES[zoneKey];
+    map=L.map("egsSumoMap",{
+      center:z.center,
+      zoom:z.zoom,
+      zoomControl:true,
+      attributionControl:false,
+      preferCanvas:true
+    });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{ maxZoom:19 }).addTo(map);
+    canvas=byId("egsTrafficCanvas");
+    if(canvas) ctx=canvas.getContext("2d");
+    resizeCanvas();
+    map.on("move zoom resize",()=>{ resizeCanvas(); if(mode==="simulation") drawStep(); });
+    window.addEventListener("resize",()=>{ resizeCanvas(); if(mode==="simulation") drawStep(); });
+    setTimeout(()=>map.invalidateSize(),150);
+    return true;
+  }
+
+  function resizeCanvas(){
+    if(!canvas || !ctx) return;
+    const rect=canvas.getBoundingClientRect();
+    const dpr=window.devicePixelRatio || 1;
+    canvas.width=Math.max(1, Math.round(rect.width*dpr));
+    canvas.height=Math.max(1, Math.round(rect.height*dpr));
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+
+  function clearCanvas(){
+    if(!ctx || !canvas) return;
+    const rect=canvas.getBoundingClientRect();
+    ctx.clearRect(0,0,rect.width,rect.height);
+  }
+
+  function removeHeat(){
+    if(heatLayer && map){
+      map.removeLayer(heatLayer);
+      heatLayer=null;
+    }
+  }
+
+  function renderHeat(){
+    clearCanvas();
+    removeHeat();
+    const intensity = Number(byId("heatIntensity")?.value || 6);
+    if(window.L && L.heatLayer){
+      heatLayer = L.heatLayer(heatData, { radius: 18 + intensity*2, blur: 12 + intensity, maxZoom: 17, max: 1.0 }).addTo(map);
+    } else {
+      heatLayer = L.layerGroup(heatData.slice(0,80).map(p=>L.circleMarker([p[0],p[1]],{
+        radius:4 + intensity/2,
+        fillOpacity:.35,
+        opacity:.3,
+        color:"#00FF88",
+        fillColor:"#00FF88"
+      }))).addTo(map);
+    }
+    setText("kpiPoints", String(heatData.length));
+    setText("kpiVehicles", "—");
+    setText("kpiSpeed", "—");
+    setText("kpiMode", "HEAT");
+  }
+
+  function drawStep(){
+    if(mode !== "simulation" || !ctx || !map || !animationData.length) return;
+    clearCanvas();
+    const rect=canvas.getBoundingClientRect();
+    const size=Number(byId("vehicleSize")?.value || 6);
+    const frame=tick%120;
+    let speedTotal=0, count=0;
+    animationData.forEach(track=>{
+      const p=track[frame%track.length];
+      const pt=map.latLngToContainerPoint([p.lat,p.lng]);
+      if(pt.x < -20 || pt.y < -20 || pt.x > rect.width+20 || pt.y > rect.height+20) return;
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, size, 0, Math.PI*2);
+      ctx.fillStyle=p.color || "#00FF88";
+      ctx.globalAlpha=.9;
+      ctx.fill();
+      ctx.globalAlpha=.22;
+      ctx.beginPath();
+      ctx.arc(pt.x, pt.y, size*2.2, 0, Math.PI*2);
+      ctx.fill();
+      ctx.globalAlpha=1;
+      speedTotal += Number(p.speed || 20); count++;
+    });
+    setText("kpiPoints", "—");
+    setText("kpiVehicles", String(count));
+    setText("kpiSpeed", count ? Math.round(speedTotal/count) + " km/h" : "—");
+    setText("kpiMode", "SIM");
+  }
+
+  function animate(){
+    if(mode==="simulation" && !paused){
+      tick += Number(byId("vehicleSpeed")?.value || 6);
+      drawStep();
+    }
+    raf=requestAnimationFrame(animate);
+  }
+
+  function renderLayer(){
+    const z=EGS_ZONES[zoneKey];
+    if(map){
+      map.setView(z.center,z.zoom,{animate:false});
+      setTimeout(()=>map.invalidateSize(),80);
+    }
+    setHidden("egsHeatControls", mode !== "heatmap");
+    setHidden("egsSimulationControls", mode !== "simulation");
+    if(mode==="heatmap") renderHeat();
+    else { removeHeat(); drawStep(); }
+    setText("egsStatusText", z.label + " · " + (mode==="heatmap" ? "heatmap" : "vehicle simulation") + " layer");
+    setText("sumoAnalysis", tr(z.note));
+  }
+
+  function updateUI(){
+    document.querySelectorAll(".egs-mode-btn").forEach(btn=>{
+      btn.classList.toggle("active", btn.dataset.egsMode===mode);
+      btn.setAttribute("aria-pressed", String(btn.dataset.egsMode===mode));
+    });
+    document.querySelectorAll(".egs-zone-btn").forEach(btn=>{
+      btn.classList.toggle("active", btn.dataset.egsZone===zoneKey);
+      btn.setAttribute("aria-pressed", String(btn.dataset.egsZone===zoneKey));
+    });
+    const play=byId("egsPlayBtn");
+    if(play) play.textContent = paused ? "PLAY" : "PAUSE";
+  }
+
+  function bind(){
+    document.querySelectorAll(".egs-mode-btn").forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        mode=btn.dataset.egsMode || "heatmap";
+        updateUI();
+        loadSUMOLayer(zoneKey,mode);
+      });
+    });
+    document.querySelectorAll(".egs-zone-btn").forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        zoneKey=btn.dataset.egsZone || "maarif";
+        updateUI();
+        loadSUMOLayer(zoneKey,mode);
+      });
+    });
+    ["heatIntensity","vehicleSpeed","vehicleSize"].forEach(id=>{
+      const el=byId(id);
+      if(el) el.addEventListener("input",()=>{ if(mode==="heatmap") renderHeat(); else drawStep(); });
+    });
+    const play=byId("egsPlayBtn");
+    if(play) play.addEventListener("click",()=>{ paused=!paused; updateUI(); });
+    const reset=byId("egsResetBtn");
+    if(reset) reset.addEventListener("click",()=>{ tick=0; drawStep(); });
+  }
+
+  function boot(){
+    applySumoLanguage();
+    bind();
+    if(initMap()){
+      updateUI();
+      loadSUMOLayer(zoneKey, mode);
+      animate();
+    }
+    const observer = new MutationObserver(applySumoLanguage);
+    observer.observe(document.body,{attributes:true,attributeFilter:["data-lang","dir"]});
+  }
+
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
+</script>
+
+
+<script>
+/* =========================================================
+   Amanah Signal Easter Egg
+   Vanilla JS / non-destructive / multilingual / accessible
+   ========================================================= */
+
+(function () {
+  "use strict";
+
+  const AMANAH_SIGNAL_DURATION = 20000;
+  const AMANAH_KEYWORDS = ["AMANAH", "AMANAAH"];
+  const AMANAH_TARGET_IDS = [
+    "islamic-finance",
+    "research",
+    "academic-fit",
+    "finance-focus",
+    "projects",
+    "about"
+  ];
+
+  let amanahTypedBuffer = "";
+  let amanahClickCount = 0;
+  let amanahClickTimer = null;
+  let amanahTimeout = null;
+
+  const amanahCopy = {
+    en: {
+      title: "Amanah Signal Activated",
+      text: "Finance guided by trust, Shariah discipline, and real economic value.",
+      badges: ["Amanah", "Maqasid", "VBI", "Risk-sharing"],
+      cta: "View Islamic Finance Focus",
+      close: "Close Amanah Signal"
+    },
+    ms: {
+      title: "Isyarat Amanah Diaktifkan",
+      text: "Kewangan berpandukan amanah, disiplin Syariah dan nilai ekonomi sebenar.",
+      badges: ["Amanah", "Maqasid", "VBI", "Perkongsian Risiko"],
+      cta: "Lihat Fokus Kewangan Islam",
+      close: "Tutup Isyarat Amanah"
+    },
+    ar: {
+      title: "تم تفعيل إشارة الأمانة",
+      text: "تمويل يقوم على الأمانة، والانضباط الشرعي، والقيمة الاقتصادية الحقيقية.",
+      badges: ["الأمانة", "المقاصد", "الوساطة القائمة على القيمة", "تقاسم المخاطر"],
+      cta: "عرض محور التمويل الإسلامي",
+      close: "إغلاق إشارة الأمانة"
+    }
+  };
+
+  function getCurrentPortfolioLanguage() {
+    const htmlLang = (document.documentElement.getAttribute("lang") || "").toLowerCase();
+    const bodyLang = (document.body.getAttribute("data-lang") || "").toLowerCase();
+
+    const activeSwitcher =
+      document.querySelector(".language-switcher .active") ||
+      document.querySelector(".lang-switch .active") ||
+      document.querySelector(".lang-switch button[aria-pressed='true']") ||
+      document.querySelector("[data-lang][aria-pressed='true']");
+
+    const switcherLang = activeSwitcher
+      ? (
+          activeSwitcher.getAttribute("data-lang") ||
+          activeSwitcher.getAttribute("lang") ||
+          activeSwitcher.textContent ||
+          ""
+        ).trim().toLowerCase()
+      : "";
+
+    const rawLang = bodyLang || htmlLang || switcherLang || "en";
+
+    if (rawLang.startsWith("ar") || rawLang === "arabic" || rawLang === "عربي") return "ar";
+    if (rawLang.startsWith("ms") || rawLang === "bm" || rawLang.includes("bahasa")) return "ms";
+    return "en";
+  }
+
+  function getIslamicFinanceTargetSection() {
+    for (const id of AMANAH_TARGET_IDS) {
+      const target = document.getElementById(id);
+      if (target) return target;
+    }
+    return null;
+  }
+
+  function getOrCreateAmanahOverlay() {
+    let overlay = document.getElementById("amanahSignalOverlay");
+
+    if (overlay) return overlay;
+
+    overlay = document.createElement("div");
+    overlay.id = "amanahSignalOverlay";
+    overlay.className = "amanah-signal";
+    overlay.setAttribute("aria-live", "polite");
+    overlay.setAttribute("aria-hidden", "true");
+
+    overlay.innerHTML = `
+      <button
+        type="button"
+        class="amanah-signal__close"
+        aria-label="Close Amanah Signal"
+        data-amanah-close
+      >×</button>
+
+      <div class="amanah-signal__mark" aria-hidden="true"></div>
+
+      <div class="amanah-signal__content">
+        <p class="amanah-signal__kicker">Amanah Signal</p>
+        <h3 class="amanah-signal__title" data-amanah-title></h3>
+        <p class="amanah-signal__text" data-amanah-text></p>
+        <div class="amanah-signal__badges" data-amanah-badges></div>
+        <button type="button" class="amanah-signal__cta" data-amanah-cta></button>
+      </div>
+    `;
+
+    document.body.appendChild(overlay);
+    return overlay;
+  }
+
+  function renderAmanahOverlay() {
+    const lang = getCurrentPortfolioLanguage();
+    const copy = amanahCopy[lang] || amanahCopy.en;
+    const overlay = getOrCreateAmanahOverlay();
+
+    const title = overlay.querySelector("[data-amanah-title]");
+    const text = overlay.querySelector("[data-amanah-text]");
+    const badges = overlay.querySelector("[data-amanah-badges]");
+    const cta = overlay.querySelector("[data-amanah-cta]");
+    const close = overlay.querySelector("[data-amanah-close]");
+
+    overlay.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+
+    if (title) title.textContent = copy.title;
+    if (text) text.textContent = copy.text;
+
+    if (badges) {
+      badges.innerHTML = "";
+      copy.badges.forEach((badgeText) => {
+        const badge = document.createElement("span");
+        badge.textContent = badgeText;
+        badges.appendChild(badge);
+      });
+    }
+
+    if (close) {
+      close.setAttribute("aria-label", copy.close);
+    }
+
+    if (cta) {
+      const target = getIslamicFinanceTargetSection();
+
+      if (target) {
+        cta.hidden = false;
+        cta.disabled = false;
+        cta.textContent = copy.cta;
+
+        cta.onclick = function () {
+          target.scrollIntoView({
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+              ? "auto"
+              : "smooth",
+            block: "start"
+          });
+        };
+      } else {
+        cta.hidden = true;
+        cta.disabled = true;
+      }
+    }
+
+    return overlay;
+  }
+
+  function activateAmanahSignal() {
+    const overlay = renderAmanahOverlay();
+
+    window.clearTimeout(amanahTimeout);
+
+    document.body.classList.add("amanah-signal-active");
+    overlay.classList.add("is-visible");
+    overlay.setAttribute("aria-hidden", "false");
+
+    const close = overlay.querySelector("[data-amanah-close]");
+    if (close) {
+      close.onclick = deactivateAmanahSignal;
+    }
+
+    amanahTimeout = window.setTimeout(deactivateAmanahSignal, AMANAH_SIGNAL_DURATION);
+  }
+
+  function deactivateAmanahSignal() {
+    const overlay = document.getElementById("amanahSignalOverlay");
+
+    window.clearTimeout(amanahTimeout);
+    amanahTimeout = null;
+
+    document.body.classList.remove("amanah-signal-active");
+
+    if (overlay) {
+      overlay.classList.remove("is-visible");
+      overlay.setAttribute("aria-hidden", "true");
+    }
+  }
+
+  function shouldIgnoreKeyEvent(event) {
+    const target = event.target;
+    if (!target) return false;
+
+    const tagName = target.tagName ? target.tagName.toLowerCase() : "";
+
+    return (
+      tagName === "input" ||
+      tagName === "textarea" ||
+      tagName === "select" ||
+      target.isContentEditable
+    );
+  }
+
+  function detectAmanahKeyword() {
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        deactivateAmanahSignal();
+        return;
+      }
+
+      if (shouldIgnoreKeyEvent(event)) return;
+      if (!event.key || event.key.length !== 1) return;
+
+      amanahTypedBuffer = (amanahTypedBuffer + event.key.toUpperCase()).slice(-Math.max(...AMANAH_KEYWORDS.map(word => word.length)));
+
+      if (AMANAH_KEYWORDS.some(word => amanahTypedBuffer.endsWith(word))) {
+        activateAmanahSignal();
+        amanahTypedBuffer = "";
+      }
+    });
+  }
+
+  function getAmanahClickTarget() {
+    const selectors = [
+      ".site-logo",
+      ".brand-name",
+      ".candidate-name",
+      "header h1",
+      ".brand",
+      ".logo"
+    ];
+
+    for (const selector of selectors) {
+      const element = document.querySelector(selector);
+      if (element) return element;
+    }
+
+    return (
+      document.querySelector("header") ||
+      document.querySelector("main header") ||
+      document.body
+    );
+  }
+
+  function detectAmanahClicks() {
+    const clickTarget = getAmanahClickTarget();
+    if (!clickTarget) return;
+
+    clickTarget.addEventListener("click", function () {
+      amanahClickCount += 1;
+
+      window.clearTimeout(amanahClickTimer);
+      amanahClickTimer = window.setTimeout(function () {
+        amanahClickCount = 0;
+      }, 2500);
+
+      if (amanahClickCount >= 5) {
+        amanahClickCount = 0;
+        window.clearTimeout(amanahClickTimer);
+        activateAmanahSignal();
+      }
+    });
+  }
+
+  function initAmanahSignal() {
+    getOrCreateAmanahOverlay();
+    detectAmanahKeyword();
+    detectAmanahClicks();
+
+    document.addEventListener("click", function (event) {
+      const closeButton = event.target.closest("[data-amanah-close]");
+      if (closeButton) deactivateAmanahSignal();
+    });
+  }
+
+  window.activateAmanahSignal = activateAmanahSignal;
+  window.deactivateAmanahSignal = deactivateAmanahSignal;
+  window.detectAmanahKeyword = detectAmanahKeyword;
+  window.detectAmanahClicks = detectAmanahClicks;
+  window.getCurrentPortfolioLanguage = getCurrentPortfolioLanguage;
+  window.getIslamicFinanceTargetSection = getIslamicFinanceTargetSection;
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initAmanahSignal);
+  } else {
+    initAmanahSignal();
+  }
+})();
+</script>
+
 </body>
 </html>
