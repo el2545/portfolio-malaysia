@@ -271,143 +271,6 @@ body[dir="rtl"] .navlinks{justify-content:flex-start}
   .container{max-width:none}
 }
 
-/* Original Leaflet/SUMO dashboard layer — copied into Malaysia portfolio */
-:root{--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;}
-#sumo{scroll-margin-top:96px}
-.egs-sumo-shell {
- background: #050505;
- color: #E8FCEE;
- border: 1px solid #004400;
- font-family: var(--font-mono);
- overflow:hidden;
-}
-.egs-sumo-toolbar {
- display: flex;
- flex-wrap: wrap;
- gap: 6px;
- padding: 7px;
- border-bottom: 1px solid #004400;
- background: #071107;
-}
-.egs-mode-btn,
-.egs-zone-btn,
-.egs-control-btn {
- border: 1px solid #004400;
- background: #101b10;
- color: #75a875;
- border-radius: 3px;
- padding: 5px 9px;
- font-family: var(--font-mono);
- font-size: 10px;
- cursor: pointer;
- line-height: 1.15;
-}
-.egs-mode-btn:hover,
-.egs-zone-btn:hover,
-.egs-control-btn:hover { color: #00FF88; border-color: #00AA55; }
-.egs-mode-btn.active,
-.egs-zone-btn.active {
- background: rgba(0,255,136,.12);
- color: var(--tc, #00FF88);
- border-color: var(--tc, #00FF88);
- box-shadow: inset 0 -2px 0 var(--tc, #00FF88);
-}
-.egs-sumo-grid {
- display: grid;
- grid-template-columns: minmax(0, 1fr) 220px;
- min-height: 430px;
-}
-.egs-map-wrap { position: relative; min-height: 430px; background: #0A0A0A; }
-#egsSumoMap { position:absolute; inset:0; z-index:1; min-height:430px; }
-#egsTrafficCanvas { position:absolute; inset:0; z-index:500; width:100%; height:100%; pointer-events:none; }
-.egs-map-badge {
- position: absolute;
- z-index: 700;
- top: 10px; left: 10px;
- max-width: calc(100% - 20px);
- background: rgba(0, 10, 0, .82);
- border: 1px solid #004400;
- border-radius: 3px;
- padding: 7px 9px;
- color: #00FF88;
- pointer-events: none;
-}
-.egs-map-badge strong { display:block; font-size: 11px; margin-bottom:2px; }
-.egs-map-badge span { display:block; font-size: 9px; color:#77aa77; line-height:1.35; }
-.egs-legend {
- position: absolute;
- z-index: 700;
- left: 10px; bottom: 10px;
- display:flex; gap:8px; flex-wrap:wrap;
- background: rgba(0, 10, 0, .82);
- border: 1px solid #004400;
- border-radius: 3px;
- padding: 6px 8px;
- font-size: 9px;
- color:#77aa77;
- pointer-events:none;
-}
-.egs-dot { display:inline-block; width:10px; height:10px; border-radius:99px; margin-right:4px; vertical-align:-1px; }
-.egs-dot.green { background:#00FF88; }
-.egs-dot.yellow { background:#FFD700; }
-.egs-dot.red { background:#FF3355; }
-.egs-side {
- background: #050505;
- border-left: 1px solid #004400;
- display:flex;
- flex-direction:column;
-}
-.egs-kpis { display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #004400; }
-.egs-kpi { padding:8px 7px; border-right:1px solid #004400; border-bottom:1px solid #004400; text-align:center; }
-.egs-kpi:nth-child(2n) { border-right:none; }
-.egs-kpi-label { color:#446644; font-size:8px; margin-bottom:3px; }
-.egs-kpi-val { color:#00FF88; font-size:18px; font-weight:700; line-height:1; }
-.egs-controls { padding:8px; border-bottom:1px solid #004400; }
-.egs-control-row { margin-bottom:8px; }
-.egs-control-row label { display:block; color:#668866; font-size:8px; margin-bottom:3px; }
-.egs-control-row input[type="range"] { width:100%; accent-color:#00FF88; }
-.egs-control-buttons { display:grid; grid-template-columns:1fr 1fr; gap:5px; margin-bottom:8px; }
-.egs-note { padding:8px; color:#668866; font-size:9px; line-height:1.5; overflow-y:auto; }
-.egs-hidden { display:none !important; }
-.egs-link-row { display:flex; gap:5px; flex-wrap:wrap; padding:7px; border-top:1px solid #004400; }
-.egs-small-tag { border:1px solid #004400; color:#668866; padding:2px 6px; border-radius:2px; font-size:8px; }
-#sumo-dashboard{
- margin-top:18px;
- overflow:hidden;
-}
-#sumo-dashboard .ph{
- padding:10px 14px;
- display:flex;
- align-items:center;
- justify-content:space-between;
- gap:12px;
- border-radius:20px 20px 0 0;
- min-height:48px;
-}
-#sumo-dashboard .ph-en{
- font-size:.72rem;
- font-weight:700;
- white-space:normal;
- color:#75a875;
-}
-#sumo-dashboard .pb{
- border-radius:0 0 20px 20px;
- overflow:hidden;
-}
-body[dir="rtl"] #sumo-dashboard{direction:ltr;font-family:var(--font-mono);}
-body[dir="rtl"] .egs-map-badge, body[dir="rtl"] .egs-legend{text-align:left}
-.sumo-source-note{
- margin-top:12px;
- padding:14px 16px;
- border:1px solid var(--line);
- border-radius:18px;
- background:#fff;
- color:var(--muted);
- line-height:1.65;
- font-weight:560;
-}
-@media (max-width: 760px) {
- .egs-sumo-grid { grid-template-columns: 1fr; }
  .egs-side { border-left:none; border-top:1px solid #004400; }
  .egs-map-wrap, #egsSumoMap { min-height: 360px; }
 }
@@ -807,6 +670,137 @@ body {
   min-width: 0;
 }
 
+
+/* SAUDI_EXACT_LEAFLET_SUMO_CSS_RESTORED: exact previous portfolio SUMO CSS block */
+:root{--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;}
+
+.egs-sumo-shell {
+ background: #050505;
+ color: #E8FCEE;
+ border: 1px solid #004400;
+ font-family: var(--font-mono);
+}
+.egs-sumo-toolbar {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 6px;
+ padding: 7px;
+ border-bottom: 1px solid #004400;
+ background: #071107;
+}
+.egs-mode-btn,
+.egs-zone-btn,
+.egs-control-btn {
+ border: 1px solid #004400;
+ background: #101b10;
+ color: #75a875;
+ border-radius: 3px;
+ padding: 5px 9px;
+ font-family: var(--font-mono);
+ font-size: 10px;
+ cursor: pointer;
+ line-height: 1.15;
+}
+.egs-mode-btn:hover,
+.egs-zone-btn:hover,
+.egs-control-btn:hover { color: #00FF88; border-color: #00AA55; }
+.egs-mode-btn.active,
+.egs-zone-btn.active {
+ background: rgba(0,255,136,.12);
+ color: var(--tc, #00FF88);
+ border-color: var(--tc, #00FF88);
+ box-shadow: inset 0 -2px 0 var(--tc, #00FF88);
+}
+.egs-sumo-grid {
+ display: grid;
+ grid-template-columns: minmax(0, 1fr) 220px;
+ min-height: 430px;
+}
+.egs-map-wrap { position: relative; min-height: 430px; background: #0A0A0A; }
+#egsSumoMap { position:absolute; inset:0; z-index:1; min-height:430px; }
+#egsTrafficCanvas { position:absolute; inset:0; z-index:500; width:100%; height:100%; pointer-events:none; }
+.egs-map-badge {
+ position: absolute;
+ z-index: 700;
+ top: 10px; left: 10px;
+ max-width: calc(100% - 20px);
+ background: rgba(0, 10, 0, .82);
+ border: 1px solid #004400;
+ border-radius: 3px;
+ padding: 7px 9px;
+ color: #00FF88;
+ pointer-events: none;
+}
+.egs-map-badge strong { display:block; font-size: 11px; margin-bottom:2px; }
+.egs-map-badge span { display:block; font-size: 9px; color:#77aa77; line-height:1.35; }
+.egs-legend {
+ position: absolute;
+ z-index: 700;
+ left: 10px; bottom: 10px;
+ display:flex; gap:8px; flex-wrap:wrap;
+ background: rgba(0, 10, 0, .82);
+ border: 1px solid #004400;
+ border-radius: 3px;
+ padding: 6px 8px;
+ font-size: 9px;
+ color:#77aa77;
+ pointer-events:none;
+}
+.egs-dot { display:inline-block; width:10px; height:10px; border-radius:99px; margin-right:4px; vertical-align:-1px; }
+.egs-dot.green { background:#00FF88; }
+.egs-dot.yellow { background:#FFD700; }
+.egs-dot.red { background:#FF3355; }
+.egs-side {
+ background: #050505;
+ border-left: 1px solid #004400;
+ display:flex;
+ flex-direction:column;
+}
+.egs-kpis { display:grid; grid-template-columns:1fr 1fr; border-bottom:1px solid #004400; }
+.egs-kpi { padding:8px 7px; border-right:1px solid #004400; border-bottom:1px solid #004400; text-align:center; }
+.egs-kpi:nth-child(2n) { border-right:none; }
+.egs-kpi-label { color:#446644; font-size:8px; margin-bottom:3px; }
+.egs-kpi-val { color:#00FF88; font-size:18px; font-weight:700; line-height:1; }
+.egs-controls { padding:8px; border-bottom:1px solid #004400; }
+.egs-control-row { margin-bottom:8px; }
+.egs-control-row label { display:block; color:#668866; font-size:8px; margin-bottom:3px; }
+.egs-control-row input[type="range"] { width:100%; accent-color:#00FF88; }
+.egs-control-buttons { display:grid; grid-template-columns:1fr 1fr; gap:5px; margin-bottom:8px; }
+.egs-note { padding:8px; color:#668866; font-size:9px; line-height:1.5; overflow-y:auto; }
+.egs-hidden { display:none !important; }
+.egs-link-row { display:flex; gap:5px; flex-wrap:wrap; padding:7px; border-top:1px solid #004400; }
+.egs-small-tag { border:1px solid #004400; color:#668866; padding:2px 6px; border-radius:2px; font-size:8px; }
+@media (max-width: 760px) {
+ .egs-sumo-grid { grid-template-columns: 1fr; }
+ .egs-side { border-left:none; border-top:1px solid #004400; }
+ .egs-map-wrap, #egsSumoMap { min-height: 360px; }
+}
+
+#sumo-dashboard{
+ margin-top:18px;
+ overflow:hidden;
+}
+#sumo-dashboard .ph{
+ padding:10px 14px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:12px;
+ border-radius:20px 20px 0 0;
+ min-height:48px;
+}
+#sumo-dashboard .ph-en{
+ font-size:.72rem;
+ font-weight:700;
+ white-space:normal;
+}
+#sumo-dashboard .pb{
+ border-radius:0 0 20px 20px;
+ overflow:hidden;
+}
+body.rtl #sumo-dashboard{direction:ltr;font-family:var(--font-en);}
+/* bridge only: current portfolio uses body[dir], original block checks body.rtl */
+body[dir="rtl"] #sumo-dashboard{direction:ltr;font-family:var(--latin, Inter, sans-serif);}
 </style>
 </head>
 
@@ -956,79 +950,16 @@ body {
         <div class="kicker" data-sumo-en="SUMO / Leaflet layer" data-sumo-ms="Lapisan SUMO / Leaflet" data-sumo-ar="طبقة SUMO / Leaflet">SUMO / Leaflet layer</div>
         <h2 id="sumoTitle" data-sumo-en="Casablanca traffic simulation, brought into the Malaysia portfolio as applied evidence." data-sumo-ms="Simulasi trafik Casablanca dimasukkan ke dalam portfolio Malaysia sebagai bukti gunaan." data-sumo-ar="تم إدماج محاكاة مرور الدار البيضاء في بورتفوليو ماليزيا كدليل تطبيقي.">Casablanca traffic simulation layer restored inside the Malaysia portfolio.</h2>
       </div>
-      <p class="note" data-sumo-en="The Leaflet/SUMO layer is kept as method evidence: map, heatmap, vehicle canvas, zones, KPIs and JSON fallback logic." data-sumo-ms="Lapisan Leaflet/SUMO dikekalkan sebagai bukti kaedah: peta, peta haba, kanvas kenderaan, zon, KPI dan logik sandaran JSON." data-sumo-ar="تم الحفاظ على طبقة Leaflet/SUMO كدليل منهجي: خريطة، خريطة حرارية، Canvas للمركبات، مناطق، مؤشرات KPI ومنطق JSON احتياطي.">The same Leaflet/SUMO architecture is kept as methodological evidence: map, heatmap, vehicle canvas, zone buttons, KPI panel and JSON fallback logic.</p>
+      <p class="note" data-sumo-en="The original Leaflet/SUMO block is restored here as prior technical evidence: same dashboard structure, same controls, same fallback logic." data-sumo-ms="Blok Leaflet/SUMO asal dikekalkan di sini sebagai bukti teknikal terdahulu: struktur dashboard, kawalan dan logik sandaran yang sama." data-sumo-ar="تمت استعادة كتلة Leaflet/SUMO الأصلية هنا كدليل تقني سابق: البنية نفسها، أدوات التحكم نفسها، ومنطق الاحتياط نفسه.">The same Leaflet/SUMO architecture is kept as methodological evidence: map, heatmap, vehicle canvas, zone buttons, KPI panel and JSON fallback logic.</p>
     </div>
 
     <div aria-label="Leaflet SUMO traffic simulation dashboard" class="egs-sumo-shell panel" id="sumo-dashboard">
-      <div class="ph">
-        <b data-sumo-en="Leaflet/SUMO Transfer Lab" data-sumo-ms="Makmal Leaflet/SUMO" data-sumo-ar="مختبر Leaflet/SUMO">Leaflet/SUMO Transfer Lab</b>
-        <span class="ph-en" data-sumo-en="Casablanca traffic simulation kept as the applied method layer." data-sumo-ms="Simulasi trafik Casablanca dikekalkan sebagai lapisan kaedah gunaan." data-sumo-ar="تم الاحتفاظ بمحاكاة مرور الدار البيضاء كطبقة منهجية تطبيقية.">Casablanca traffic simulation preserved as the empirical method layer.</span>
-      </div>
-      <div class="pb">
-        <div class="egs-sumo-toolbar">
-          <button class="egs-mode-btn active" data-egs-mode="heatmap" data-sumo-en="Heatmap" data-sumo-ms="Peta haba" data-sumo-ar="خريطة حرارية">Heatmap</button>
-          <button class="egs-mode-btn" data-egs-mode="simulation" data-sumo-en="Simulation" data-sumo-ms="Simulasi" data-sumo-ar="محاكاة">Simulation</button>
-          <button class="egs-zone-btn active" data-egs-zone="maarif">Maârif</button>
-          <button class="egs-zone-btn" data-egs-zone="hay_hassani">Hay Hassani</button>
-          <button class="egs-zone-btn" data-egs-zone="ben_msick">Ben M'Sick</button>
-          <button class="egs-zone-btn" data-egs-zone="sidi_maarouf">Sidi Maârouf</button>
-          <button class="egs-zone-btn" data-egs-zone="bd_mohammed_v">Bd. Mohammed V</button>
-        </div>
-
-        <div class="egs-sumo-grid">
-          <div class="egs-map-wrap">
-            <div id="egsSumoMap" aria-label="Leaflet traffic heatmap"></div>
-            <canvas id="egsTrafficCanvas" aria-hidden="true"></canvas>
-            <div class="egs-map-badge">
-              <strong id="egsStatusTitle">SUMO / Leaflet</strong>
-              <span id="egsStatusText">Loading traffic layer…</span>
-            </div>
-            <div class="egs-legend" id="egsHeatLegend">
-              <span><i class="egs-dot red"></i>Slow</span>
-              <span><i class="egs-dot yellow"></i>Medium</span>
-              <span><i class="egs-dot green"></i>Fast</span>
-            </div>
-          </div>
-
-          <aside class="egs-side">
-            <div class="egs-kpis">
-              <div class="egs-kpi"><div class="egs-kpi-label">POINTS</div><div class="egs-kpi-val" id="kpiPoints">—</div></div>
-              <div class="egs-kpi"><div class="egs-kpi-label">VEHICLES</div><div class="egs-kpi-val" id="kpiVehicles">—</div></div>
-              <div class="egs-kpi"><div class="egs-kpi-label">AVG SPEED</div><div class="egs-kpi-val" id="kpiSpeed">—</div></div>
-              <div class="egs-kpi"><div class="egs-kpi-label">MODE</div><div class="egs-kpi-val" id="kpiMode">—</div></div>
-            </div>
-
-            <div class="egs-controls">
-              <div class="egs-control-row" id="egsHeatControls">
-                <label for="heatIntensity">HEAT INTENSITY</label>
-                <input id="heatIntensity" type="range" min="1" max="10" value="6" aria-label="Heatmap intensity">
-              </div>
-              <div id="egsSimulationControls">
-                <div class="egs-control-row">
-                  <label for="vehicleSpeed">VEHICLE SPEED</label>
-                  <input id="vehicleSpeed" type="range" min="1" max="10" value="6" aria-label="Vehicle animation speed">
-                </div>
-                <div class="egs-control-row">
-                  <label for="vehicleSize">VEHICLE SIZE</label>
-                  <input id="vehicleSize" type="range" min="2" max="12" value="6" aria-label="Vehicle marker size">
-                </div>
-                <div class="egs-control-buttons">
-                  <button class="egs-control-btn" id="egsPlayBtn" type="button">PLAY</button>
-                  <button class="egs-control-btn" id="egsResetBtn" type="button">RESET</button>
-                </div>
-              </div>
-            </div>
-
-            <p class="egs-note" id="sumoAnalysis">Maârif: central dense urban area. The layer can read real SUMO/GIS JSON when present; otherwise it displays embedded demonstration data.</p>
-            <div class="egs-link-row">
-              <span class="egs-small-tag">Leaflet 1.9.4</span>
-              <span class="egs-small-tag">Leaflet.heat</span>
-              <span class="egs-small-tag">SUMO FCD</span>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </div>
+<div class="ph"><b data-ar="مختبر نقل منهج Leaflet/SUMO" data-en="Leaflet/SUMO Transfer Lab">Leaflet/SUMO Transfer Lab</b><span class="ph-en" data-ar="تم الاحتفاظ بنموذج محاكاة حركة المرور في الدار البيضاء بوصفه طبقة منهجية تطبيقية." data-en="The Casablanca traffic simulation model is preserved as the empirical method layer.">The Casablanca traffic simulation model is preserved as the empirical method layer.</span></div>
+<div class="pb">
+<div class="egs-sumo-toolbar"><button class="egs-mode-btn active" data-ar="خريطة حرارية" data-egs-mode="heatmap" data-en="Heatmap">Heatmap</button><button class="egs-mode-btn" data-ar="محاكاة" data-egs-mode="simulation" data-en="Simulation">Simulation</button><button class="egs-zone-btn active" data-egs-zone="maarif">Maârif</button><button class="egs-zone-btn" data-egs-zone="hay_hassani">Hay Hassani</button><button class="egs-zone-btn" data-egs-zone="ben_msick">Ben M'Sick</button><button class="egs-zone-btn" data-egs-zone="sidi_maarouf">Sidi Maârouf</button><button class="egs-zone-btn" data-egs-zone="bd_mohammed_v">Bd. Mohammed V</button></div>
+<div class="egs-sumo-grid"><div class="egs-map-wrap"><div id="egsSumoMap"></div><canvas id="egsTrafficCanvas"></canvas><div class="egs-map-badge"><strong data-ar="طبقة أدلة SUMO/GIS" data-en="SUMO/GIS Evidence Layer" id="egsStatusTitle">SUMO/GIS Evidence Layer</strong><span data-ar="اختر منطقة لفحص الخريطة الحرارية أو محاكاة المركبات." data-en="Load a zone to inspect heatmap or vehicle simulation." id="egsStatusText">Load a zone to inspect heatmap or vehicle simulation.</span></div><div class="egs-legend"><span data-ar="بطيء" data-en="Slow"><i class="egs-dot red"></i>Slow</span><span data-ar="متوسط" data-en="Medium"><i class="egs-dot yellow"></i>Medium</span><span data-ar="سريع" data-en="Fast"><i class="egs-dot green"></i>Fast</span></div></div><aside class="egs-side"><div class="egs-kpis"><div class="egs-kpi"><div class="egs-kpi-label" data-ar="النقاط" data-en="POINTS">POINTS</div><div class="egs-kpi-val" id="egsKpiMain">—</div></div><div class="egs-kpi"><div class="egs-kpi-label" data-ar="المركبات" data-en="VEHICLES">VEHICLES</div><div class="egs-kpi-val" id="egsKpiVehicles">—</div></div><div class="egs-kpi"><div class="egs-kpi-label" data-ar="متوسط السرعة" data-en="AVG SPEED">AVG SPEED</div><div class="egs-kpi-val" id="egsKpiSpeed">—</div></div><div class="egs-kpi"><div class="egs-kpi-label" data-ar="الوضع" data-en="MODE">MODE</div><div class="egs-kpi-val" id="egsKpiMode">—</div></div></div><div class="egs-controls"><div class="egs-control-row" data-ar="نصف قطر الحرارة" data-en="Heat radius"><label data-ar="نصف قطر الحرارة" data-en="Heat radius">Heat radius</label><input id="egsRadiusRange" max="35" min="5" type="range" value="18"/></div><div class="egs-control-row" data-ar="تمويه الحرارة" data-en="Heat blur"><label data-ar="تمويه الحرارة" data-en="Heat blur">Heat blur</label><input id="egsBlurRange" max="35" min="5" type="range" value="20"/></div><div class="egs-control-row" data-ar="الكثافة" data-en="Intensity"><label data-ar="الكثافة" data-en="Intensity">Intensity</label><input id="egsIntensityRange" max="10" min="1" type="range" value="5"/></div><div class="egs-control-row" data-ar="سرعة المركبات" data-en="Vehicle speed"><label data-ar="سرعة المركبات" data-en="Vehicle speed">Vehicle speed</label><input id="egsSpeedRange" max="10" min="1" type="range" value="6"/></div><div class="egs-control-row" data-ar="حجم المركبات" data-en="Vehicle size"><label data-ar="حجم المركبات" data-en="Vehicle size">Vehicle size</label><input id="egsVehicleSizeRange" max="12" min="2" type="range" value="6"/></div><div class="egs-control-buttons"><button class="egs-control-btn" data-ar="إعادة الحرارة" data-en="Reset Heat" id="egsResetHeatmapBtn">Reset Heat</button><button class="egs-control-btn" data-ar="ضبط المحاكاة" data-en="Fit Sim" id="egsResetSimulationBtn">Fit Sim</button><button class="egs-control-btn" data-ar="تشغيل" data-en="Play" id="egsPlayBtn">Play</button><button class="egs-control-btn" data-ar="إيقاف مؤقت" data-en="Pause" id="egsPauseBtn">Pause</button><button class="egs-control-btn" data-ar="إعادة التشغيل" data-en="Restart" id="egsRestartBtn">Restart</button></div></div><p class="egs-note" data-ar="تحافظ هذه اللوحة على طبقة منهج SUMO/GIS من المحفظة الأصلية." data-en="This dashboard preserves the SUMO/GIS method layer from the original portfolio." id="egsAnalysisText">This dashboard preserves the SUMO/GIS method layer from the original portfolio.</p></aside></div>
+</div>
+</div>
 
     <p class="sumo-source-note" data-sumo-en="Deployment note: optional real SUMO JSON files can be placed at the repository root using the filenames expected by the dashboard.</p>
 
@@ -1217,332 +1148,508 @@ applyLang(currentLang);
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
-
-
 <script>
 (function(){
-  const SUMO_FILES = {
-    maarif: {
-      heatmap: "maarif_heatmap.json",
-      animation: "maarif_animation.json",
-      fcd: "fcd_maarif.json"
-    },
-    hay_hassani: {
-      heatmap: "hay_hassani_heatmap.json",
-      animation: "hay_hassani_animation.json",
-      fcd: "fcd_hay_hassani.json"
-    },
-    ben_msick: {
-      heatmap: "ben_msick_heatmap.json",
-      animation: "ben_msick_animation.json",
-      fcd: "fcd_ben_msick.json"
-    },
-    sidi_maarouf: {
-      heatmap: "sidi_maarouf_heatmap.json",
-      animation: "sidi_maarouf_animation.json",
-      fcd: "fcd_sidi_maarouf.json"
-    },
-    bd_mohammed_v: {
-      heatmap: "bd_mohammed_v_heatmap.json",
-      animation: "bd_mohammed_v_animation.json",
-      fcd: "fcd_bd_mohammed_v.json"
-    }
-  };
+ 'use strict';
 
-  const EGS_ZONES = {
-    maarif: { label:"Maârif", center:[33.5868,-7.6387], zoom:14, scaleLat:.012, scaleLng:.014,
-      note:{en:"Maârif: central dense urban area. The layer can read real SUMO/GIS JSON when present; otherwise it displays embedded demonstration data.", ms:"Maârif: kawasan bandar pusat yang padat. Lapisan ini boleh membaca JSON SUMO/GIS sebenar jika tersedia; jika tidak, ia memaparkan data demonstrasi.", ar:"المعاريف: منطقة حضرية مركزية كثيفة. يمكن لهذه الطبقة قراءة ملفات SUMO/GIS بصيغة JSON عند توفرها؛ وإلا فتعرض بيانات تجريبية مدمجة."}},
-    hay_hassani: { label:"Hay Hassani", center:[33.5580,-7.6900], zoom:13, scaleLat:.016, scaleLng:.017,
-      note:{en:"Hay Hassani: residential expansion zone with dispersed flows and mixed corridor intensity.", ms:"Hay Hassani: zon pengembangan kediaman dengan aliran tersebar dan intensiti koridor bercampur.", ar:"حي الحسني: منطقة توسع سكني بتدفقات موزعة وكثافة ممرات مختلطة."}},
-    ben_msick: { label:"Ben M'Sick", center:[33.5486,-7.5820], zoom:13, scaleLat:.015, scaleLng:.016,
-      note:{en:"Ben M'Sick: eastern urban corridor with uneven traffic density and local access roads.", ms:"Ben M'Sick: koridor bandar timur dengan kepadatan trafik tidak sekata dan jalan akses tempatan.", ar:"بن مسيك: ممر حضري شرقي بكثافة حركة غير متجانسة وطرق وصول محلية."}},
-    sidi_maarouf: { label:"Sidi Maârouf", center:[33.5192,-7.6512], zoom:13, scaleLat:.016, scaleLng:.017,
-      note:{en:"Sidi Maârouf: business and peripheral corridor where traffic exposure supports investment-location scoring.", ms:"Sidi Maârouf: koridor perniagaan dan pinggir bandar di mana pendedahan trafik menyokong penilaian lokasi pelaburan.", ar:"سيدي معروف: ممر أعمال وحزام حضري طرفي تدعم فيه كثافة المرور تقييم مواقع الاستثمار."}},
-    bd_mohammed_v: { label:"Bd. Mohammed V", center:[33.5937,-7.6122], zoom:14, scaleLat:.010, scaleLng:.018,
-      note:{en:"Boulevard Mohammed V: linear urban axis suited to corridor-based traffic visualization.", ms:"Boulevard Mohammed V: paksi bandar linear yang sesuai untuk visualisasi trafik berasaskan koridor.", ar:"شارع محمد الخامس: محور حضري خطي مناسب لتصوير حركة المرور على مستوى الممر."}}
-  };
+ const EGS_ZONES = {
+ maarif: {
+ label:'Maârif', color:'#FF3355', center:[33.5866,-7.6325], zoom:14,
+ heatmapFile:'maarif_heatmap.json',
+ simulationFile:'maarif_simulation_geo.json',
+ analysis:'Maârif: central dense fabric. The layer can read real SUMO/GIS JSON when present; otherwise it displays a built-in demonstration dataset.',
+ analysisAr:'المعاريف: نسيج حضري مركزي كثيف. تستطيع الطبقة قراءة ملفات SUMO/GIS بصيغة JSON عند توفرها؛ وإلا تعرض مجموعة بيانات تجريبية مدمجة.'
+ },
+ hay_hassani: {
+ label:'Hay Hassani', color:'#FFB830', center:[33.5607,-7.6900], zoom:14,
+ heatmapFile:'hay_hassani_heatmap.json',
+ simulationFile:'hay_hassani_simulation_geo.json',
+ analysis:'Hay Hassani: peripheral flows and transition zones. Useful to inspect localized slowdowns and vehicle accumulation.',
+ analysisAr:'حي الحسني: تدفقات طرفية ومناطق انتقالية. مفيد لفحص التباطؤ المحلي وتراكم المركبات.'
+ },
+ ben_msick: {
+ label:"Ben M'Sick", color:'#00E676', center:[33.5500,-7.5800], zoom:14,
+ heatmapFile:'ben_msick_heatmap.json',
+ simulationFile:'ben_msick_simulation_geo.json',
+ analysis:"Ben M'Sick: dense urban network. The dashboard supports reading conflict points, secondary-road intensity and speed variations.",
+ analysisAr:"بن مسيك: شبكة حضرية كثيفة. تدعم اللوحة قراءة نقاط التعارض وكثافة الطرق الثانوية وتغيرات السرعة."
+ },
+ sidi_maarouf: {
+ label:'Sidi Maârouf', color:'#BF5AF2', center:[33.5250,-7.6500], zoom:14,
+ heatmapFile:'sidi_maarouf_heatmap.json',
+ simulationFile:'sidi_maarouf_simulation_geo.json',
+ analysis:'Sidi Maârouf: strategic employment and arterial area. Simulation shows flows related to business poles and major roads.',
+ analysisAr:'سيدي معروف: منطقة تشغيل ومحاور استراتيجية. تعرض المحاكاة تدفقات مرتبطة بأقطاب الأعمال والطرق الرئيسية.'
+ },
+ bd_mohammed_v: {
+ label:'Bd. Mohammed V', color:'#00B4D8', center:[33.5950,-7.6100], zoom:15,
+ heatmapFile:'bd_mohammed_v_heatmap.json',
+ simulationFile:'bd_mohammed_v_simulation_geo.json',
+ analysis:'Boulevard Mohammed V: major corridor. Heatmap and simulation identify concentration and slowdown segments.',
+ analysisAr:'شارع محمد الخامس: ممر رئيسي. تحدد الخريطة الحرارية والمحاكاة مقاطع التركّز والتباطؤ.'
+ }
+ };
 
-  let map=null, heatLayer=null, canvas=null, ctx=null, mode="heatmap", zoneKey="maarif", animationData=[], heatData=[], raf=null, tick=0, paused=false;
+ let map=null, heatLayer=null, canvas=null, ctx=null;
+ let mode='heatmap', zoneKey='maarif', currentData=null, heatPoints=[], stepIndex=0;
+ let playing=false, raf=null, lastFrame=0;
+ const MAX_HEAT_POINTS=12000;
+ const MAX_VEHICLES_PER_FRAME=1600;
 
-  function byId(id){ return document.getElementById(id); }
-  function lang(){ return document.body.dataset.lang || document.documentElement.lang || "en"; }
-  function tr(obj){ const l=lang(); return obj[l] || obj.en || ""; }
-  function setText(id, text){ const el=byId(id); if(el) el.textContent=text; }
-  function setHidden(id, val){ const el=byId(id); if(el) el.classList.toggle("egs-hidden", !!val); }
+ function byId(id){ return document.getElementById(id); }
+ function setText(id,value){ const el=byId(id); if(el) el.textContent=value; }
+ function setHidden(id,hidden){ const el=byId(id); if(el) el.classList.toggle('egs-hidden', !!hidden); }
+ function safeNumber(n, fallback=0){ const v=Number(n); return Number.isFinite(v)?v:fallback; }
+ function fr(n){ return Number(n||0).toLocaleString('fr-FR'); }
 
-  function applySumoLanguage(){
-    const l=lang();
-    document.querySelectorAll("[data-sumo-en]").forEach(el=>{
-      el.textContent = el.getAttribute("data-sumo-" + l) || el.getAttribute("data-sumo-en");
-    });
-    const z=EGS_ZONES[zoneKey];
-    if(z) setText("sumoAnalysis", tr(z.note));
-  }
+ async function loadJson(file){
+ try{
+ const response = await fetch(file + '?v=' + Date.now(), { cache:'no-store' });
+ if(!response.ok) throw new Error('HTTP ' + response.status);
+ return await response.json();
+ }catch(error){
+ console.warn('[EGS SUMO] External JSON unavailable, using built-in demo data:', file, error);
+ return null;
+ }
+ }
 
-  function fallbackHeat(zone){
-    const z=EGS_ZONES[zone];
-    const pts=[];
-    for(let i=0;i<160;i++){
-      const a=i/160*Math.PI*2;
-      const r=.15 + ((i*37)%100)/100;
-      const lat=z.center[0] + Math.sin(a*1.7)*z.scaleLat*r + (Math.random()-.5)*z.scaleLat*.2;
-      const lng=z.center[1] + Math.cos(a*1.15)*z.scaleLng*r + (Math.random()-.5)*z.scaleLng*.2;
-      const intensity=.25 + ((i*13)%75)/100;
-      pts.push([lat,lng,intensity]);
-    }
-    return pts;
-  }
+ function seeded(seed){
+ let s=seed>>>0;
+ return function(){
+ s=(s*1664525+1013904223)>>>0;
+ return s/4294967296;
+ };
+ }
 
-  function fallbackVehicles(zone){
-    const z=EGS_ZONES[zone];
-    const arr=[];
-    for(let i=0;i<48;i++){
-      const lane=(i%6)-2.5;
-      const phase=(i*19)%100/100;
-      const speed=0.45 + (i%7)*0.12;
-      arr.push({ lane, phase, speed, color:i%3===0?"#FF3355":(i%3===1?"#FFD700":"#00FF88") });
-    }
-    return arr.map(v=>{
-      const steps=[];
-      for(let t=0;t<120;t++){
-        const p=(v.phase + t/120*v.speed)%1;
-        const lat=z.center[0] + (p-.5)*z.scaleLat*1.55 + Math.sin(p*Math.PI*2)*z.scaleLat*.05 + v.lane*z.scaleLat*.025;
-        const lng=z.center[1] + (p-.5)*z.scaleLng*1.65 + Math.cos(p*Math.PI*2)*z.scaleLng*.05 + v.lane*z.scaleLng*.018;
-        steps.push({lat,lng,speed:18+Math.round(v.speed*22), color:v.color});
-      }
-      return steps;
-    });
-  }
+ function zoneSeed(key){
+ return Array.from(key).reduce((a,c)=>a+c.charCodeAt(0), 2166136261)>>>0;
+ }
 
-  function normalizeHeat(data){
-    if(Array.isArray(data)){
-      return data.map(p=>{
-        if(Array.isArray(p)) return [Number(p[0]), Number(p[1]), Number(p[2] ?? .55)];
-        return [Number(p.lat ?? p.latitude), Number(p.lng ?? p.lon ?? p.longitude), Number(p.intensity ?? p.value ?? .55)];
-      }).filter(p=>Number.isFinite(p[0]) && Number.isFinite(p[1]));
-    }
-    if(data && Array.isArray(data.points)) return normalizeHeat(data.points);
-    return [];
-  }
+ function demoHeatData(zone){
+ const rand=seeded(zoneSeed(zoneKey));
+ const [lat0,lng0]=zone.center;
+ const points=[];
+ const corridors=[
+ {a:-0.018,b:-0.012,c:1.00},
+ {a: 0.015,b:-0.006,c:.75},
+ {a:-0.012,b: 0.015,c:.58},
+ {a: 0.020,b: 0.011,c:.42}
+ ];
+ for(let i=0;i<900;i++){
+ const road=corridors[i%corridors.length];
+ const t=(rand()*2-1);
+ const jitterLat=(rand()-.5)*0.0034;
+ const jitterLng=(rand()-.5)*0.0034;
+ const lat=lat0 + road.a*t + jitterLat;
+ const lng=lng0 + road.b*t + jitterLng;
+ const intensity=Math.max(.08, Math.min(1, road.c*(.45+rand()*.65)));
+ points.push([lat,lng,intensity]);
+ }
+ return {
+ demo:true,
+ points,
+ kpis:{ vehicleRecords:5400, steps:180, averageSpeed:7.35 }
+ };
+ }
 
-  function normalizeVehicles(data){
-    if(Array.isArray(data) && Array.isArray(data[0])) return data;
-    const rows = Array.isArray(data) ? data : (data && (data.vehicles || data.points || data.frames)) || [];
-    if(!Array.isArray(rows) || !rows.length) return [];
-    const grouped={};
-    rows.forEach((r,i)=>{
-      const id = r.id || r.vehicle || r.veh || ("v"+(i%32));
-      const lat = Number(r.lat ?? r.latitude);
-      const lng = Number(r.lng ?? r.lon ?? r.longitude);
-      if(!Number.isFinite(lat) || !Number.isFinite(lng)) return;
-      if(!grouped[id]) grouped[id]=[];
-      grouped[id].push({lat,lng,speed:Number(r.speed ?? 20), color:r.color || "#00FF88"});
-    });
-    return Object.values(grouped).filter(x=>x.length>1);
-  }
+ function demoSimulationData(zone){
+ const rand=seeded(zoneSeed(zoneKey)+99);
+ const [lat0,lng0]=zone.center;
+ const timesteps=[];
+ const routes=[
+ {a:-0.018,b:-0.011,phase:0,speed:7.4},
+ {a: 0.016,b:-0.006,phase:1.1,speed:5.8},
+ {a:-0.011,b: 0.016,phase:2.4,speed:9.2},
+ {a: 0.020,b: 0.010,phase:3.2,speed:4.9}
+ ];
+ const vehicleCount=110;
+ for(let t=0;t<220;t++){
+ const vehicles=[];
+ for(let i=0;i<vehicleCount;i++){
+ const route=routes[i%routes.length];
+ const progress=((t*0.006*(route.speed/6))+(i/vehicleCount)+route.phase)%1;
+ const x=(progress*2-1);
+ const pulse=Math.sin((t+i)*0.08);
+ const lat=lat0 + route.a*x + (rand()-.5)*0.00022 + Math.sin(progress*Math.PI*2+route.phase)*0.0011;
+ const lng=lng0 + route.b*x + (rand()-.5)*0.00022 + Math.cos(progress*Math.PI*2+route.phase)*0.0011;
+ const speed=Math.max(.8, route.speed + pulse*2.2 - (i%17===0?3.2:0));
+ const angle=Math.atan2(route.b, route.a)*180/Math.PI + 90;
+ vehicles.push({ id:'demo-'+i, lat, lng, speed, angle });
+ }
+ timesteps.push({ time:t, vehicles });
+ }
+ return {
+ demo:true,
+ timesteps,
+ kpis:{ vehicleRecords:vehicleCount*timesteps.length, steps:timesteps.length, averageSpeed:6.83 }
+ };
+ }
 
-  async function tryJson(url){
-    const res = await fetch(url, {cache:"no-store"});
-    if(!res.ok) throw new Error("missing " + url);
-    return await res.json();
-  }
+ function initMap(){
+ const container=byId('egsSumoMap');
+ if(!container) return false;
+ if(!window.L || !L.map){
+ container.innerHTML='<div style="display:grid;place-items:center;height:100%;min-height:430px;padding:24px;text-align:center;color:#00FF88;background:#050505;border:1px solid #004400;font-family:monospace;line-height:1.6">Leaflet could not load from the CDN. Check your internet connection or host Leaflet locally.</div>';
+ setText('egsStatusText', document.body.classList.contains('rtl') ? 'مكتبة Leaflet غير متاحة. تحتاج لوحة SUMO إلى leaflet.min.js قبل leaflet-heat.js.' : 'Leaflet library unavailable. The SUMO panel needs leaflet.min.js before leaflet-heat.js.');
+ return false;
+ }
+ if(map) return true;
+ const z=EGS_ZONES[zoneKey];
+ map=L.map('egsSumoMap',{
+ center:z.center,
+ zoom:z.zoom,
+ zoomControl:true,
+ attributionControl:false,
+ preferCanvas:true
+ });
+ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{ maxZoom:19 }).addTo(map);
+ canvas=byId('egsTrafficCanvas');
+ if(canvas) ctx=canvas.getContext('2d');
+ resizeCanvas();
+ map.on('move zoom resize',()=>{ resizeCanvas(); if(mode==='simulation') drawStep(); });
+ window.addEventListener('resize',()=>{ resizeCanvas(); if(mode==='simulation') drawStep(); });
+ setTimeout(()=>map.invalidateSize(),150);
+ return true;
+ }
 
-  async function loadSUMOLayer(zone, selectedMode){
-    const z=EGS_ZONES[zone];
-    setText("egsStatusTitle", "SUMO / Leaflet");
-    setText("egsStatusText", "Loading " + z.label + " " + selectedMode + " layer…");
-    try {
-      if(selectedMode === "heatmap"){
-        const data = await tryJson(SUMO_FILES[zone].heatmap);
-        heatData = normalizeHeat(data);
-        if(!heatData.length) throw new Error("empty heatmap");
-      } else {
-        const data = await tryJson(SUMO_FILES[zone].animation);
-        animationData = normalizeVehicles(data);
-        if(!animationData.length) throw new Error("empty animation");
-      }
-    } catch(error) {
-      if(selectedMode === "heatmap") heatData = fallbackHeat(zone);
-      else animationData = fallbackVehicles(zone);
-    }
-    renderLayer();
-  }
+ function resizeCanvas(){
+ if(!canvas || !ctx) return;
+ const rect=canvas.getBoundingClientRect();
+ const dpr=window.devicePixelRatio || 1;
+ canvas.width=Math.max(1, Math.round(rect.width*dpr));
+ canvas.height=Math.max(1, Math.round(rect.height*dpr));
+ ctx.setTransform(dpr,0,0,dpr,0,0);
+ }
 
-  function initMap(){
-    const container=byId("egsSumoMap");
-    if(!container) return false;
-    if(!window.L || !L.map){
-      container.innerHTML='<div style="display:grid;place-items:center;height:100%;min-height:430px;padding:24px;text-align:center;color:#00FF88;background:#050505;border:1px solid #004400;font-family:monospace;line-height:1.6">Leaflet could not load from the CDN. Check your internet connection or host Leaflet locally.</div>';
-      setText("egsStatusText", "Leaflet library unavailable. The SUMO panel needs leaflet.min.js before leaflet-heat.js.");
-      return false;
-    }
-    if(map) return true;
-    const z=EGS_ZONES[zoneKey];
-    map=L.map("egsSumoMap",{
-      center:z.center,
-      zoom:z.zoom,
-      zoomControl:true,
-      attributionControl:false,
-      preferCanvas:true
-    });
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{ maxZoom:19 }).addTo(map);
-    canvas=byId("egsTrafficCanvas");
-    if(canvas) ctx=canvas.getContext("2d");
-    resizeCanvas();
-    map.on("move zoom resize",()=>{ resizeCanvas(); if(mode==="simulation") drawStep(); });
-    window.addEventListener("resize",()=>{ resizeCanvas(); if(mode==="simulation") drawStep(); });
-    setTimeout(()=>map.invalidateSize(),150);
-    return true;
-  }
+ function clearCanvas(){
+ if(!ctx || !canvas) return;
+ const rect=canvas.getBoundingClientRect();
+ ctx.clearRect(0,0,rect.width,rect.height);
+ }
 
-  function resizeCanvas(){
-    if(!canvas || !ctx) return;
-    const rect=canvas.getBoundingClientRect();
-    const dpr=window.devicePixelRatio || 1;
-    canvas.width=Math.max(1, Math.round(rect.width*dpr));
-    canvas.height=Math.max(1, Math.round(rect.height*dpr));
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-  }
+ function removeHeat(){
+ if(heatLayer && map){
+ map.removeLayer(heatLayer);
+ heatLayer=null;
+ }
+ }
 
-  function clearCanvas(){
-    if(!ctx || !canvas) return;
-    const rect=canvas.getBoundingClientRect();
-    ctx.clearRect(0,0,rect.width,rect.height);
-  }
+ function updateUI(){
+ const isHeat=mode==='heatmap';
+ const z=EGS_ZONES[zoneKey];
+ document.querySelectorAll('.egs-mode-btn').forEach(btn=>{
+ btn.classList.toggle('active', btn.dataset.egsMode===mode);
+ btn.setAttribute('aria-pressed', String(btn.dataset.egsMode===mode));
+ });
+ document.querySelectorAll('.egs-zone-btn').forEach(btn=>{
+ btn.classList.toggle('active', btn.dataset.egsZone===zoneKey);
+ btn.setAttribute('aria-pressed', String(btn.dataset.egsZone===zoneKey));
+ });
 
-  function removeHeat(){
-    if(heatLayer && map){
-      map.removeLayer(heatLayer);
-      heatLayer=null;
-    }
-  }
+ setHidden('egsHeatControls', !isHeat);
+ setHidden('egsSimulationControls', isHeat);
+ setHidden('egsHeatLegend', !isHeat);
+ setHidden('egsSimulationLegend', isHeat);
 
-  function renderHeat(){
-    clearCanvas();
-    removeHeat();
-    const intensity = Number(byId("heatIntensity")?.value || 6);
-    if(window.L && L.heatLayer){
-      heatLayer = L.heatLayer(heatData, { radius: 18 + intensity*2, blur: 12 + intensity, maxZoom: 17, max: 1.0 }).addTo(map);
-    } else {
-      heatLayer = L.layerGroup(heatData.slice(0,80).map(p=>L.circleMarker([p[0],p[1]],{
-        radius:4 + intensity/2,
-        fillOpacity:.35,
-        opacity:.3,
-        color:"#00FF88",
-        fillColor:"#00FF88"
-      }))).addTo(map);
-    }
-    setText("kpiPoints", String(heatData.length));
-    setText("kpiVehicles", "—");
-    setText("kpiSpeed", "—");
-    setText("kpiMode", "HEAT");
-  }
+ setText('egsZoneTitle', z.label);
+ setText('egsAnalysisText', document.body.classList.contains('rtl') ? (z.analysisAr || z.analysis) : z.analysis);
+ setText('egsMainLabel', document.body.classList.contains('rtl') ? (isHeat ? 'النقاط' : 'الظاهر') : (isHeat ? 'POINTS' : 'VISIBLE'));
+ setText('egsKpiMain','—');
+ setText('egsKpiVehicles','—');
+ setText('egsKpiSteps','—');
+ setText('egsKpiSpeed','—');
+ setText('egsKpiMode', document.body.classList.contains('rtl') ? (isHeat ? 'حرارة' : 'محاكاة') : (isHeat ? 'HEAT' : 'SIM'));
+ setText('egsStatusTitle', z.label + ' · ' + (document.body.classList.contains('rtl') ? (isHeat ? 'خريطة حرارية' : 'محاكاة') : (isHeat ? 'Heatmap' : 'Simulation')));
+ }
 
-  function drawStep(){
-    if(mode !== "simulation" || !ctx || !map || !animationData.length) return;
-    clearCanvas();
-    const rect=canvas.getBoundingClientRect();
-    const size=Number(byId("vehicleSize")?.value || 6);
-    const frame=tick%120;
-    let speedTotal=0, count=0;
-    animationData.forEach(track=>{
-      const p=track[frame%track.length];
-      const pt=map.latLngToContainerPoint([p.lat,p.lng]);
-      if(pt.x < -20 || pt.y < -20 || pt.x > rect.width+20 || pt.y > rect.height+20) return;
-      ctx.beginPath();
-      ctx.arc(pt.x, pt.y, size, 0, Math.PI*2);
-      ctx.fillStyle=p.color || "#00FF88";
-      ctx.globalAlpha=.9;
-      ctx.fill();
-      ctx.globalAlpha=.22;
-      ctx.beginPath();
-      ctx.arc(pt.x, pt.y, size*2.2, 0, Math.PI*2);
-      ctx.fill();
-      ctx.globalAlpha=1;
-      speedTotal += Number(p.speed || 20); count++;
-    });
-    setText("kpiPoints", "—");
-    setText("kpiVehicles", String(count));
-    setText("kpiSpeed", count ? Math.round(speedTotal/count) + " km/h" : "—");
-    setText("kpiMode", "SIM");
-  }
+ async function loadCurrent(){
+ if(!map) return;
+ cancelAnimationFrame(raf);
+ raf=null;
+ playing=false;
+ stepIndex=0;
+ removeHeat();
+ clearCanvas();
+ updateUI();
+ const z=EGS_ZONES[zoneKey];
+ map.setView(z.center,z.zoom);
+ if(mode==='heatmap') await loadHeatmap();
+ else await loadSimulation();
+ setTimeout(()=>map.invalidateSize(),100);
+ }
 
-  function animate(){
-    if(mode==="simulation" && !paused){
-      tick += Number(byId("vehicleSpeed")?.value || 6);
-      drawStep();
-    }
-    raf=requestAnimationFrame(animate);
-  }
+ async function loadHeatmap(){
+ const z=EGS_ZONES[zoneKey];
+ setText('egsStatusText', document.body.classList.contains('rtl') ? 'جارٍ تحميل طبقة الخريطة الحرارية من SUMO...' : 'Loading SUMO heatmap layer...');
+ const external=await loadJson(z.heatmapFile);
+ currentData=(external && Array.isArray(external.points)) ? external : demoHeatData(z);
+ heatPoints=normalizeHeat(currentData.points || []);
+ if(currentData.demo){
+ setText('egsStatusText', document.body.classList.contains('rtl') ? ('تُعرض خريطة حرارية تجريبية لأن الملف '+z.heatmapFile+' غير موجود أو لا يمكن جلبه محلياً.') : ('Demo heatmap shown because '+z.heatmapFile+' was not found or cannot be fetched locally.'));
+ }else{
+ setText('egsStatusText', document.body.classList.contains('rtl') ? ('تم تحميل البيانات الحقيقية: '+z.heatmapFile) : ('Loaded real data: '+z.heatmapFile));
+ }
+ drawHeatmap();
+ updateHeatKpis();
+ }
 
-  function renderLayer(){
-    const z=EGS_ZONES[zoneKey];
-    if(map){
-      map.setView(z.center,z.zoom,{animate:false});
-      setTimeout(()=>map.invalidateSize(),80);
-    }
-    setHidden("egsHeatControls", mode !== "heatmap");
-    setHidden("egsSimulationControls", mode !== "simulation");
-    if(mode==="heatmap") renderHeat();
-    else { removeHeat(); drawStep(); }
-    setText("egsStatusText", z.label + " · " + (mode==="heatmap" ? "heatmap" : "vehicle simulation") + " layer");
-    setText("sumoAnalysis", tr(z.note));
-  }
+ function normalizeHeat(points){
+ const arr=[];
+ for(const p of points){
+ if(!Array.isArray(p) || p.length<2) continue;
+ const lat=safeNumber(p[0], NaN);
+ const lng=safeNumber(p[1], NaN);
+ const intensity=safeNumber(p[2], .4);
+ if(Number.isFinite(lat) && Number.isFinite(lng)){
+ arr.push([lat,lng,Math.max(.05,Math.min(intensity,1))]);
+ }
+ }
+ if(arr.length<=MAX_HEAT_POINTS) return arr;
+ const interval=Math.ceil(arr.length/MAX_HEAT_POINTS);
+ return arr.filter((_,i)=>i%interval===0).slice(0,MAX_HEAT_POINTS);
+ }
 
-  function updateUI(){
-    document.querySelectorAll(".egs-mode-btn").forEach(btn=>{
-      btn.classList.toggle("active", btn.dataset.egsMode===mode);
-      btn.setAttribute("aria-pressed", String(btn.dataset.egsMode===mode));
-    });
-    document.querySelectorAll(".egs-zone-btn").forEach(btn=>{
-      btn.classList.toggle("active", btn.dataset.egsZone===zoneKey);
-      btn.setAttribute("aria-pressed", String(btn.dataset.egsZone===zoneKey));
-    });
-    const play=byId("egsPlayBtn");
-    if(play) play.textContent = paused ? "PLAY" : "PAUSE";
-  }
+ function drawHeatmap(){
+ removeHeat();
+ clearCanvas();
+ if(!map || !heatPoints.length) return;
+ const radius=safeNumber(byId('egsRadiusRange')?.value,18);
+ const blur=safeNumber(byId('egsBlurRange')?.value,20);
+ const mult=safeNumber(byId('egsIntensityRange')?.value,5)/8;
+ const points=heatPoints.map(p=>[p[0],p[1],Math.min(1,p[2]*mult)]);
 
-  function bind(){
-    document.querySelectorAll(".egs-mode-btn").forEach(btn=>{
-      btn.addEventListener("click",()=>{
-        mode=btn.dataset.egsMode || "heatmap";
-        updateUI();
-        loadSUMOLayer(zoneKey,mode);
-      });
-    });
-    document.querySelectorAll(".egs-zone-btn").forEach(btn=>{
-      btn.addEventListener("click",()=>{
-        zoneKey=btn.dataset.egsZone || "maarif";
-        updateUI();
-        loadSUMOLayer(zoneKey,mode);
-      });
-    });
-    ["heatIntensity","vehicleSpeed","vehicleSize"].forEach(id=>{
-      const el=byId(id);
-      if(el) el.addEventListener("input",()=>{ if(mode==="heatmap") renderHeat(); else drawStep(); });
-    });
-    const play=byId("egsPlayBtn");
-    if(play) play.addEventListener("click",()=>{ paused=!paused; updateUI(); });
-    const reset=byId("egsResetBtn");
-    if(reset) reset.addEventListener("click",()=>{ tick=0; drawStep(); });
-  }
+ if(L.heatLayer){
+ heatLayer=L.heatLayer(points,{
+ radius, blur, maxZoom:18, minOpacity:.08, max:1,
+ gradient:{0.15:'#00FF88',0.35:'#FFD700',0.60:'#FF8A00',1:'#FF3355'}
+ }).addTo(map);
+ }else{
+ heatLayer=L.layerGroup(points.slice(0,350).map(p=>
+ L.circleMarker([p[0],p[1]],{
+ radius:Math.max(2, radius/5),
+ stroke:false,
+ fill:true,
+ fillOpacity:Math.max(.25, Math.min(.85,p[2])),
+ fillColor:p[2]>.65?'#FF3355':p[2]>.35?'#FFD700':'#00FF88'
+ })
+ )).addTo(map);
+ setText('egsStatusText', document.body.classList.contains('rtl') ? 'إضافة Leaflet للخرائط الحرارية غير متاحة. يتم عرض طبقة نقاط بديلة.' : 'Leaflet heat plugin unavailable. Showing point fallback layer.');
+ }
+ fitPoints(points);
+ }
 
-  function boot(){
-    applySumoLanguage();
-    bind();
-    if(initMap()){
-      updateUI();
-      loadSUMOLayer(zoneKey, mode);
-      animate();
-    }
-    const observer = new MutationObserver(applySumoLanguage);
-    observer.observe(document.body,{attributes:true,attributeFilter:["data-lang","dir"]});
-  }
+ function updateHeatKpis(){
+ const k=currentData?.kpis || {};
+ setText('egsKpiMain',fr(heatPoints.length));
+ setText('egsKpiVehicles',fr(k.vehicleRecords || heatPoints.length));
+ setText('egsKpiSteps',fr(k.steps || 0));
+ setText('egsKpiSpeed',safeNumber(k.averageSpeed,0).toFixed(2)+' m/s');
+ setText('egsKpiMode', document.body.classList.contains('rtl') ? 'حرارة' : 'HEAT');
+ }
 
-  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
-  else boot();
+ async function loadSimulation(){
+ const z=EGS_ZONES[zoneKey];
+ setText('egsStatusText', document.body.classList.contains('rtl') ? 'جارٍ تحميل محاكاة SUMO الجغرافية...' : 'Loading SUMO geo simulation...');
+ const external=await loadJson(z.simulationFile);
+ currentData=(external && Array.isArray(external.timesteps)) ? external : demoSimulationData(z);
+ if(currentData.demo){
+ setText('egsStatusText', document.body.classList.contains('rtl') ? ('تُعرض محاكاة تجريبية لأن الملف '+z.simulationFile+' غير موجود أو لا يمكن جلبه محلياً.') : ('Demo simulation shown because '+z.simulationFile+' was not found or cannot be fetched locally.'));
+ }else{
+ setText('egsStatusText', document.body.classList.contains('rtl') ? ('تم تحميل البيانات الحقيقية: '+z.simulationFile) : ('Loaded real data: '+z.simulationFile));
+ }
+ setText('egsKpiSteps',fr(currentData.timesteps.length));
+ setText('egsKpiMode', document.body.classList.contains('rtl') ? 'محاكاة' : 'SIM');
+ if(currentData.kpis){
+ setText('egsKpiVehicles',fr(currentData.kpis.vehicleRecords || 0));
+ setText('egsKpiSpeed',safeNumber(currentData.kpis.averageSpeed,0).toFixed(2)+' m/s');
+ }
+ setTimeout(()=>{
+ resizeCanvas();
+ fitSimulation();
+ playing=true;
+ startAnimation();
+ },160);
+ }
+
+ function getLL(vehicle){
+ const lat=safeNumber(vehicle?.lat, NaN);
+ const lng=safeNumber(vehicle?.lng, NaN);
+ return Number.isFinite(lat) && Number.isFinite(lng) ? [lat,lng] : null;
+ }
+
+ function fitSimulation(){
+ if(!currentData?.timesteps?.length) return;
+ const points=[];
+ for(const step of currentData.timesteps){
+ for(const vehicle of (step.vehicles || [])){
+ const ll=getLL(vehicle);
+ if(ll) points.push(ll);
+ }
+ if(points.length>3000) break;
+ }
+ fitPoints(points);
+ drawStep();
+ }
+
+ function drawStep(){
+ if(mode!=='simulation' || !currentData?.timesteps?.length || !map || !ctx) return;
+ const step=currentData.timesteps[stepIndex % currentData.timesteps.length];
+ if(!step) return;
+ clearCanvas();
+ const vehicles=sampleVehicles(step.vehicles || [], MAX_VEHICLES_PER_FRAME);
+ let n=0, sum=0;
+ for(const vehicle of vehicles){
+ const ll=getLL(vehicle);
+ if(!ll) continue;
+ const pt=map.latLngToContainerPoint(ll);
+ const speed=safeNumber(vehicle.speed,0);
+ const angle=safeNumber(vehicle.angle,0);
+ if(!Number.isFinite(pt.x) || !Number.isFinite(pt.y)) continue;
+ drawVehicle(pt.x,pt.y,speed,angle);
+ n++;
+ sum+=speed;
+ }
+ setText('egsKpiMain',fr(n));
+ setText('egsKpiVehicles',fr(n));
+ setText('egsKpiSpeed',(n?sum/n:0).toFixed(2)+' m/s');
+ setText('egsKpiMode', document.body.classList.contains('rtl') ? 'محاكاة' : 'SIM');
+ }
+
+ function sampleVehicles(vehicles,max){
+ if(vehicles.length<=max) return vehicles;
+ const interval=Math.ceil(vehicles.length/max);
+ return vehicles.filter((_,i)=>i%interval===0);
+ }
+
+ function colorSpeed(speed){
+ return speed<3 ? '#FF3355' : speed<8 ? '#FFD700' : '#00FF88';
+ }
+
+ function drawVehicle(x,y,speed,angle){
+ const size=safeNumber(byId('egsVehicleSizeRange')?.value,6);
+ const color=colorSpeed(speed);
+ const a=(safeNumber(angle,0)-90)*Math.PI/180;
+ ctx.save();
+ ctx.translate(x,y);
+ ctx.rotate(a);
+ ctx.fillStyle=color;
+ ctx.strokeStyle='rgba(255,255,255,.95)';
+ ctx.lineWidth=1.4;
+ ctx.shadowBlur=10;
+ ctx.shadowColor=color;
+ roundedRect(-size,-size/2,size*2.4,size*1.15,Math.max(2,size/2));
+ ctx.fill();
+ ctx.stroke();
+ ctx.restore();
+ }
+
+ function roundedRect(x,y,w,h,r){
+ ctx.beginPath();
+ ctx.moveTo(x+r,y);
+ ctx.lineTo(x+w-r,y);
+ ctx.quadraticCurveTo(x+w,y,x+w,y+r);
+ ctx.lineTo(x+w,y+h-r);
+ ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
+ ctx.lineTo(x+r,y+h);
+ ctx.quadraticCurveTo(x,y+h,x,y+h-r);
+ ctx.lineTo(x,y+r);
+ ctx.quadraticCurveTo(x,y,x+r,y);
+ ctx.closePath();
+ }
+
+ function startAnimation(){
+ cancelAnimationFrame(raf);
+ lastFrame=0;
+ raf=requestAnimationFrame(loop);
+ }
+
+ function loop(timestamp){
+ if(mode!=='simulation' || !currentData?.timesteps?.length) return;
+ const delay=Math.max(20,280-safeNumber(byId('egsSpeedRange')?.value,6)*20);
+ if(playing && timestamp-lastFrame>=delay){
+ drawStep();
+ stepIndex=(stepIndex+1)%currentData.timesteps.length;
+ lastFrame=timestamp;
+ }
+ raf=requestAnimationFrame(loop);
+ }
+
+ function fitPoints(points){
+ if(!map || !points || !points.length) return;
+ const bounds=L.latLngBounds(points.map(p=>[p[0],p[1]]));
+ if(bounds.isValid()) map.fitBounds(bounds,{ padding:[30,30], maxZoom:EGS_ZONES[zoneKey].zoom });
+ }
+
+ function bindEvents(){
+ document.querySelectorAll('.egs-mode-btn').forEach(btn=>{
+ btn.addEventListener('click',()=>{
+ mode=btn.dataset.egsMode || 'heatmap';
+ loadCurrent();
+ });
+ });
+ document.querySelectorAll('.egs-zone-btn').forEach(btn=>{
+ btn.addEventListener('click',()=>{
+ zoneKey=btn.dataset.egsZone || 'maarif';
+ loadCurrent();
+ });
+ });
+ ['egsRadiusRange','egsBlurRange','egsIntensityRange'].forEach(id=>{
+ const el=byId(id);
+ if(el) el.addEventListener('input',()=>{ if(mode==='heatmap') drawHeatmap(); });
+ });
+ const resetHeat=byId('egsResetHeatmapBtn');
+ if(resetHeat) resetHeat.addEventListener('click',()=>{ if(mode==='heatmap') drawHeatmap(); });
+ const play=byId('egsPlayBtn');
+ if(play) play.addEventListener('click',()=>{ playing=true; if(mode==='simulation' && !raf) startAnimation(); });
+ const pause=byId('egsPauseBtn');
+ if(pause) pause.addEventListener('click',()=>{ playing=false; });
+ const restart=byId('egsRestartBtn');
+ if(restart) restart.addEventListener('click',()=>{ stepIndex=0; drawStep(); });
+ const vehicleSize=byId('egsVehicleSizeRange');
+ if(vehicleSize) vehicleSize.addEventListener('input',drawStep);
+ const resetSim=byId('egsResetSimulationBtn');
+ if(resetSim) resetSim.addEventListener('click',fitSimulation);
+ }
+
+ document.addEventListener('DOMContentLoaded',()=>{
+ const panel=byId('sumo-dashboard');
+ if(!panel) return;
+ bindEvents();
+ const boot=()=>{
+ if(initMap()) loadCurrent();
+ };
+ if('IntersectionObserver' in window){
+ const observer=new IntersectionObserver(entries=>{
+ if(entries[0] && entries[0].isIntersecting){
+ boot();
+ observer.disconnect();
+ }
+ },{threshold:.10});
+ observer.observe(panel);
+ }else{
+ boot();
+ }
+ });
 })();
 </script>
+
+<script>
+/* Compatibility bridge for restored original Leaflet/SUMO block.
+   It only mirrors the page language state into the legacy body.rtl class used by the original code. */
+(function(){
+  function syncLegacyRtlClass(){
+    const isAr = (document.documentElement.lang || "").toLowerCase().startsWith("ar") ||
+                 (document.body.dataset.lang || "").toLowerCase().startsWith("ar") ||
+                 document.body.getAttribute("dir") === "rtl";
+    document.body.classList.toggle("rtl", isAr);
+  }
+  syncLegacyRtlClass();
+  new MutationObserver(syncLegacyRtlClass).observe(document.body,{attributes:true,attributeFilter:["dir","data-lang","class"]});
+  new MutationObserver(syncLegacyRtlClass).observe(document.documentElement,{attributes:true,attributeFilter:["lang","dir"]});
+})();
+</script>
+
+
 
 
 <script>
